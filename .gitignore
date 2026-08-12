@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+*.pyc
+__pycache__/
+.venv/
+venv/
+data/greeting_pcm_cache/
+data/memory/
+logs/
+*.log
+*.ogg
+*.pcm
+*.zip
+*.tar.gz
+.DS_Store
+

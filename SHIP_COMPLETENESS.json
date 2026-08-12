@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "agent_shim": true,
+    "agent_runtime": true,
+    "worker_prewarm": true,
+    "llm_prewarm": true,
+    "greeting_cache": true,
+    "ui_server": true,
+    "bootstrap": true,
+    "preflight": true,
+    "sql": true,
+    "requirements": true,
+    "config": true,
+    "env_example": true,
+    "first_line": true,
+    "agent_instructions": true,
+    "stt_hints": true,
+    "llm_context_prewarm": true,
+    "latency_best_fit": true,
+    "knowledge_pack": true,
+    "cartridge_lock": true,
+    "cartridge_persona": true,
+    "first_dialogue_pcm": true,
+    "lang_presets": true,
+    "frontend_or_ui": true,
+    "speaker_profiler": true,
+    "speaker_profiling_config": true,
+    "speaker_docs": true,
+    "post_download_checklist": true
+  },
+  "missing": [],
+  "all_ok": true,
+  "prebake": {
+    "ok": true,
+    "pcm_count": 49,
+    "error": null,
+    "provider": "cartesia",
+    "first_line": "Namaste, this is Sumeet calling from the front desk at Cyberhost. How are you doing today?"
+  }
+}

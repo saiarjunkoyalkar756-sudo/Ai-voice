@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "description": "Pre-bake reply lines per preset_id. Edit when language, knowledge pack, or sales stages change — zero code deploy.",
+  "presets": {
+    "tinglish": {
+      "knowledge_pack_id": "tinglish",
+      "min_variants": 35,
+      "stages": {
+        "open": [
+          "Chala manchidi andi, cheppandi — ye area lo chustunnaru?",
+          "Welcome andi! VK Realty nunchi Arjun — emi type property kavali meeku?",
+          "VK Realty andi — Hyderabad west lo 8 top projects tho tie-up undi."
+        ],
+        "discover": [
+          "Sare andi, budget range entha rough ga cheppandi?",
+          "Purpose enti andi — own stay aa, investment aa?",
+          "Timeline entha urgent andi? Immediate possession kavala?",
+          "Family ki entha members andi? Kids school area important aa?",
+          "Gachibowli ki close lo Prestige Clairmont undi andi. Office ekkada meeku?",
+          "Financial District lo ASBL Broadway options unnayi andi. Budget entha?",
+          "Investment ki rental yield kuda explain chesta andi."
+        ],
+        "match": [
+          "Kokapet lo manchi options unnayi andi. 2BHK a, 3BHK a?",
+          "Narsingi side Godrej Madison Heights chala popular andi. Budget match avutunda?",
+          "My Home Apas unity pricing competitive andi. EMI option kavala?",
+          "Prestige Highline luxury segment andi. Premium segment chustunnara?",
+          "ASBL Landmark Financial District lo undi andi. Office commute entha?",
+          "Tellapur side 80 lakhs range lo 2BHK start avutundi andi. Location ok na?",
+          "Correct approach andi, compare cheyyalsinde. Ye project tho compare chestunnaru?"
+        ],
+        "objection": [
+          "Nijame andi, price konchem stretch avutundi. Loan plan chestunnara?",
+          "Rate high anipisthundi ante payment plan flexible undi andi.",
+          "Builder trust important — full RERA and past delivery strong andi.",
+          "90 lakhs loan ki around 78 thousand per month padutundi andi. Down payment entha?",
+          "Ikkada rate 7,200 per sqft undi andi. Idi meeru anukunna range lo unda?"
+        ],
+        "close": [
+          "Tappakunda andi, time teesukondi. Ee weekend site visit free na?",
+          "Site visit schedule cheddama andi? Saturday 11 AM slot open undi.",
+          "Sare andi, Saturday morning a, Sunday better a meeku?",
+          "Avunu andi, iddaru kalisi decide avvalsinde. Sunday family visit pettukundam a?",
+          "WhatsApp lo floor plan pampista andi. Same number confirm cheyyandi?",
+          "Loan specialist connect chesta andi — bank tie-up undi VK Realty ki.",
+          "Brochure WhatsApp lo pampistanu andi. Same number na?"
+        ],
+        "wrapup": [
+          "Parledu andi, mee convenient time cheppandi — callback schedule cheddam?",
+          "Thank you andi — details summarise chesi SMS chesta.",
+          "Mee time ki thanks andi. Follow-up Thursday 6 PM set cheddam?",
+          "Avunu, full RERA approved andi. Inka em doubts unnayi?",
+          "Sare andi — 1.15 crores, all-inclusive. Registration charges separate.",
+          "Ee project ki possession December 2027 andi. Ready-to-move kavala meeku?"
+        ]
+      }
+    },
+    "english": {
+      "knowledge_pack_id": "english",
+      "min_variants": 10,
+      "stages": {
+        "open": [
+          "Sure — which area are you looking at?",
+          "I'm Arjun from VK Realty. What type of property do you need?"
+        ],
+        "discover": [
+          "What's your rough budget range?",
+          "Is this for own stay or investment?",
+          "When do you need possession — immediate or under construction?"
+        ],
+        "match": [
+          "We have strong options in Kokapet. Are you looking at 2BHK or 3BHK?",
+          "Prestige Clairmont near Gachibowli is popular. Does location work for you?"
+        ],
+        "close": [
+          "Shall I schedule a site visit this Saturday at 11 AM?",
+          "I'll send the brochure on WhatsApp — same number?"
+        ],
+        "wrapup": [
+          "Thank you — I'll summarise and text you the details.",
+          "Happy to call back Thursday at 6 PM if that suits you."
+        ]
+      }
+    },
+    "hme": {
+      "knowledge_pack_id": "hte",
+      "min_variants": 35,
+      "stages": {
+        "open": [
+          "बिल्कुल जी, बताइए — कौन सा area देख रहे हैं?",
+          "VK Realty से बोल रहा हूँ जी — कौन सा project interest है?",
+          "नमस्ते जी — property search में मैं कैसे help करूँ?"
+        ],
+        "discover": [
+          "ठीक है जी, budget range क्या है roughly?",
+          "Purpose क्या है जी — own stay या investment?",
+          "Timeline कितनी urgent है जी? Immediate possession चाहिए?",
+          "Family size कितनी है जी? School nearby important है?",
+          "Office location कहाँ है जी — commute kitna max?",
+          "Investment angle है या own stay जी?"
+        ],
+        "match": [
+          "Thane side अच्छे options हैं जी। 2BHK या 3BHK?",
+          "Gachibowli के पास Prestige option है जी — budget match होगा?",
+          "Godrej project popular है जी — EMI plan चाहिए?",
+          "Premium segment देख रहे हैं जी या mid-range?",
+          "Compare करना सही approach है जी। किस project से compare कर रहे हैं?",
+          "Location Gachibowli के पास है जी — office वहीं है क्या?"
+        ],
+        "objection": [
+          "EMI roughly 75 thousand per month पड़ेगी जी। Loan plan है?",
+          "Price थोड़ा stretch हो तो flexible payment plan है जी।",
+          "RERA approved है जी, number WhatsApp कर दूँगा।",
+          "Rate per sqft competitive है जी — range में fit होता है?",
+          "Loan pre-approval है तो discount मिल सकता है जी।"
+        ],
+        "close": [
+          "Site visit Saturday fix कर दूँ जी?",
+          "Saturday 11 AM या Sunday 3 PM — क्या suit करेगा?",
+          "Family के साथ visit कर लीजिए जी — Sunday morning ठीक है?",
+          "Brochure भेज देता हूँ जी। Same WhatsApp number?",
+          "Loan specialist connect कर दूँ जी — bank tie-up है।",
+          "Floor plan WhatsApp पर भेज दूँ जी — same number?"
+        ],
+        "wrapup": [
+          "Callback evening 6 बजे ठीक रहेगा जी?",
+          "Thank you जी, main details confirm करके भेजता हूँ।",
+          "Follow-up Thursday 6 PM set कर दूँ जी?",
+          "Possession 2027 है जी। Ready-to-move चाहिए?",
+          "Price all-inclusive 1.15 crore है जी। Registration अलग रहेगा।",
+          "Down payment कितना plan है जी?",
+          "Parking और amenities strong हैं जी। Visit करके देखिए।",
+          "Investment yield भी discuss कर सकते हैं जी।",
+          "Parking और clubhouse strong हैं जी।"
+        ]
+      }
+    }
+  }
+}

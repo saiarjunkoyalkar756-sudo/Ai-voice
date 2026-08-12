@@ -1,0 +1,2579 @@
+{
+  "format": "speaksy.client.codebase",
+  "format_version": "1.1",
+  "client_id": "sp-345122",
+  "shipped_at": "2026-07-10T18:00:41.216341+00:00",
+  "shipped_by": "dev@local.speaksy",
+  "approved": true,
+  "full_production": true,
+  "pack_id": "english",
+  "lang_preset": "english",
+  "industry": "ecommerce",
+  "persona": {
+    "name": "sumeet",
+    "role": "front desk",
+    "company": "Cyberhost"
+  },
+  "first_line": "Namaste, this is Sumeet calling from the front desk at Cyberhost. How are you doing today?",
+  "prebake": {
+    "ok": true,
+    "pcm_count": 49,
+    "provider": "cartesia",
+    "error": null
+  },
+  "completeness": {
+    "checks": {
+      "agent_shim": true,
+      "agent_runtime": true,
+      "worker_prewarm": true,
+      "llm_prewarm": true,
+      "greeting_cache": true,
+      "ui_server": true,
+      "bootstrap": true,
+      "preflight": true,
+      "sql": true,
+      "requirements": true,
+      "config": true,
+      "env_example": true,
+      "first_line": true,
+      "agent_instructions": true,
+      "stt_hints": true,
+      "llm_context_prewarm": true,
+      "latency_best_fit": true,
+      "knowledge_pack": true,
+      "cartridge_lock": true,
+      "cartridge_persona": true,
+      "first_dialogue_pcm": true,
+      "lang_presets": true,
+      "frontend_or_ui": true,
+      "speaker_profiler": true,
+      "speaker_profiling_config": true,
+      "speaker_docs": true,
+      "post_download_checklist": true
+    },
+    "missing": [],
+    "all_ok": true,
+    "prebake": {
+      "ok": true,
+      "pcm_count": 49,
+      "error": null,
+      "provider": "cartesia",
+      "first_line": "Namaste, this is Sumeet calling from the front desk at Cyberhost. How are you doing today?"
+    }
+  },
+  "file_count": 490,
+  "required_secrets": [
+    "LIVEKIT_URL",
+    "LIVEKIT_API_KEY",
+    "LIVEKIT_API_SECRET",
+    "LIVEKIT_AGENT_NAME",
+    "GEMINI_API_KEY",
+    "OPENAI_API_KEY",
+    "GROQ_API_KEY",
+    "ANTHROPIC_API_KEY",
+    "DEEPSEEK_API_KEY",
+    "STT_PROVIDER",
+    "TTS_PROVIDER",
+    "SONIOX_API_KEY",
+    "CARTESIA_API_KEY",
+    "CARTESIA_TTS_MODEL",
+    "SARVAM_API_KEY",
+    "DEEPGRAM_API_KEY",
+    "ELEVENLABS_API_KEY",
+    "SMALLEST_API_KEY",
+    "INWORLD_API_KEY",
+    "SUPABASE_URL",
+    "SUPABASE_KEY",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "SUPABASE_S3_ACCESS_KEY",
+    "SUPABASE_S3_SECRET_KEY",
+    "SUPABASE_S3_ENDPOINT",
+    "SUPABASE_S3_REGION",
+    "SUPABASE_RECORDINGS_BUCKET",
+    "JWT_SECRET",
+    "DASHBOARD_USERNAME",
+    "DASHBOARD_PASSWORD",
+    "API_SETTINGS_PASSWORD",
+    "DISABLE_AUTH",
+    "ALLOWED_ORIGINS",
+    "SIP_TRUNK_ID",
+    "OUTBOUND_TRUNK_ID",
+    "INBOUND_PHONE_NUMBERS",
+    "DEFAULT_TRANSFER_NUMBER",
+    "VOBIZ_SIP_DOMAIN",
+    "VOBIZ_USERNAME",
+    "VOBIZ_PASSWORD",
+    "VOBIZ_OUTBOUND_NUMBER",
+    "TWILIO_ACCOUNT_SID",
+    "TWILIO_AUTH_TOKEN",
+    "TWILIO_PHONE_NUMBER",
+    "TWILIO_WHATSAPP_NUMBER",
+    "CAL_API_KEY",
+    "CAL_EVENT_TYPE_ID",
+    "TWENTY_API_URL",
+    "TWENTY_API_KEY",
+    "CRM_TYPE",
+    "CRM_API_KEY",
+    "CRM_BASE_URL",
+    "CRM_WEBHOOK_SECRET",
+    "CRM_WEBHOOK_URL",
+    "REDIS_URL",
+    "SENTRY_DSN",
+    "CLIENT_ID",
+    "ENVIRONMENT"
+  ],
+  "bootstrap": "python3 scripts/bootstrap_client.py",
+  "preflight": "python3 scripts/run_preflight.py",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 1206,
+      "sha256": "45fe46acb6e77613"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 5,
+      "sha256": "69aa73cf5bc3377a"
+    },
+    {
+      "path": "CICD-1.ogg",
+      "bytes": 515405,
+      "sha256": "972c60bd9d5aab5a"
+    },
+    {
+      "path": "CLIENT_SETUP.md",
+      "bytes": 1590,
+      "sha256": "0fa58813e3bd5b3e"
+    },
+    {
+      "path": "CLIENT_SHIP.md",
+      "bytes": 4414,
+      "sha256": "9e6a2c566cfc6130"
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 2135,
+      "sha256": "c328dac0ef8032eb"
+    },
+    {
+      "path": "FULL_CONTEXT.md",
+      "bytes": 23011,
+      "sha256": "af16ab2bd1a56526"
+    },
+    {
+      "path": "LATENCY_BEST_FIT_PRODUCTION.md",
+      "bytes": 6897,
+      "sha256": "86d5e17d542f4d10"
+    },
+    {
+      "path": "POST_DOWNLOAD_CHECKLIST.md",
+      "bytes": 8099,
+      "sha256": "59a8a76ca67eb73a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3389,
+      "sha256": "862d659365275c76"
+    },
+    {
+      "path": "SHIP_COMPLETENESS.json",
+      "bytes": 1006,
+      "sha256": "e4f964d0a73f89e9"
+    },
+    {
+      "path": "SHIP_MANIFEST.json",
+      "bytes": 61874,
+      "sha256": "1b5c48340d2c3e02"
+    },
+    {
+      "path": "SHIP_README.md",
+      "bytes": 2165,
+      "sha256": "d1a37e1dbd73deba"
+    },
+    {
+      "path": "SPEAKER_PROFILING.md",
+      "bytes": 1578,
+      "sha256": "816cce2bb6c710fe"
+    },
+    {
+      "path": "agent.py",
+      "bytes": 1883,
+      "sha256": "18d1407d0cc1a587"
+    },
+    {
+      "path": "agent_ai_edit.py",
+      "bytes": 12605,
+      "sha256": "b08b77f324926f4e"
+    },
+    {
+      "path": "agent_config_loader.py",
+      "bytes": 10826,
+      "sha256": "09ff5f76627f3798"
+    },
+    {
+      "path": "agent_generator.py",
+      "bytes": 17027,
+      "sha256": "65a6edb86723bb81"
+    },
+    {
+      "path": "agent_models.py",
+      "bytes": 11673,
+      "sha256": "b64f7e6319fd1bb8"
+    },
+    {
+      "path": "agent_process.py",
+      "bytes": 18597,
+      "sha256": "c6dfa6d131a8b617"
+    },
+    {
+      "path": "agent_version_store.py",
+      "bytes": 3171,
+      "sha256": "9bdbba8ab0249443"
+    },
+    {
+      "path": "agents_db.py",
+      "bytes": 21297,
+      "sha256": "633c58c784a6df77"
+    },
+    {
+      "path": "assistant_settings.py",
+      "bytes": 24051,
+      "sha256": "65664d0647887789"
+    },
+    {
+      "path": "auth.py",
+      "bytes": 6283,
+      "sha256": "654a8c2840c7d634"
+    },
+    {
+      "path": "backchannel.py",
+      "bytes": 3576,
+      "sha256": "5ea75925586b60dd"
+    },
+    {
+      "path": "background_audio.py",
+      "bytes": 5181,
+      "sha256": "5e2881464db08665"
+    },
+    {
+      "path": "brochure_intent.py",
+      "bytes": 8630,
+      "sha256": "608d614d0cae192a"
+    },
+    {
+      "path": "calendar_tools.py",
+      "bytes": 11769,
+      "sha256": "f6027266b1c36f0b"
+    },
+    {
+      "path": "call_audit.py",
+      "bytes": 1754,
+      "sha256": "b8486590901dfac8"
+    },
+    {
+      "path": "call_config.py",
+      "bytes": 3054,
+      "sha256": "d438a67d2ae3aecb"
+    },
+    {
+      "path": "call_logs_db.py",
+      "bytes": 7751,
+      "sha256": "fdf3d9f1bd2cd7f5"
+    },
+    {
+      "path": "call_planner.py",
+      "bytes": 14805,
+      "sha256": "94196ca736dc8116"
+    },
+    {
+      "path": "call_quality_scorer.py",
+      "bytes": 25595,
+      "sha256": "466c62273f5dd0b8"
+    },
+    {
+      "path": "campaign_store.py",
+      "bytes": 7580,
+      "sha256": "e71a5fab012e8e38"
+    },
+    {
+      "path": "cartesia_tts.py",
+      "bytes": 7298,
+      "sha256": "3675e0b468c3ea1a"
+    },
+    {
+      "path": "cartridge/artifacts.json",
+      "bytes": 12772,
+      "sha256": "d07f57cdbdc03c64"
+    },
+    {
+      "path": "cartridge/client.yaml",
+      "bytes": 326,
+      "sha256": "3457b0e524289840"
+    },
+    {
+      "path": "cartridge/compiled.lock.json",
+      "bytes": 910,
+      "sha256": "f1da7c2dec98e893"
+    },
+    {
+      "path": "cartridge/facts.json",
+      "bytes": 4027,
+      "sha256": "f23c40befba2c64f"
+    },
+    {
+      "path": "cartridge/persona.json",
+      "bytes": 1317,
+      "sha256": "b2078d2a1bfbbb02"
+    },
+    {
+      "path": "circuit_breaker.py",
+      "bytes": 25760,
+      "sha256": "d53e370401e5aea8"
+    },
+    {
+      "path": "config.json",
+      "bytes": 9083,
+      "sha256": "f7c9f1e6bd1f901c"
+    },
+    {
+      "path": "config_store.py",
+      "bytes": 9415,
+      "sha256": "f786d3c1b80aac96"
+    },
+    {
+      "path": "context_summariser.py",
+      "bytes": 3875,
+      "sha256": "102c7a0be8884300"
+    },
+    {
+      "path": "continuous_improvement.py",
+      "bytes": 9804,
+      "sha256": "7a9adddfd07a66cb"
+    },
+    {
+      "path": "conversational_iq.py",
+      "bytes": 21203,
+      "sha256": "e9c6889ec3a0c899"
+    },
+    {
+      "path": "conversion_metrics.py",
+      "bytes": 5573,
+      "sha256": "48f90c01fcac83e8"
+    },
+    {
+      "path": "dashboard_analytics.py",
+      "bytes": 27454,
+      "sha256": "087c6ad8d693b896"
+    },
+    {
+      "path": "dashboard_routes.py",
+      "bytes": 28370,
+      "sha256": "a63467ee29877e57"
+    },
+    {
+      "path": "data/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/agent_logs/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/campaigns/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/company_knowledge/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/company_knowledge/english.json",
+      "bytes": 6710,
+      "sha256": "305faf98bac1ea6f"
+    },
+    {
+      "path": "data/conversational_iq/registry.json",
+      "bytes": 14915,
+      "sha256": "c0d27baab84e1126"
+    },
+    {
+      "path": "data/employee_backstory.json",
+      "bytes": 6358,
+      "sha256": "2f06145a0b02223d"
+    },
+    {
+      "path": "data/english_inventory.json",
+      "bytes": 1306,
+      "sha256": "2f9affd952403a9d"
+    },
+    {
+      "path": "data/english_market_competitor.json",
+      "bytes": 2844,
+      "sha256": "0afa78496e15abf3"
+    },
+    {
+      "path": "data/greeting_pcm_cache/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/greeting_pcm_cache/017950a24b22aef081971c5d.pcm",
+      "bytes": 141796,
+      "sha256": "edc2412e1a87fed7"
+    },
+    {
+      "path": "data/greeting_pcm_cache/04be1b8dd85df2f6430c59c6.pcm",
+      "bytes": 38116,
+      "sha256": "821afb6cdaf3ca04"
+    },
+    {
+      "path": "data/greeting_pcm_cache/0faa6445cb0031d2b271af32.pcm",
+      "bytes": 149476,
+      "sha256": "bab189ed7ab87e03"
+    },
+    {
+      "path": "data/greeting_pcm_cache/1b49ecfa50889033d7e5f9ac.pcm",
+      "bytes": 249316,
+      "sha256": "e6c6229ca6a1d1ba"
+    },
+    {
+      "path": "data/greeting_pcm_cache/1d90f4ca228a30024dc008b9.pcm",
+      "bytes": 30436,
+      "sha256": "15a102a6adef24f4"
+    },
+    {
+      "path": "data/greeting_pcm_cache/22041000cf9fd4d547f3bcd8.pcm",
+      "bytes": 172516,
+      "sha256": "0bf920dd634a39ec"
+    },
+    {
+      "path": "data/greeting_pcm_cache/27a3fabafd43cd4aeec67c3b.pcm",
+      "bytes": 184034,
+      "sha256": "964bcdbdb211f21e"
+    },
+    {
+      "path": "data/greeting_pcm_cache/288b03fefc2a5487776d7dce.pcm",
+      "bytes": 149476,
+      "sha256": "8e06ac403821ce5e"
+    },
+    {
+      "path": "data/greeting_pcm_cache/2ac53c3046486bcbea8d892d.pcm",
+      "bytes": 172516,
+      "sha256": "db82a43cdec3d2fc"
+    },
+    {
+      "path": "data/greeting_pcm_cache/2fe689344f658c66e70eea59.pcm",
+      "bytes": 253156,
+      "sha256": "5e2983f535ee4479"
+    },
+    {
+      "path": "data/greeting_pcm_cache/302f6bbab138c09707b3b37b.pcm",
+      "bytes": 203236,
+      "sha256": "b17c56c1a09bd5c1"
+    },
+    {
+      "path": "data/greeting_pcm_cache/36326fc32132d4c856cae3da.pcm",
+      "bytes": 226276,
+      "sha256": "0bdb3176c08f3335"
+    },
+    {
+      "path": "data/greeting_pcm_cache/3c6ec711a15474ad41c23f56.pcm",
+      "bytes": 153316,
+      "sha256": "9326c508c5b46ce3"
+    },
+    {
+      "path": "data/greeting_pcm_cache/3e7bcf78f8716ae4a5fdd6d2.pcm",
+      "bytes": 91874,
+      "sha256": "2b6728ac0e6ade99"
+    },
+    {
+      "path": "data/greeting_pcm_cache/446b735438939a557d733e64.pcm",
+      "bytes": 191716,
+      "sha256": "5e0b9dd4265aa3a4"
+    },
+    {
+      "path": "data/greeting_pcm_cache/4b5cacf07d3c1141ace70390.pcm",
+      "bytes": 172516,
+      "sha256": "c437f0cc3b0678ac"
+    },
+    {
+      "path": "data/greeting_pcm_cache/4cd018254908903ea5e84768.pcm",
+      "bytes": 153316,
+      "sha256": "a242ffb13c8bc6ba"
+    },
+    {
+      "path": "data/greeting_pcm_cache/5208d8f46b1ce6dbbf504111.pcm",
+      "bytes": 187874,
+      "sha256": "4ba49c81179bf9fc"
+    },
+    {
+      "path": "data/greeting_pcm_cache/5f84955938feb7a03ae18e47.pcm",
+      "bytes": 268516,
+      "sha256": "ef0a5e2cbdca3f08"
+    },
+    {
+      "path": "data/greeting_pcm_cache/68cc288a5a8fa3ce296558a2.pcm",
+      "bytes": 199396,
+      "sha256": "152900e378c749d2"
+    },
+    {
+      "path": "data/greeting_pcm_cache/6940de872c9bd3df30971de6.pcm",
+      "bytes": 210916,
+      "sha256": "ccb2474422d419d6"
+    },
+    {
+      "path": "data/greeting_pcm_cache/6d41cd5dc7465071753db401.pcm",
+      "bytes": 299234,
+      "sha256": "86dc3af85c86c590"
+    },
+    {
+      "path": "data/greeting_pcm_cache/722547cc1ebce66735194a0c.pcm",
+      "bytes": 187876,
+      "sha256": "76dd48e0d3af37ab"
+    },
+    {
+      "path": "data/greeting_pcm_cache/757c2972c4dff4bba656cd6e.pcm",
+      "bytes": 184034,
+      "sha256": "cb0ba26a0a91afd0"
+    },
+    {
+      "path": "data/greeting_pcm_cache/76481830936041e72bb732d2.pcm",
+      "bytes": 191716,
+      "sha256": "49a7d16c791ee874"
+    },
+    {
+      "path": "data/greeting_pcm_cache/77eda9cc111f14f765a0bd1f.pcm",
+      "bytes": 195556,
+      "sha256": "e710ef65ffdee5f0"
+    },
+    {
+      "path": "data/greeting_pcm_cache/7be3a8271fb69afce14000f2.pcm",
+      "bytes": 260836,
+      "sha256": "19997e917d5151a7"
+    },
+    {
+      "path": "data/greeting_pcm_cache/8c6a3748cd51117bcb5327f3.pcm",
+      "bytes": 145634,
+      "sha256": "74ed503974c75081"
+    },
+    {
+      "path": "data/greeting_pcm_cache/90d6652e47d5cc5dea979122.pcm",
+      "bytes": 210916,
+      "sha256": "1ecbcc87fc1ce684"
+    },
+    {
+      "path": "data/greeting_pcm_cache/92d732a4d1e33980c6d72daf.pcm",
+      "bytes": 199396,
+      "sha256": "1ccefdb70b987cac"
+    },
+    {
+      "path": "data/greeting_pcm_cache/92ed59cb0be898e98036421d.pcm",
+      "bytes": 160996,
+      "sha256": "0bb2f233ec480e8c"
+    },
+    {
+      "path": "data/greeting_pcm_cache/99153ec165cf5194af81be70.pcm",
+      "bytes": 207076,
+      "sha256": "4c70f86bfb396ab9"
+    },
+    {
+      "path": "data/greeting_pcm_cache/9d955d97a6650485aa9f1f77.pcm",
+      "bytes": 184034,
+      "sha256": "d719232a66b29019"
+    },
+    {
+      "path": "data/greeting_pcm_cache/PREWARM_INDEX.json",
+      "bytes": 9143,
+      "sha256": "f6ffde76f13d9998"
+    },
+    {
+      "path": "data/greeting_pcm_cache/a3ddd322d334f6414f5f1555.pcm",
+      "bytes": 130276,
+      "sha256": "f95d3144e1f155c8"
+    },
+    {
+      "path": "data/greeting_pcm_cache/b8392e00eeba18a35d46d570.pcm",
+      "bytes": 145634,
+      "sha256": "8fe36a9f0f2a1dad"
+    },
+    {
+      "path": "data/greeting_pcm_cache/bc23c7c85bf36a49a80cb676.pcm",
+      "bytes": 184034,
+      "sha256": "265953c23ced29bd"
+    },
+    {
+      "path": "data/greeting_pcm_cache/c3f23be41139a1015a143c30.pcm",
+      "bytes": 180194,
+      "sha256": "477d04015fb3354b"
+    },
+    {
+      "path": "data/greeting_pcm_cache/c9c1f8ea1d1ee796304613c8.pcm",
+      "bytes": 299234,
+      "sha256": "a05c0c661505cf0b"
+    },
+    {
+      "path": "data/greeting_pcm_cache/d5d6eeb31c1640b1c4ea3f69.pcm",
+      "bytes": 45796,
+      "sha256": "e1df17b2178f1170"
+    },
+    {
+      "path": "data/greeting_pcm_cache/d8be6761663e8718d926d87c.pcm",
+      "bytes": 214754,
+      "sha256": "cccbc96d82755346"
+    },
+    {
+      "path": "data/greeting_pcm_cache/e2cd67dc4ba2e0815735fe56.pcm",
+      "bytes": 137956,
+      "sha256": "3c36498a10167fe9"
+    },
+    {
+      "path": "data/greeting_pcm_cache/e3c8ac687aad3952a3152298.pcm",
+      "bytes": 180194,
+      "sha256": "a1f36d14d58edafb"
+    },
+    {
+      "path": "data/greeting_pcm_cache/e59906830bfea91ca5cf5ffd.pcm",
+      "bytes": 218596,
+      "sha256": "e92b40b6e558ccc7"
+    },
+    {
+      "path": "data/greeting_pcm_cache/eb01a7fe78af5749489f1728.pcm",
+      "bytes": 207076,
+      "sha256": "8064743d3583e9af"
+    },
+    {
+      "path": "data/greeting_pcm_cache/ed8b6f3454036d51efdd6321.pcm",
+      "bytes": 187874,
+      "sha256": "df635a410b604f43"
+    },
+    {
+      "path": "data/greeting_pcm_cache/f52c1579006ca3e11110b63c.pcm",
+      "bytes": 180196,
+      "sha256": "3457a1f393f1436c"
+    },
+    {
+      "path": "data/greeting_pcm_cache/f8de8155a4ef0004fc4d7c29.pcm",
+      "bytes": 130274,
+      "sha256": "fc72fde2cf935b1c"
+    },
+    {
+      "path": "data/greeting_pcm_cache/f97f0b14ff5958b78a934b20.pcm",
+      "bytes": 260834,
+      "sha256": "03090564d322d618"
+    },
+    {
+      "path": "data/greeting_pcm_cache/fb747f791d5c93f40e0c4170.pcm",
+      "bytes": 38116,
+      "sha256": "9b46164648f5401f"
+    },
+    {
+      "path": "data/hte_inventory.json",
+      "bytes": 1969,
+      "sha256": "79539af564ecb1da"
+    },
+    {
+      "path": "data/hte_market_competitor.json",
+      "bytes": 2393,
+      "sha256": "007b6a0bb0a66e0f"
+    },
+    {
+      "path": "data/lang_presets.json",
+      "bytes": 2039,
+      "sha256": "be2327428dc6e94e"
+    },
+    {
+      "path": "data/latency_baselines/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "data/preset_reply_variants.json",
+      "bytes": 7651,
+      "sha256": "32f74dd818d93b4c"
+    },
+    {
+      "path": "data/preset_schema.json",
+      "bytes": 2541,
+      "sha256": "73eb1200f4a8af2f"
+    },
+    {
+      "path": "data/tinglish_inventory.json",
+      "bytes": 17610,
+      "sha256": "42098574a344160d"
+    },
+    {
+      "path": "data/tinglish_market_competitor.json",
+      "bytes": 14536,
+      "sha256": "ce212dea5455aa70"
+    },
+    {
+      "path": "datetime_utils.py",
+      "bytes": 614,
+      "sha256": "16562b64498e8d19"
+    },
+    {
+      "path": "db.py",
+      "bytes": 41215,
+      "sha256": "519c8f1d52561ccb"
+    },
+    {
+      "path": "deepseek_summariser.py",
+      "bytes": 974,
+      "sha256": "604cd9c9b7b9bc31"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 3277,
+      "sha256": "7062172cec6350c0"
+    },
+    {
+      "path": "docs_html/index.html",
+      "bytes": 3646,
+      "sha256": "1e21d1aa4e462372"
+    },
+    {
+      "path": "docs_html/index.json",
+      "bytes": 479,
+      "sha256": "0559be130579a463"
+    },
+    {
+      "path": "docs_routes.py",
+      "bytes": 8282,
+      "sha256": "5f4a5f2c66841fc9"
+    },
+    {
+      "path": "docs_status_routes.py",
+      "bytes": 5553,
+      "sha256": "9d28d326ed989c72"
+    },
+    {
+      "path": "emotion_detector.py",
+      "bytes": 3345,
+      "sha256": "0e42e71ad4e0866e"
+    },
+    {
+      "path": "employee_intent_router.py",
+      "bytes": 3789,
+      "sha256": "7d73fc5c8da7e754"
+    },
+    {
+      "path": "employee_knowledge.py",
+      "bytes": 12963,
+      "sha256": "6b823f258218c08b"
+    },
+    {
+      "path": "engine/README.md",
+      "bytes": 2246,
+      "sha256": "5f31475df89b1630"
+    },
+    {
+      "path": "engine/__init__.py",
+      "bytes": 1098,
+      "sha256": "93eeb10929217d99"
+    },
+    {
+      "path": "engine/active_calls.py",
+      "bytes": 2188,
+      "sha256": "7825654003fd28b3"
+    },
+    {
+      "path": "engine/agent_runtime.py",
+      "bytes": 203483,
+      "sha256": "57bc5abb8b775242"
+    },
+    {
+      "path": "engine/canary.py",
+      "bytes": 1573,
+      "sha256": "3ae410a5b07cd853"
+    },
+    {
+      "path": "engine/conversation_engine.py",
+      "bytes": 5787,
+      "sha256": "7c4aa62cf29ce818"
+    },
+    {
+      "path": "engine/dream_bridge.py",
+      "bytes": 1061,
+      "sha256": "0547aad6df86b33f"
+    },
+    {
+      "path": "engine/interrupt_ack.py",
+      "bytes": 1970,
+      "sha256": "7486ae4fa35729a2"
+    },
+    {
+      "path": "engine/interrupt_policy.py",
+      "bytes": 2083,
+      "sha256": "f2cb5c3f24fb822b"
+    },
+    {
+      "path": "engine/llm_node_helpers.py",
+      "bytes": 2909,
+      "sha256": "11cd67b6be78f64c"
+    },
+    {
+      "path": "engine/metrics/__init__.py",
+      "bytes": 265,
+      "sha256": "33093fe580ed63f6"
+    },
+    {
+      "path": "engine/metrics/turn_metrics.py",
+      "bytes": 8847,
+      "sha256": "ce4f8f76f79f0f13"
+    },
+    {
+      "path": "engine/pinned_config.py",
+      "bytes": 1813,
+      "sha256": "f13f928c4d9c4272"
+    },
+    {
+      "path": "engine/pipeline_stages.py",
+      "bytes": 1005,
+      "sha256": "25ec6c8d5a36dbce"
+    },
+    {
+      "path": "engine/post_call_export.py",
+      "bytes": 3324,
+      "sha256": "f52a8a5d9d278b2f"
+    },
+    {
+      "path": "engine/returning_opener.py",
+      "bytes": 2162,
+      "sha256": "1603df6dc09149a8"
+    },
+    {
+      "path": "engine/stt_context_expand.py",
+      "bytes": 2853,
+      "sha256": "d752762958d1765f"
+    },
+    {
+      "path": "engine/tracing.py",
+      "bytes": 2570,
+      "sha256": "1e8b069c11d4d33e"
+    },
+    {
+      "path": "engine/ttft_policy.py",
+      "bytes": 1355,
+      "sha256": "d88e0e3450405263"
+    },
+    {
+      "path": "engine/turn_result.py",
+      "bytes": 1240,
+      "sha256": "9decaec8a32ea8c9"
+    },
+    {
+      "path": "engine/voicemail.py",
+      "bytes": 2229,
+      "sha256": "a735d1c1c8a4a56c"
+    },
+    {
+      "path": "engine/worker.py",
+      "bytes": 330,
+      "sha256": "7bcc3998da9d9bfa"
+    },
+    {
+      "path": "env_manager.py",
+      "bytes": 11031,
+      "sha256": "ed49abe97081fc9a"
+    },
+    {
+      "path": "fas.py",
+      "bytes": 610,
+      "sha256": "5a7d9bd50c7222f8"
+    },
+    {
+      "path": "filler_injection.py",
+      "bytes": 2952,
+      "sha256": "61fa671f8fa775c8"
+    },
+    {
+      "path": "frontend/agent-control.js",
+      "bytes": 4623,
+      "sha256": "1fab46f251e3e551"
+    },
+    {
+      "path": "frontend/agent-detail.js",
+      "bytes": 53400,
+      "sha256": "4c318c8d391e1fed"
+    },
+    {
+      "path": "frontend/agent-flow-studio.css",
+      "bytes": 10150,
+      "sha256": "6d3ba46e84a9f598"
+    },
+    {
+      "path": "frontend/agent-flow-studio.js",
+      "bytes": 25323,
+      "sha256": "37b68d9f2248d55f"
+    },
+    {
+      "path": "frontend/analytics.js",
+      "bytes": 14504,
+      "sha256": "bba5e104ead30fde"
+    },
+    {
+      "path": "frontend/app.js",
+      "bytes": 98042,
+      "sha256": "234bab9f7bb261be"
+    },
+    {
+      "path": "frontend/apple-grade.css",
+      "bytes": 17890,
+      "sha256": "37f9cbf0ac255cc4"
+    },
+    {
+      "path": "frontend/assistant-settings.js",
+      "bytes": 42918,
+      "sha256": "e2a996a2fef0adb5"
+    },
+    {
+      "path": "frontend/calendar.js",
+      "bytes": 20008,
+      "sha256": "983423f3fe98f428"
+    },
+    {
+      "path": "frontend/call-logs.js",
+      "bytes": 48845,
+      "sha256": "b42aaf0084c6e7f0"
+    },
+    {
+      "path": "frontend/clients.js",
+      "bytes": 8625,
+      "sha256": "65d8b7c0371cb2c8"
+    },
+    {
+      "path": "frontend/dashboard-v2.css",
+      "bytes": 18950,
+      "sha256": "48fff8d783585704"
+    },
+    {
+      "path": "frontend/dashboard-v2.js",
+      "bytes": 1753,
+      "sha256": "53ca12fe49c30802"
+    },
+    {
+      "path": "frontend/dashboard.js",
+      "bytes": 52804,
+      "sha256": "bf2942a0e667d2bd"
+    },
+    {
+      "path": "frontend/favicon.png",
+      "bytes": 2475038,
+      "sha256": "a54ba25908552f52"
+    },
+    {
+      "path": "frontend/integrations.js",
+      "bytes": 14801,
+      "sha256": "b551323014cc1daa"
+    },
+    {
+      "path": "frontend/lang-presets.js",
+      "bytes": 9232,
+      "sha256": "96d6248d48e93236"
+    },
+    {
+      "path": "frontend/styles.css",
+      "bytes": 170121,
+      "sha256": "f32aa31d7a9b9f43"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/dashboard.html",
+      "bytes": 109379,
+      "sha256": "34bb3ad55e78cc82"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_0.jpg",
+      "bytes": 61430,
+      "sha256": "0650268b4fb21814"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_1.jpg",
+      "bytes": 62089,
+      "sha256": "192590fa0f0c1d6d"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_10.jpg",
+      "bytes": 67815,
+      "sha256": "379b884f69f38f17"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_100.jpg",
+      "bytes": 161077,
+      "sha256": "7860fc810ab0b975"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_101.jpg",
+      "bytes": 157656,
+      "sha256": "f197f09b31674779"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_102.jpg",
+      "bytes": 158504,
+      "sha256": "49b9e5953ae7853a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_103.jpg",
+      "bytes": 158203,
+      "sha256": "83437e94b69e5001"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_104.jpg",
+      "bytes": 160800,
+      "sha256": "9b8aaa3bfe008f99"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_105.jpg",
+      "bytes": 159096,
+      "sha256": "d5b421572d4cc087"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_106.jpg",
+      "bytes": 161137,
+      "sha256": "2ff8bb22abe0d1f5"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_107.jpg",
+      "bytes": 162020,
+      "sha256": "21e60b5c7579ab80"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_108.jpg",
+      "bytes": 165973,
+      "sha256": "31465d69cfec390e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_109.jpg",
+      "bytes": 162742,
+      "sha256": "f2f16332faf7a48b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_11.jpg",
+      "bytes": 67801,
+      "sha256": "8139462b997efd24"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_110.jpg",
+      "bytes": 162666,
+      "sha256": "69116a7f4044624a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_111.jpg",
+      "bytes": 161565,
+      "sha256": "d9825e20d23bfd03"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_112.jpg",
+      "bytes": 164241,
+      "sha256": "62b3dd6417af857a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_113.jpg",
+      "bytes": 161993,
+      "sha256": "b24bdb916fdb6173"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_12.jpg",
+      "bytes": 69697,
+      "sha256": "977582ecff8bab5c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_13.jpg",
+      "bytes": 68612,
+      "sha256": "7415aaf5c4b8ea83"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_14.jpg",
+      "bytes": 69872,
+      "sha256": "4cc7a5f6863d4ada"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_15.jpg",
+      "bytes": 69684,
+      "sha256": "8fd5fbce2ddc8e2f"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_16.jpg",
+      "bytes": 71501,
+      "sha256": "acef3f8489204787"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_17.jpg",
+      "bytes": 72768,
+      "sha256": "de493b17173c2fdd"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_18.jpg",
+      "bytes": 74035,
+      "sha256": "9977c0b6012c03e0"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_19.jpg",
+      "bytes": 74037,
+      "sha256": "5d1d4f2b9c501a0c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_2.jpg",
+      "bytes": 63212,
+      "sha256": "17b7f6a5be6bfbf6"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_20.jpg",
+      "bytes": 76340,
+      "sha256": "00528c508f1b46dc"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_21.jpg",
+      "bytes": 76359,
+      "sha256": "baf8abf67ab25f9b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_22.jpg",
+      "bytes": 76807,
+      "sha256": "71d2350a34363520"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_23.jpg",
+      "bytes": 76344,
+      "sha256": "98ad8a6608931c80"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_24.jpg",
+      "bytes": 78112,
+      "sha256": "2e97d514033059f7"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_25.jpg",
+      "bytes": 77727,
+      "sha256": "6b94f5cd73b72470"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_26.jpg",
+      "bytes": 79510,
+      "sha256": "497adfcfed6ff426"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_27.jpg",
+      "bytes": 79828,
+      "sha256": "e5133857abaa40b6"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_28.jpg",
+      "bytes": 82820,
+      "sha256": "a37cbc89379ca986"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_29.jpg",
+      "bytes": 81283,
+      "sha256": "342f0adbe7c3cbd1"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_3.jpg",
+      "bytes": 63743,
+      "sha256": "f040df6770c6d735"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_30.jpg",
+      "bytes": 81872,
+      "sha256": "97641437c7780da4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_31.jpg",
+      "bytes": 81610,
+      "sha256": "e07a2b2243bca3c3"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_32.jpg",
+      "bytes": 82425,
+      "sha256": "bbc88e334953da51"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_33.jpg",
+      "bytes": 82387,
+      "sha256": "29ba97d079ede16e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_34.jpg",
+      "bytes": 83480,
+      "sha256": "53505bd3b4c1849d"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_35.jpg",
+      "bytes": 83966,
+      "sha256": "94e97ed0f87874d6"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_36.jpg",
+      "bytes": 85966,
+      "sha256": "4cd88d83b6762ebf"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_37.jpg",
+      "bytes": 84530,
+      "sha256": "f49dde5363fa682d"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_38.jpg",
+      "bytes": 84940,
+      "sha256": "e7a629bffb8e61fd"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_39.jpg",
+      "bytes": 84710,
+      "sha256": "e671737da173673b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_4.jpg",
+      "bytes": 65558,
+      "sha256": "99199053c9cb9a6d"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_40.jpg",
+      "bytes": 86234,
+      "sha256": "ee598efbbb980bde"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_41.jpg",
+      "bytes": 87386,
+      "sha256": "7f798a5492e9bca4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_42.jpg",
+      "bytes": 88657,
+      "sha256": "946f4a0b26e9584a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_43.jpg",
+      "bytes": 89604,
+      "sha256": "b7e20cd1650d7215"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_44.jpg",
+      "bytes": 92039,
+      "sha256": "4c8eeeca54a51806"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_45.jpg",
+      "bytes": 90583,
+      "sha256": "54d4f845cb4ca73f"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_46.jpg",
+      "bytes": 90687,
+      "sha256": "40a096986b01e3bb"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_47.jpg",
+      "bytes": 91062,
+      "sha256": "b481aa17ba8a0619"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_48.jpg",
+      "bytes": 93365,
+      "sha256": "067c51e57157049c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_49.jpg",
+      "bytes": 94219,
+      "sha256": "f34666df20057fc0"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_5.jpg",
+      "bytes": 64745,
+      "sha256": "dd4b83a467f2c097"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_50.jpg",
+      "bytes": 96113,
+      "sha256": "31ecc71848b27faf"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_51.jpg",
+      "bytes": 97265,
+      "sha256": "48846c28efd7b49b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_52.jpg",
+      "bytes": 100902,
+      "sha256": "ad7e39c3d09091a4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_53.jpg",
+      "bytes": 100478,
+      "sha256": "72326154d7d01622"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_54.jpg",
+      "bytes": 102267,
+      "sha256": "5ee764c23d096e7e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_55.jpg",
+      "bytes": 102680,
+      "sha256": "9b8c375a31e8c45a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_56.jpg",
+      "bytes": 106480,
+      "sha256": "6372d48729d68d85"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_57.jpg",
+      "bytes": 108921,
+      "sha256": "821d0c70e4cbc33c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_58.jpg",
+      "bytes": 112093,
+      "sha256": "714ad14063500bf9"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_59.jpg",
+      "bytes": 113463,
+      "sha256": "38afb5d726bd63e7"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_6.jpg",
+      "bytes": 64843,
+      "sha256": "2a78ac590bb824e0"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_60.jpg",
+      "bytes": 118688,
+      "sha256": "80c37d1fb59eaeb4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_61.jpg",
+      "bytes": 116974,
+      "sha256": "5cc05036efa49c5a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_62.jpg",
+      "bytes": 120579,
+      "sha256": "87e574713c5cb173"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_63.jpg",
+      "bytes": 121390,
+      "sha256": "29f1b6f4cd256f51"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_64.jpg",
+      "bytes": 123332,
+      "sha256": "25ec0789b66ae3bd"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_65.jpg",
+      "bytes": 123742,
+      "sha256": "1c7da0f9cee9b5e4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_66.jpg",
+      "bytes": 126839,
+      "sha256": "b6bca347a1ea12c8"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_67.jpg",
+      "bytes": 128092,
+      "sha256": "0413b6dec3553f32"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_68.jpg",
+      "bytes": 134748,
+      "sha256": "3794215f2e2a9bc4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_69.jpg",
+      "bytes": 130666,
+      "sha256": "b4a120a7325f7ea3"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_7.jpg",
+      "bytes": 64621,
+      "sha256": "ce932824ecd77b1a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_70.jpg",
+      "bytes": 132683,
+      "sha256": "afca34269a70790e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_71.jpg",
+      "bytes": 131371,
+      "sha256": "bda573e0051c2f88"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_72.jpg",
+      "bytes": 134714,
+      "sha256": "1fa9d5b0e054cf2f"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_73.jpg",
+      "bytes": 134707,
+      "sha256": "73644c421b1b2050"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_74.jpg",
+      "bytes": 137386,
+      "sha256": "613351f3d43f61d2"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_75.jpg",
+      "bytes": 139127,
+      "sha256": "8355897583aa870c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_76.jpg",
+      "bytes": 145076,
+      "sha256": "77acac6fe6be4487"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_77.jpg",
+      "bytes": 140865,
+      "sha256": "e7f396707f487c9a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_78.jpg",
+      "bytes": 141203,
+      "sha256": "6fb61eb7a3230307"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_79.jpg",
+      "bytes": 140904,
+      "sha256": "c5b7a047af76ce4c"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_8.jpg",
+      "bytes": 66158,
+      "sha256": "5aee1a5f138132a8"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_80.jpg",
+      "bytes": 143347,
+      "sha256": "8aa1c249f2ed2b29"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_81.jpg",
+      "bytes": 140968,
+      "sha256": "398670630b378d74"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_82.jpg",
+      "bytes": 143381,
+      "sha256": "aa15e7199f4a4684"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_83.jpg",
+      "bytes": 144880,
+      "sha256": "d4aa848fd5f7c328"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_84.jpg",
+      "bytes": 149413,
+      "sha256": "efd1e21a5636ff18"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_85.jpg",
+      "bytes": 146542,
+      "sha256": "4d295f4fee24f936"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_86.jpg",
+      "bytes": 147123,
+      "sha256": "b7625d35a7a8e1b5"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_87.jpg",
+      "bytes": 145892,
+      "sha256": "d72e4373d54182ff"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_88.jpg",
+      "bytes": 149836,
+      "sha256": "15a00fb8a95c3d99"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_89.jpg",
+      "bytes": 149199,
+      "sha256": "a26eb1f7982fae42"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_9.jpg",
+      "bytes": 66158,
+      "sha256": "fd1a9aaad16b44ec"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_90.jpg",
+      "bytes": 151269,
+      "sha256": "70af2b1f9716d0de"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_91.jpg",
+      "bytes": 153086,
+      "sha256": "6318ef4b418d60b8"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_92.jpg",
+      "bytes": 157109,
+      "sha256": "4bee82e113aaac80"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_93.jpg",
+      "bytes": 156112,
+      "sha256": "9ea991e8d8e6f94b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_94.jpg",
+      "bytes": 154902,
+      "sha256": "9ccae5ba75333a9a"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_95.jpg",
+      "bytes": 153207,
+      "sha256": "1b33794e245a2050"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_96.jpg",
+      "bytes": 154940,
+      "sha256": "26781db8ddac748b"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_97.jpg",
+      "bytes": 153886,
+      "sha256": "7bf69e8cd74e4093"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_98.jpg",
+      "bytes": 156685,
+      "sha256": "ffc6bf262edf202e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/frames/CICD_99.jpg",
+      "bytes": 158180,
+      "sha256": "eb08a325449e4ab8"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/index.html",
+      "bytes": 14031,
+      "sha256": "0486d3ea3e25be2e"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/login.html",
+      "bytes": 2583,
+      "sha256": "52f4b3a3fa9c653f"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/organisation.js",
+      "bytes": 23788,
+      "sha256": "9c06a12ee0d92fa4"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/outpero-logo.jpg",
+      "bytes": 7579,
+      "sha256": "e034a2cf3b8de055"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/tinglish-home.css",
+      "bytes": 15136,
+      "sha256": "aae9471350e13769"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/tinglish-home.js",
+      "bytes": 6247,
+      "sha256": "76c42de1f90037ae"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty-dashboard.css",
+      "bytes": 76445,
+      "sha256": "e6885a91d5dc075d"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty-dashboard.js",
+      "bytes": 22533,
+      "sha256": "31562377fe9442a6"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty-login.css",
+      "bytes": 27204,
+      "sha256": "82e2c1fbbc6b82a2"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty-login.js",
+      "bytes": 3018,
+      "sha256": "108bd41c03258490"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty-organisation.css",
+      "bytes": 9559,
+      "sha256": "ee68509a06105dbd"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty.css",
+      "bytes": 9492,
+      "sha256": "bf467f8253693601"
+    },
+    {
+      "path": "frontend/tinglish-vk-realty/vk-realty.js",
+      "bytes": 13423,
+      "sha256": "76de647a529fd941"
+    },
+    {
+      "path": "frontend/vendor/chartjs/chart.umd.min.js",
+      "bytes": 208522,
+      "sha256": "48444a82d4edcb5b"
+    },
+    {
+      "path": "frontend/vendor/fonts/cy-grotesk-wide-light.ttf",
+      "bytes": 255076,
+      "sha256": "27fef3d46e721859"
+    },
+    {
+      "path": "frontend/vendor/fonts/cy-grotesk-wide-medium.ttf",
+      "bytes": 252720,
+      "sha256": "c1e00f98455a6bdc"
+    },
+    {
+      "path": "frontend/vendor/images/speaksy-brand-mark.png",
+      "bytes": 2475038,
+      "sha256": "a54ba25908552f52"
+    },
+    {
+      "path": "frontend/vendor/images/speaksy-logo-powered.png",
+      "bytes": 313030,
+      "sha256": "e9c8d50c0cc574e7"
+    },
+    {
+      "path": "frontend/vendor/images/speaksy-logo.png",
+      "bytes": 835288,
+      "sha256": "3a1ea631998540d2"
+    },
+    {
+      "path": "frontend/vendor/lucide/lucide.min.js",
+      "bytes": 358106,
+      "sha256": "5de4fffddc1b41ad"
+    },
+    {
+      "path": "frontend/vercel-ui.css",
+      "bytes": 69483,
+      "sha256": "bf5cf0062f4c795f"
+    },
+    {
+      "path": "frontend/whatsapp-chat.js",
+      "bytes": 13778,
+      "sha256": "b5a7236588f116d5"
+    },
+    {
+      "path": "frontend/whatsapp-connect.js",
+      "bytes": 8858,
+      "sha256": "a9ffa6c1cb7b425e"
+    },
+    {
+      "path": "frontend/whatsapp-numbers.js",
+      "bytes": 2928,
+      "sha256": "14d077ee670c36f4"
+    },
+    {
+      "path": "gemini_client_config.py",
+      "bytes": 709,
+      "sha256": "f43600aaa900f549"
+    },
+    {
+      "path": "gemini_context_cache.py",
+      "bytes": 2124,
+      "sha256": "4d2291488645cf29"
+    },
+    {
+      "path": "gemini_endpoint.py",
+      "bytes": 1579,
+      "sha256": "95fa7fef7cc58f0c"
+    },
+    {
+      "path": "gemini_llm.py",
+      "bytes": 7524,
+      "sha256": "dbc2bc7e400ab144"
+    },
+    {
+      "path": "gemini_tts.py",
+      "bytes": 27296,
+      "sha256": "dfc78e1c2e875500"
+    },
+    {
+      "path": "greeting_cache.py",
+      "bytes": 32783,
+      "sha256": "27f7a923dc970fba"
+    },
+    {
+      "path": "identity_shield.py",
+      "bytes": 28945,
+      "sha256": "69c8533dc82485db"
+    },
+    {
+      "path": "indic_sentence_tokenizer.py",
+      "bytes": 10374,
+      "sha256": "c6abe88c951a26ea"
+    },
+    {
+      "path": "intent_classifier.py",
+      "bytes": 4863,
+      "sha256": "7a2c8d73e7d99c5f"
+    },
+    {
+      "path": "interrupt_handler.py",
+      "bytes": 3219,
+      "sha256": "d255bb3e4c04f401"
+    },
+    {
+      "path": "iq_assembler.py",
+      "bytes": 9135,
+      "sha256": "cce0ec7c6f4b59ed"
+    },
+    {
+      "path": "iq_registry.py",
+      "bytes": 3668,
+      "sha256": "7638b6ae2b27b43f"
+    },
+    {
+      "path": "kb_compiler/__init__.py",
+      "bytes": 604,
+      "sha256": "f53788a25a4f4707"
+    },
+    {
+      "path": "kb_compiler/bake.py",
+      "bytes": 18023,
+      "sha256": "eb177437f83f7f39"
+    },
+    {
+      "path": "kb_compiler/critic.py",
+      "bytes": 2824,
+      "sha256": "60624a960b95ef27"
+    },
+    {
+      "path": "kb_compiler/ingest.py",
+      "bytes": 5209,
+      "sha256": "a787985d7d364046"
+    },
+    {
+      "path": "kb_compiler/llm.py",
+      "bytes": 6429,
+      "sha256": "67f147a9ff81f05b"
+    },
+    {
+      "path": "kb_compiler/pipeline.py",
+      "bytes": 8135,
+      "sha256": "6d9298451ab4cffd"
+    },
+    {
+      "path": "kb_compiler/repair.py",
+      "bytes": 11926,
+      "sha256": "f933b7335f241ce1"
+    },
+    {
+      "path": "kb_compiler/synthesize.py",
+      "bytes": 13059,
+      "sha256": "32a3f013c40f6443"
+    },
+    {
+      "path": "kb_compiler/validate.py",
+      "bytes": 6710,
+      "sha256": "71040bbc3a519f4f"
+    },
+    {
+      "path": "knowledge_data/company_knowledge.json",
+      "bytes": 6710,
+      "sha256": "305faf98bac1ea6f"
+    },
+    {
+      "path": "knowledge_pack.py",
+      "bytes": 28532,
+      "sha256": "7023278a1e20043a"
+    },
+    {
+      "path": "knowledge_system/__init__.py",
+      "bytes": 1286,
+      "sha256": "e735bb0770c5b181"
+    },
+    {
+      "path": "knowledge_system/confidence_scorer.py",
+      "bytes": 8227,
+      "sha256": "9fb5f21c9ba4cd00"
+    },
+    {
+      "path": "knowledge_system/embeddings.py",
+      "bytes": 7032,
+      "sha256": "6d5a0afcbb0d22c2"
+    },
+    {
+      "path": "knowledge_system/guardrails.py",
+      "bytes": 12132,
+      "sha256": "98833af549fd4fbb"
+    },
+    {
+      "path": "knowledge_system/intent_router.py",
+      "bytes": 11555,
+      "sha256": "46998a73a809a040"
+    },
+    {
+      "path": "knowledge_system/response_formatter.py",
+      "bytes": 12648,
+      "sha256": "bf0bc6973584f478"
+    },
+    {
+      "path": "knowledge_system/retrieval_engine.py",
+      "bytes": 12183,
+      "sha256": "dd78d3c7c8b98b64"
+    },
+    {
+      "path": "lang_presets_store.py",
+      "bytes": 18136,
+      "sha256": "bd3fe03001992ce9"
+    },
+    {
+      "path": "language_router.py",
+      "bytes": 26382,
+      "sha256": "d62858fccfe29599"
+    },
+    {
+      "path": "livekit_api_client.py",
+      "bytes": 2542,
+      "sha256": "3eb038552c16a063"
+    },
+    {
+      "path": "livekit_turn.py",
+      "bytes": 2429,
+      "sha256": "c65e1e8b90722e38"
+    },
+    {
+      "path": "llm_prewarm.py",
+      "bytes": 4702,
+      "sha256": "2c147ac8865c43d8"
+    },
+    {
+      "path": "llm_tiered_guard.py",
+      "bytes": 4078,
+      "sha256": "984669579bce4c02"
+    },
+    {
+      "path": "local_live_monitor.py",
+      "bytes": 6866,
+      "sha256": "620c166797ef1e12"
+    },
+    {
+      "path": "name_capture.py",
+      "bytes": 4718,
+      "sha256": "a022a330b8a12b16"
+    },
+    {
+      "path": "notify.py",
+      "bytes": 5726,
+      "sha256": "6f13c8a75ac49419"
+    },
+    {
+      "path": "org_portal.py",
+      "bytes": 2276,
+      "sha256": "3bac98ccd7f25705"
+    },
+    {
+      "path": "org_routes.py",
+      "bytes": 15817,
+      "sha256": "1cb13978723d2546"
+    },
+    {
+      "path": "org_store.py",
+      "bytes": 19334,
+      "sha256": "b1cce3aafd875afa"
+    },
+    {
+      "path": "partial_turn_tracker.py",
+      "bytes": 6916,
+      "sha256": "3b6285a7c88555d9"
+    },
+    {
+      "path": "phone_utils.py",
+      "bytes": 2466,
+      "sha256": "9b2cd78803f00a64"
+    },
+    {
+      "path": "platform_routes.py",
+      "bytes": 72704,
+      "sha256": "f41d95976c011297"
+    },
+    {
+      "path": "post_call_handler.py",
+      "bytes": 3442,
+      "sha256": "5f1d14cb13d58b6c"
+    },
+    {
+      "path": "preset_contract.py",
+      "bytes": 5654,
+      "sha256": "fe1a02910e0077e7"
+    },
+    {
+      "path": "prompt_compiler.py",
+      "bytes": 8687,
+      "sha256": "a7cfbe1fb6da0179"
+    },
+    {
+      "path": "re_voice_memory/__init__.py",
+      "bytes": 2349,
+      "sha256": "c1eeb372eb8ad62d"
+    },
+    {
+      "path": "re_voice_memory/caller_history.py",
+      "bytes": 7798,
+      "sha256": "ca6c272618cf9de6"
+    },
+    {
+      "path": "re_voice_memory/constants.py",
+      "bytes": 829,
+      "sha256": "03b8253896e6ac7e"
+    },
+    {
+      "path": "re_voice_memory/crm_sync.py",
+      "bytes": 8819,
+      "sha256": "d8b6b717b57fa11c"
+    },
+    {
+      "path": "re_voice_memory/dashboard.py",
+      "bytes": 5899,
+      "sha256": "c58e5149f66acb68"
+    },
+    {
+      "path": "re_voice_memory/dream.py",
+      "bytes": 6441,
+      "sha256": "8f7e45177c71ded2"
+    },
+    {
+      "path": "re_voice_memory/extract.py",
+      "bytes": 32934,
+      "sha256": "f1d1112bcfea33b7"
+    },
+    {
+      "path": "re_voice_memory/file_lock.py",
+      "bytes": 941,
+      "sha256": "a24c7b423e8fc6bd"
+    },
+    {
+      "path": "re_voice_memory/fs.py",
+      "bytes": 1569,
+      "sha256": "5dc9bb0f5c04cd20"
+    },
+    {
+      "path": "re_voice_memory/inject.py",
+      "bytes": 20295,
+      "sha256": "2e4051c795114c95"
+    },
+    {
+      "path": "re_voice_memory/intent_score.py",
+      "bytes": 6489,
+      "sha256": "d972f0c4062e8a67"
+    },
+    {
+      "path": "re_voice_memory/kv_store.py",
+      "bytes": 17108,
+      "sha256": "2bef86d763ea8c07"
+    },
+    {
+      "path": "re_voice_memory/lead.py",
+      "bytes": 9904,
+      "sha256": "abb5237c35634c5a"
+    },
+    {
+      "path": "re_voice_memory/memory_admin.py",
+      "bytes": 2641,
+      "sha256": "6c8c681092674553"
+    },
+    {
+      "path": "re_voice_memory/metrics.py",
+      "bytes": 5837,
+      "sha256": "313c3546af5699d8"
+    },
+    {
+      "path": "re_voice_memory/migrate.py",
+      "bytes": 5018,
+      "sha256": "82c0be555ec5ef21"
+    },
+    {
+      "path": "re_voice_memory/objection_log.py",
+      "bytes": 7308,
+      "sha256": "7c52ced0390d56d5"
+    },
+    {
+      "path": "re_voice_memory/property_graph.py",
+      "bytes": 7347,
+      "sha256": "6a5e308dbd50d706"
+    },
+    {
+      "path": "re_voice_memory/raw_md.py",
+      "bytes": 4786,
+      "sha256": "a01dd9f9116a324d"
+    },
+    {
+      "path": "re_voice_memory/twenty_crm.py",
+      "bytes": 18221,
+      "sha256": "b0833df8949d2a77"
+    },
+    {
+      "path": "recording.py",
+      "bytes": 5623,
+      "sha256": "91d6072c4c4b622c"
+    },
+    {
+      "path": "reply_cache.py",
+      "bytes": 2647,
+      "sha256": "77696c4cf572ff9d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 4696,
+      "sha256": "703dab58efb60af0"
+    },
+    {
+      "path": "restore_lang_settings.py",
+      "bytes": 1139,
+      "sha256": "d5fdd86e98274132"
+    },
+    {
+      "path": "sales_playbook.py",
+      "bytes": 24215,
+      "sha256": "c3d6a583a1b27e6a"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "scripts/benchmark_e2e_latency.py",
+      "bytes": 12203,
+      "sha256": "606f4bd84a3f8e60"
+    },
+    {
+      "path": "scripts/benchmark_turn_injection.py",
+      "bytes": 3440,
+      "sha256": "12e364c12323ebb9"
+    },
+    {
+      "path": "scripts/bootstrap_client.py",
+      "bytes": 2656,
+      "sha256": "312618fb61bc22d3"
+    },
+    {
+      "path": "scripts/calibrate_token_multipliers.py",
+      "bytes": 784,
+      "sha256": "f277e1d6f28ce102"
+    },
+    {
+      "path": "scripts/canary_rollout.sh",
+      "bytes": 875,
+      "sha256": "1746550cb2672bfc"
+    },
+    {
+      "path": "scripts/compile_client.py",
+      "bytes": 1803,
+      "sha256": "90d42cde56ef0c21"
+    },
+    {
+      "path": "scripts/compile_prompt.py",
+      "bytes": 1590,
+      "sha256": "85bba5e61b89778a"
+    },
+    {
+      "path": "scripts/create_tinglish_client.py",
+      "bytes": 9983,
+      "sha256": "26dc9a679e3e4509"
+    },
+    {
+      "path": "scripts/latency_regression_gate.py",
+      "bytes": 2267,
+      "sha256": "1ffd0e3fa70329af"
+    },
+    {
+      "path": "scripts/run_latency_pipeline_30s.py",
+      "bytes": 4460,
+      "sha256": "a948b26471199229"
+    },
+    {
+      "path": "scripts/run_preflight.py",
+      "bytes": 6260,
+      "sha256": "ad630d50983d0408"
+    },
+    {
+      "path": "scripts/ship_client.py",
+      "bytes": 1818,
+      "sha256": "f9291b3383c09617"
+    },
+    {
+      "path": "scripts/validate_iq_registry.py",
+      "bytes": 2350,
+      "sha256": "0c4914affb0391a9"
+    },
+    {
+      "path": "scripts/verify_setup.py",
+      "bytes": 6044,
+      "sha256": "b2d43d24769eddb5"
+    },
+    {
+      "path": "secondary_llm.py",
+      "bytes": 1775,
+      "sha256": "f3b0ac27ea09ac6c"
+    },
+    {
+      "path": "secrets_manager.py",
+      "bytes": 2231,
+      "sha256": "f625d30cc8658506"
+    },
+    {
+      "path": "send_whatsapp_media.py",
+      "bytes": 7686,
+      "sha256": "059b8a1bafff2d13"
+    },
+    {
+      "path": "setup_bidirectional_trunk.py",
+      "bytes": 18318,
+      "sha256": "e5dd83d115cf1877"
+    },
+    {
+      "path": "ship/__init__.py",
+      "bytes": 443,
+      "sha256": "52c2d245ce428e38"
+    },
+    {
+      "path": "ship/packager.py",
+      "bytes": 29062,
+      "sha256": "e78fb922f2985e64"
+    },
+    {
+      "path": "ship/prebake.py",
+      "bytes": 12429,
+      "sha256": "75e442acbaa0977d"
+    },
+    {
+      "path": "ship/secrets.py",
+      "bytes": 6198,
+      "sha256": "ba7fcb328b29484f"
+    },
+    {
+      "path": "silence_guard.py",
+      "bytes": 13840,
+      "sha256": "a4402dd952debe18"
+    },
+    {
+      "path": "site_visit_booking.py",
+      "bytes": 12032,
+      "sha256": "03a15812362d843a"
+    },
+    {
+      "path": "site_visit_intent.py",
+      "bytes": 7678,
+      "sha256": "9e6cf5c3deb73e5e"
+    },
+    {
+      "path": "speaker_profiler.py",
+      "bytes": 30011,
+      "sha256": "5828dcc970fad73f"
+    },
+    {
+      "path": "speculative_reply.py",
+      "bytes": 9264,
+      "sha256": "621041a7787f5e6b"
+    },
+    {
+      "path": "sql/README.md",
+      "bytes": 1119,
+      "sha256": "a0274eea78c9d0e0"
+    },
+    {
+      "path": "sql/supabase_fix_rls.sql",
+      "bytes": 7892,
+      "sha256": "cdad9888aa69de18"
+    },
+    {
+      "path": "sql/supabase_migration_lead_actions.sql",
+      "bytes": 515,
+      "sha256": "5355b42c95cb32cb"
+    },
+    {
+      "path": "sql/supabase_migration_v2.sql",
+      "bytes": 3635,
+      "sha256": "a2c69fb9464d19ac"
+    },
+    {
+      "path": "sql/supabase_migration_v3.sql",
+      "bytes": 3075,
+      "sha256": "df8783cbb2f47881"
+    },
+    {
+      "path": "sql/supabase_migration_v4_agents.sql",
+      "bytes": 17254,
+      "sha256": "0158b5ec9004d8ab"
+    },
+    {
+      "path": "sql/supabase_migration_v5_deepseek_summary.sql",
+      "bytes": 196,
+      "sha256": "c9c901ee8bb94ea2"
+    },
+    {
+      "path": "sql/supabase_migration_v6_orgs.sql",
+      "bytes": 2857,
+      "sha256": "04f1437b7b242c4d"
+    },
+    {
+      "path": "sql/supabase_migration_v7_whatsapp.sql",
+      "bytes": 4516,
+      "sha256": "2f291277603a137b"
+    },
+    {
+      "path": "sql/supabase_migration_v8_whatsapp_chat.sql",
+      "bytes": 4925,
+      "sha256": "d3021a28caab5610"
+    },
+    {
+      "path": "sql/supabase_migration_v9_turn_metrics.sql",
+      "bytes": 829,
+      "sha256": "df8ebe84aed64327"
+    },
+    {
+      "path": "sql/supabase_schema.sql",
+      "bytes": 57622,
+      "sha256": "f9b0def655ff2480"
+    },
+    {
+      "path": "sql/supabase_setup.sql",
+      "bytes": 2941,
+      "sha256": "901ab43d444be68c"
+    },
+    {
+      "path": "stt_audio.py",
+      "bytes": 3304,
+      "sha256": "65762845397a1874"
+    },
+    {
+      "path": "stt_context.py",
+      "bytes": 5298,
+      "sha256": "5803ddfdc7ee6338"
+    },
+    {
+      "path": "stt_provider.py",
+      "bytes": 7210,
+      "sha256": "2560bc053a0c311c"
+    },
+    {
+      "path": "stt_soniox.py",
+      "bytes": 16145,
+      "sha256": "472f3ea368d4b06f"
+    },
+    {
+      "path": "stt_stream.py",
+      "bytes": 5551,
+      "sha256": "740763a60f218d84"
+    },
+    {
+      "path": "supervisord.conf",
+      "bytes": 780,
+      "sha256": "ed47d7706e7d98a9"
+    },
+    {
+      "path": "system_control.py",
+      "bytes": 5305,
+      "sha256": "cffe0d319e06f307"
+    },
+    {
+      "path": "tenancy.py",
+      "bytes": 1836,
+      "sha256": "abc5839b10396e6c"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "tests/eval/golden_calls.json",
+      "bytes": 1625,
+      "sha256": "b9b1c27aa0ce83fe"
+    },
+    {
+      "path": "tests/eval/tinglish_50_utterances.json",
+      "bytes": 5245,
+      "sha256": "f4188d7e783dfcc0"
+    },
+    {
+      "path": "tests/preflight/__init__.py",
+      "bytes": 31,
+      "sha256": "0f77cb4d30afe3f2"
+    },
+    {
+      "path": "tests/preflight/test_dashboard_secrets.py",
+      "bytes": 1616,
+      "sha256": "00fc612c268ae9d0"
+    },
+    {
+      "path": "tests/preflight/test_engine_imports.py",
+      "bytes": 1026,
+      "sha256": "cfc6b25a4a93c3af"
+    },
+    {
+      "path": "tests/preflight/test_packager_unit.py",
+      "bytes": 1928,
+      "sha256": "c99027962c6930a6"
+    },
+    {
+      "path": "tests/preflight/test_production_config.py",
+      "bytes": 2241,
+      "sha256": "14f83a87cd0074f8"
+    },
+    {
+      "path": "tests/preflight/test_runtime_gates.py",
+      "bytes": 3728,
+      "sha256": "e9a41102380ac2b7"
+    },
+    {
+      "path": "tests/preflight/test_ship_e2e.py",
+      "bytes": 8645,
+      "sha256": "398ebbba586e0838"
+    },
+    {
+      "path": "tests/preflight/test_ship_safety.py",
+      "bytes": 3001,
+      "sha256": "20139604dd9048aa"
+    },
+    {
+      "path": "tests/preflight/test_template_hygiene.py",
+      "bytes": 3145,
+      "sha256": "159dfcfc280035be"
+    },
+    {
+      "path": "tests/test_caller_history.py",
+      "bytes": 2157,
+      "sha256": "4c48895c26793fec"
+    },
+    {
+      "path": "tests/test_conversation_health.py",
+      "bytes": 1202,
+      "sha256": "17441170ce482ef7"
+    },
+    {
+      "path": "tests/test_engine_complete.py",
+      "bytes": 4030,
+      "sha256": "3722ae45d619dee5"
+    },
+    {
+      "path": "tests/test_engine_foundation.py",
+      "bytes": 5711,
+      "sha256": "f3a53092080039c4"
+    },
+    {
+      "path": "tests/test_first_chunk_tokenizer.py",
+      "bytes": 682,
+      "sha256": "165239c73dc46487"
+    },
+    {
+      "path": "tests/test_golden_calls.py",
+      "bytes": 1053,
+      "sha256": "3195c378ccf1a9ee"
+    },
+    {
+      "path": "tests/test_iq_foundations.py",
+      "bytes": 5938,
+      "sha256": "81e54de41264f25a"
+    },
+    {
+      "path": "tests/test_iq_prompt_primitives.py",
+      "bytes": 11366,
+      "sha256": "a6cf6201292a2d7c"
+    },
+    {
+      "path": "tests/test_kb_compiler.py",
+      "bytes": 13761,
+      "sha256": "9ad1efe67b8c76ec"
+    },
+    {
+      "path": "tests/test_knowledge_pack_aliases.py",
+      "bytes": 1426,
+      "sha256": "0279cbeb18cff0d1"
+    },
+    {
+      "path": "tests/test_latency_pipeline_30s.py",
+      "bytes": 6962,
+      "sha256": "e1fe959e060f3c8e"
+    },
+    {
+      "path": "tests/test_llm_tiered_guard.py",
+      "bytes": 1764,
+      "sha256": "fe8db57721f349a7"
+    },
+    {
+      "path": "tests/test_p2_latency.py",
+      "bytes": 3769,
+      "sha256": "7ca1d8beea28386d"
+    },
+    {
+      "path": "tests/test_partial_turn_tracker.py",
+      "bytes": 853,
+      "sha256": "ee46881a64d2779a"
+    },
+    {
+      "path": "tests/test_phase2_latency.py",
+      "bytes": 2010,
+      "sha256": "f4efb6552f813a02"
+    },
+    {
+      "path": "tests/test_preset_contract.py",
+      "bytes": 1624,
+      "sha256": "96202337dd968c2d"
+    },
+    {
+      "path": "tests/test_redis_retrieval.py",
+      "bytes": 6726,
+      "sha256": "3fe6059c43e076d0"
+    },
+    {
+      "path": "tests/test_reply_cache.py",
+      "bytes": 1235,
+      "sha256": "276e24752e379f03"
+    },
+    {
+      "path": "tests/test_speaker_profiler.py",
+      "bytes": 4325,
+      "sha256": "8ecc26b70f826564"
+    },
+    {
+      "path": "tests/test_stt_adaptive.py",
+      "bytes": 1001,
+      "sha256": "97475d91cdf97f6b"
+    },
+    {
+      "path": "tests/test_tinglish_eval_suite.py",
+      "bytes": 1508,
+      "sha256": "28668483e4eabeb8"
+    },
+    {
+      "path": "tests/test_token_counter.py",
+      "bytes": 2143,
+      "sha256": "6d83067d5b876496"
+    },
+    {
+      "path": "tests/test_tts_normalizer.py",
+      "bytes": 2238,
+      "sha256": "dc8ab3480f1903c0"
+    },
+    {
+      "path": "tests/test_tts_normalizer_golden.py",
+      "bytes": 1762,
+      "sha256": "5a991c328363d5c7"
+    },
+    {
+      "path": "tests/test_turn_context_injection.py",
+      "bytes": 5448,
+      "sha256": "2890d732274f60e1"
+    },
+    {
+      "path": "tests/test_whatsapp_chat.py",
+      "bytes": 601,
+      "sha256": "d8b765be355c0f7f"
+    },
+    {
+      "path": "tests/test_whatsapp_routes.py",
+      "bytes": 658,
+      "sha256": "030ee4c3182bf9bd"
+    },
+    {
+      "path": "token_counter.py",
+      "bytes": 5129,
+      "sha256": "842d0b913d5af756"
+    },
+    {
+      "path": "tool_stage_registry.py",
+      "bytes": 3320,
+      "sha256": "a6bb180c513420fb"
+    },
+    {
+      "path": "tts_normalizer.py",
+      "bytes": 3771,
+      "sha256": "e97742c72ff825e8"
+    },
+    {
+      "path": "tts_provider.py",
+      "bytes": 6926,
+      "sha256": "6ac266cd4ef6060a"
+    },
+    {
+      "path": "tts_stream.py",
+      "bytes": 10863,
+      "sha256": "27eba3a6d656103d"
+    },
+    {
+      "path": "tts_text_transform.py",
+      "bytes": 9790,
+      "sha256": "810424568d28cb54"
+    },
+    {
+      "path": "turn_context_injection.py",
+      "bytes": 20306,
+      "sha256": "7d4e05e52adc6249"
+    },
+    {
+      "path": "turn_latency.py",
+      "bytes": 6882,
+      "sha256": "c5f857101638d1cc"
+    },
+    {
+      "path": "twilio_template.py",
+      "bytes": 513,
+      "sha256": "202bbb721373a576"
+    },
+    {
+      "path": "ui_server.py",
+      "bytes": 182301,
+      "sha256": "4896af49aa44f9bc"
+    },
+    {
+      "path": "utils.py",
+      "bytes": 2130,
+      "sha256": "145242db1ca75714"
+    },
+    {
+      "path": "voice_humanizer.py",
+      "bytes": 4180,
+      "sha256": "198d1ef82b975957"
+    },
+    {
+      "path": "whatsapp_chat_routes.py",
+      "bytes": 8398,
+      "sha256": "a3e70da8ee7ff9c3"
+    },
+    {
+      "path": "whatsapp_db.py",
+      "bytes": 9639,
+      "sha256": "caf8050358aea5ba"
+    },
+    {
+      "path": "whatsapp_events.py",
+      "bytes": 1156,
+      "sha256": "254b0ac2c1886eea"
+    },
+    {
+      "path": "whatsapp_reply_engine.py",
+      "bytes": 5796,
+      "sha256": "d0ce45df23041814"
+    },
+    {
+      "path": "whatsapp_routes.py",
+      "bytes": 4757,
+      "sha256": "ca71fba0705e3842"
+    },
+    {
+      "path": "worker_pool.py",
+      "bytes": 1759,
+      "sha256": "98fb7cfd4f525ac2"
+    },
+    {
+      "path": "worker_prewarm.py",
+      "bytes": 8324,
+      "sha256": "25e9d3de57cc3b74"
+    }
+  ]
+}

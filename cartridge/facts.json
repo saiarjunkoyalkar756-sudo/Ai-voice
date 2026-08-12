@@ -1,0 +1,127 @@
+[
+  {
+    "claim": "The request ID for the campaign is REQ-2026-000052.",
+    "value": "REQ-2026-000052",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#0]"
+  },
+  {
+    "claim": "The contact person for THECYBERHOST is Asif.",
+    "value": "Asif",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#0]"
+  },
+  {
+    "claim": "The contact email for THECYBERHOST is lava232104@gmail.com.",
+    "value": "lava232104@gmail.com",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#0]"
+  },
+  {
+    "claim": "The contact phone number is 9773974383.",
+    "value": "9773974383",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#0]"
+  },
+  {
+    "claim": "The industry of the company is Education.",
+    "value": "Education",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#0]"
+  },
+  {
+    "claim": "The job title of the contact person is CTO.",
+    "value": "CTO",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The website URL of THECYBERHOST is https://thecyberhostacademy.com/.",
+    "value": "https://thecyberhostacademy.com/",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The company size of THECYBERHOST is 1-10.",
+    "value": "1-10",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "THECYBERHOST offers cybersecurity training courses including VAPT, Cybersecurity Specialist Program (CSP), and SOC Analyst training.",
+    "value": "VAPT, CSP, SOC Analyst",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "THECYBERHOST's primary operating country is India.",
+    "value": "IN",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The operating timezone for THECYBERHOST is UTC+05:30.",
+    "value": "UTC+05:30",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The campaign duration is ongoing.",
+    "value": "Ongoing",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The expected call volume for the campaign is less than 100 calls per day.",
+    "value": "< 100 calls/day",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The campaign direction is outbound.",
+    "value": "Outbound",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "Leads for the campaign are generated from Meta ads.",
+    "value": "Meta ads",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The lead sources are Website Form and Social Media.",
+    "value": "Website Form, Social Media",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The target customer segment is B2C.",
+    "value": "B2C",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The audience languages are English and Hindi.",
+    "value": "en, hi",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The preferred voice tone for the agent is Friendly.",
+    "value": "Friendly",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The preferred voice gender is Male.",
+    "value": "Male",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The preferred speaking pace is Normal.",
+    "value": "Normal",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The preferred accent is Indian.",
+    "value": "Indian",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#1]"
+  },
+  {
+    "claim": "The current solution for handling leads is a sales team.",
+    "value": "Sales team",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#3]"
+  },
+  {
+    "claim": "THECYBERHOST has an existing script for calls.",
+    "value": "Yes",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#3]"
+  },
+  {
+    "claim": "The expected transformation timeline is immediate.",
+    "value": "Immediate",
+    "source_ref": "[REQ-2026-000052 - THECYBERHOST.md#3]"
+  }
+]

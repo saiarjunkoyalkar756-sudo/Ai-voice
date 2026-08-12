@@ -1,0 +1,59 @@
+{
+  "$schema": "preset_contract_v1",
+  "description": "Preset-agnostic engine contract — one JSON per language preset.",
+  "reply_variants_ref": "data/preset_reply_variants.json",
+  "latency_baseline_pattern": "data/latency_baselines/{preset_id}_p2_baseline.json",
+  "presets": {
+    "tinglish": {
+      "id": "tinglish",
+      "knowledge_pack_id": "tinglish",
+      "languages": ["te", "en-in"],
+      "default_language": "te",
+      "tts_voice": "4b732050-eaed-49f0-ae76-a6281a20e303",
+      "tts_language": "te-IN",
+      "directive_ref": "lang_presets_store.TINGLISH_DIRECTIVE",
+      "interrupt_pool": ["avunu andi", "sare andi", "sare garu", "hmm cheppandi"],
+      "backchannel_pool": ["avunu andi", "sare", "hmm"],
+      "idle_lines": {
+        "prompt": "Hello andi, vinipisthundaa?",
+        "last": "Parledu andi, time unte malli call cheyyandi. Thank you!"
+      },
+      "stt_hints": ["te", "en"],
+      "first_line": "Hello andi! Nenu Arjun, VK Realty nundi matladutunnanu. Meeku property search lo ela help cheyyalo cheppandi?"
+    },
+    "english": {
+      "id": "english",
+      "knowledge_pack_id": "english",
+      "languages": ["en-in"],
+      "default_language": "en-in",
+      "tts_voice": "3f2297f1-cac9-4942-b0bd-5d9bb3c35946",
+      "tts_language": "en-IN",
+      "directive_ref": "lang_presets_store.ENGLISH_DIRECTIVE",
+      "interrupt_pool": ["okay", "sure", "right"],
+      "backchannel_pool": ["mm-hmm", "okay", "right"],
+      "idle_lines": {
+        "prompt": "Are you still there?",
+        "last": "Please call back anytime. Goodbye!"
+      },
+      "stt_hints": ["en"],
+      "first_line": "Hello! This is Arjun from VK Realty. How can I help with your property search today?"
+    },
+    "hme": {
+      "id": "hme",
+      "knowledge_pack_id": "hte",
+      "languages": ["hi", "en-in", "mr"],
+      "default_language": "hi",
+      "tts_voice": "3f2297f1-cac9-4942-b0bd-5d9bb3c35946",
+      "tts_language": "hi-IN",
+      "directive_ref": "lang_presets_store.HME_DIRECTIVE",
+      "interrupt_pool": ["जी", "haan"],
+      "backchannel_pool": ["haan ji", "ji", "accha"],
+      "idle_lines": {
+        "prompt": "Hello, sun pa rahe hain?",
+        "last": "Koi baat nahi, jab time ho to dubara call kar lena. Thank you!"
+      },
+      "stt_hints": ["hi", "mr", "en"],
+      "first_line": "नमस्ते! मैं अर्जुन बोल रहा हूँ, VK Realty से। आपकी property search में मैं कैसे मदद कर सकता हूँ?"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "micro_markets": [],
+  "competitors": [],
+  "objection_scripts": {
+    "price_too_high": "Haan sir, par THECYBERHOST mein hum real lab environments aur browser-accessible practice labs dete hain. Yeh hands-on training aapke career ke liye best hai, na?",
+    "need_to_think": "Bilkul sir, aap time lijiye. Toh jab aap ready hon, THECYBERHOST ke live online batches aur cohort-based courses aapke liye available hain.",
+    "other_builder_cheaper": "Sir, THECYBERHOST mein aapko VAPT aur SOC Analyst training ke saath real lab environments milte hain. Yeh practical experience baakiyon se kaafi alag hai, na?",
+    "location_far": "Sir, location ka toh koi issue hi nahi hai kyunki THECYBERHOST live online batches conduct karta hai. Aap kahin se bhi browser-accessible practice labs access kar sakte hain.",
+    "will_wait_for_rates_to_fall": "Haan sir, par THECYBERHOST ke cohort-based courses mein immediate practical learning milti hai. Abhi start karna aapke career ke liye better rahega, na?",
+    "not_ready_to_move": "Koi baat nahi sir, aap aaram se decide kijiye. THECYBERHOST ke Cybersecurity Specialist Program aur live online batches hamesha aapke liye open hain."
+  },
+  "objection_stories": {
+    "price_too_high": "Sir, THECYBERHOST mein humara focus hands-on training par hai. Humare VAPT aur SOC Analyst training ke real lab environments aapko actual practical knowledge dete hain.",
+    "need_to_think": "Bilkul sir, take your time. THECYBERHOST ke cohort-based courses aur browser-accessible practice labs aapko real-world experience dene ke liye design kiye gaye hain.",
+    "other_builder_cheaper": "Sir, THECYBERHOST ki quality humare live online batches aur real lab environments mein dikhti hai. Yeh hands-on approach aapko best value provide karta hai.",
+    "location_far": "Sir, THECYBERHOST completely online operate karta hai. Aap apne ghar se hi live online batches aur browser-accessible practice labs easily access kar sakte hain.",
+    "will_wait_for_rates_to_fall": "Sir, THECYBERHOST ke courses jaise Cybersecurity Specialist Program immediate skill development ke liye hain. Jaldi start karne se aapko hands-on experience jaldi milega.",
+    "not_ready_to_move": "Bilkul sir, jab aap ready hon tabhi enroll karein. THECYBERHOST hamesha live online batches aur real lab environments ke saath aapki learning ke liye available hai."
+  },
+  "preset": "hte"
+}

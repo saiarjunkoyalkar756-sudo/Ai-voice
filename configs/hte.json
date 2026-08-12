@@ -1,0 +1,266 @@
+{
+  "agent_name": "arjun",
+  "agent_purpose": "ecommerce",
+  "agent_instructions": "You are Arjun, the front desk agent at THECYBERHOST. Your primary goal is outbound lead qualification, appointment setting, and information verification for leads generated from Meta ads, website forms, and social media. You represent THECYBERHOST, a cybersecurity training institute offering hands-on, cohort-based courses. You sell training programs including VAPT (Vulnerability Assessment & Penetration Testing), the Cybersecurity Specialist Program (CSP), and SOC Analyst training, which feature live online batches and browser-accessible practice labs. Your speaking style is warm, phone-natural Spoken Hinglish. Use Hindi connectors (like haan, bilkul, na, toh) while strictly using English for all product terms, numbers, and place names. Never use Telugu. Example phrases: 'Haan bilkul, our Cybersecurity Specialist Program has live online batches, toh kya aap enroll karna chahenge?' and 'Toh, are you looking for SOC Analyst training na?' CRITICAL RULES: You must keep every single response strictly between 1 to 2 sentences. You must always end every reply with a relevant question to engage the prospect. Never invent any details, prices, or numbers not provided in your facts.",
+  "first_line": "Hello, main Arjun baat kar raha hoon THECYBERHOST se, toh kya aap cybersecurity training ke liye interested hain?",
+  "language": "te",
+  "languages": [
+    "te",
+    "en-in"
+  ],
+  "lang_preset": "hte",
+  "tts_provider": "cartesia",
+  "cartesia_tts_model": "sonic-3.5",
+  "gemini_tts_model": "gemini-3.1-flash-tts-preview",
+  "stt_provider": "soniox",
+  "stt_model": "stt-rt-v5",
+  "stt_language": "unknown",
+  "llm_provider": "gemini",
+  "gemini_model": "gemini-2.5-flash-lite",
+  "llm_max_completion_tokens": 200,
+  "llm_temperature": 0.7,
+  "max_turns": 40,
+  "max_call_duration_seconds": 400,
+  "tts_voice": "6cb25f72-380e-4d76-acc4-75d95df97ee9",
+  "tts_voice_display": "Nivas Telugu/EN",
+  "tts_voice_tab": "recommended",
+  "tts_language": "te-IN",
+  "tts_hard_word_cap": 0,
+  "stt_min_endpointing_delay": 0.2,
+  "stt_max_endpointing_delay": 0.2,
+  "stt_silence_timeout_ms": 200,
+  "stt_max_endpoint_delay_ms": 200,
+  "stt_adaptive_endpoint_enabled": true,
+  "stt_endpoint_sensitivity": 0.5,
+  "stt_enable_language_identification": true,
+  "stt_enable_endpoint_detection": true,
+  "timezone": "Asia/Kolkata",
+  "call_ending": {
+    "max_duration_sec": 1800,
+    "enabled": true,
+    "end_phrases": [
+      "goodbye",
+      "bye bye",
+      "bye"
+    ],
+    "message": "Thank you andi! VK Realty tho matladinanduku. Site visit fix ayyaka malli matladukundam. Goodbye!"
+  },
+  "user_idle": {
+    "threshold_sec": 30,
+    "max_prompts": 1,
+    "prompt_message": "Hello andi, vinipisthundaa?",
+    "end_after_max": false,
+    "last_message": "Parledu andi, time unte malli call cheyyandi. Thank you!"
+  },
+  "silence_guard_enabled": false,
+  "filler_phrases_enabled": false,
+  "filler_ttft_gate_ms": 700,
+  "llm_tiered_retry_ms": 1500,
+  "llm_tiered_hard_cap_ms": 3000,
+  "llm_circuit_sla_ms": 3000,
+  "backchannel_enabled": true,
+  "llm_context_prewarm": true,
+  "system_prompt_token_budget": 1000,
+  "stable_prefix_cache_enabled": true,
+  "stage_tool_filter_enabled": true,
+  "speculative_partial_enabled": true,
+  "speculative_partial_stable_ms": 250,
+  "speculative_partial_match_threshold": 0.9,
+  "first_tts_chunk_fast_path": true,
+  "tts_aggressive_chunking_enabled": true,
+  "speculative_reply_enabled": true,
+  "speculative_reply_min_speech_ms": 2000,
+  "parallel_turn_injectors_enabled": true,
+  "allow_interruptions": true,
+  "min_interruption_duration": 0.35,
+  "min_interruption_words": 2,
+  "noise_reduction": true,
+  "livekit_url": "wss://YOUR_PROJECT.livekit.cloud",
+  "livekit_api_key": "",
+  "livekit_api_secret": "",
+  "supabase_url": "https://YOUR_PROJECT.supabase.co",
+  "supabase_key": "",
+  "sarvam_api_key": "",
+  "gemini_api_key": "",
+  "llm_model": "gemini-2.5-flash-lite",
+  "groq_model": "",
+  "llm_startup_probe": false,
+  "tone_preset": "professional",
+  "campaign_id": "",
+  "welcome_dynamic": true,
+  "welcome_interruptable": true,
+  "llm_streaming": true,
+  "ambient_sound": {
+    "enabled": true,
+    "sound_type": "cicd_1",
+    "volume": 0.14,
+    "file_path": ""
+  },
+  "advanced_settings": {
+    "noise_cancellation": true,
+    "listening_speech_confidence": 0.5,
+    "listening_start_ms": 200,
+    "listening_min_ms": 300,
+    "bot_speech_confidence": 0.5,
+    "bot_start_ms": 200,
+    "bot_min_ms": 350
+  },
+  "conversational_flow_sections": [
+    {
+      "id": "identity",
+      "title": "Identity & Purpose",
+      "content": "",
+      "enabled": true
+    },
+    {
+      "id": "facts",
+      "title": "Facts",
+      "content": "",
+      "enabled": true
+    },
+    {
+      "id": "actions",
+      "title": "Actions & Limits",
+      "content": "",
+      "enabled": true
+    }
+  ],
+  "assistant_settings": {
+    "assistant_id": "main",
+    "name": "inbound-voice-demo",
+    "languages": [
+      "te",
+      "en-in"
+    ],
+    "voice": {
+      "tab": "recommended",
+      "provider": "cartesia",
+      "voice_id": "6cb25f72-380e-4d76-acc4-75d95df97ee9",
+      "display_name": "Cartesia custom voice"
+    },
+    "llm": {
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "temperature": 0.7,
+      "streaming": true,
+      "max_completion_tokens": 200
+    },
+    "stt": {
+      "provider": "soniox",
+      "model": "stt-rt-v5",
+      "language": "unknown",
+      "silence_timeout_ms": 200,
+      "noise_reduction": true,
+      "min_endpointing_delay": 0.2,
+      "max_endpointing_delay": 0.2,
+      "max_endpoint_delay_ms": 200,
+      "endpoint_sensitivity": 0.5,
+      "enable_language_identification": true,
+      "enable_endpoint_detection": true
+    },
+    "advanced": {
+      "speaking_interruption_allowed": true,
+      "speculative_reply_enabled": true,
+      "speculative_reply_min_speech_ms": 2000,
+      "parallel_turn_injectors_enabled": true,
+      "listening": {
+        "speech_detection_confidence": 0.5,
+        "user_speech_start_duration_ms": 200,
+        "minimum_user_speech_duration_ms": 300
+      },
+      "bot_speaking": {
+        "minimum_words_to_interrupt": 2,
+        "speech_detection_confidence": 0.5,
+        "user_speech_start_duration_ms": 200,
+        "minimum_user_speech_duration_ms": 350
+      }
+    },
+    "ambient_sound": {
+      "enabled": true,
+      "sound_type": "cicd_1",
+      "volume": 0.14,
+      "file_path": ""
+    },
+    "welcome": {
+      "message": "Hello andi! Nenu Arjun, VK Realty nundi matladutunnanu. Meeku property search lo ela help cheyyalo cheppandi?",
+      "dynamic": true,
+      "interruptable": true,
+      "max_chars": 600
+    },
+    "flow": {
+      "identity_purpose": {
+        "id": "identity",
+        "title": "Identity & Purpose",
+        "content": "",
+        "enabled": true
+      },
+      "facts": {
+        "id": "facts",
+        "title": "Facts",
+        "content": "",
+        "enabled": true
+      },
+      "actions_limits": {
+        "id": "actions",
+        "title": "Actions & Limits",
+        "content": "",
+        "enabled": true
+      }
+    },
+    "system_prompt": "You are Arjun, a Senior Real Estate Consultant at VK Realty, specializing in premium and mid-segment residential properties in Hyderabad — Kokapet, Financial District, Neopolis, Narsingi, and Gachibowli.\n\nYou are warm, confident, and human-like. Speak natural SPOKEN Telugish (Telugu + English) — match the caller. Never pure literary Telugu, Hindi, Tamil, or Marathi.\n- Telugish: Telugu connectors (andi, garu, avunu, sare) + English for numbers (1.2 Cr, 3 BHK), budgets, site visit, EMI, parking, place names (Kokapet, Gachibowli), and property terms.\n- English-only caller → clear Indian English with the same English property terms.\n- Sound like a real phone consultant, not a textbook or news bulletin.\nKeep responses short, natural, and conversational (1–2 sentences).",
+    "max_turns": 40,
+    "max_call_duration_seconds": 400
+  },
+  "cartesia_api_key": "",
+  "conversational_iq_v2_enabled": true,
+  "remember_caller_enabled": true,
+  "whatsapp_provider": "baileys",
+  "stt_hints": [
+    "THECYBERHOST",
+    "Arjun",
+    "Asif",
+    "VAPT",
+    "Vulnerability Assessment",
+    "Penetration Testing",
+    "Cybersecurity Specialist Program",
+    "CSP",
+    "SOC Analyst",
+    "Meta ads",
+    "cohort-based"
+  ],
+  "iq_disabled_primitives": [],
+  "speaker_profiling": {
+    "enabled": false,
+    "window_s": 6.0,
+    "deadline_s": 7.0,
+    "age_conf_min": 0.6,
+    "gender_provider_prior": 0.8,
+    "silence_rms_floor": 350,
+    "inworld_model_id": "inworld/inworld-stt-1",
+    "inworld_top_n": 3,
+    "smallest_model": "pulse",
+    "language": "en",
+    "inject_into_llm": true,
+    "store_in_analytics": true,
+    "emotion_detection": true
+  },
+  "company_name": "THECYBERHOST",
+  "client_id": "sp-67223",
+  "ship_meta": {
+    "client_id": "sp-67223",
+    "shipped_at": "2026-07-10T17:47:17.572740+00:00",
+    "compiler_version": "1.0.0",
+    "pack_id": "hte",
+    "approved": true,
+    "secrets_via": "env_or_dashboard",
+    "full_production": true,
+    "includes_prewarm": true,
+    "bootstrap": "python3 scripts/bootstrap_client.py",
+    "prebake": {
+      "ok": true,
+      "pcm_count": 49,
+      "provider": "cartesia",
+      "error": null
+    }
+  }
+}

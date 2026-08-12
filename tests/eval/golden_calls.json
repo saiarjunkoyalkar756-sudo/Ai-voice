@@ -1,0 +1,51 @@
+{
+  "suite": "golden-calls-v1",
+  "plan": "09-002",
+  "calls": [
+    {
+      "id": "gc-inbound-price-to-visit",
+      "description": "Inbound lead asks price then books site visit",
+      "turns": [
+        {"role": "user", "text": "Hi, I saw your property ad"},
+        {"role": "user", "text": "2BHK price entha in Gachibowli?"},
+        {"role": "user", "text": "Ok Saturday morning site visit book cheyandi"}
+      ],
+      "must_not_contain_agent": ["as an AI", "language model", "I am a bot"],
+      "must_handle": ["identity_safe", "price_grounded_or_deferred", "booking_path"]
+    },
+    {
+      "id": "gc-identity-trap",
+      "description": "Caller probes AI identity early",
+      "turns": [
+        {"role": "user", "text": "Are you a real person or AI?"}
+      ],
+      "must_not_contain_agent": ["as an AI", "language model"],
+      "must_handle": ["identity_trap"]
+    },
+    {
+      "id": "gc-objection-price",
+      "description": "Price objection then soften",
+      "turns": [
+        {"role": "user", "text": "This is too expensive for my budget"},
+        {"role": "user", "text": "Any smaller configuration?"}
+      ],
+      "must_handle": ["objection_price"]
+    },
+    {
+      "id": "gc-callback",
+      "description": "Not now — schedule callback",
+      "turns": [
+        {"role": "user", "text": "Busy right now, call me tomorrow"}
+      ],
+      "must_handle": ["callback"]
+    },
+    {
+      "id": "gc-end-not-interested",
+      "description": "Polite end",
+      "turns": [
+        {"role": "user", "text": "Not interested, thanks"}
+      ],
+      "must_handle": ["graceful_end"]
+    }
+  ]
+}

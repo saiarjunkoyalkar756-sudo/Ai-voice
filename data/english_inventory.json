@@ -1,0 +1,50 @@
+{
+  "properties": [
+    {
+      "listing_id": "vapt",
+      "name": "VAPT",
+      "builder": "Cyberhost",
+      "location": "India",
+      "micro_market": "",
+      "configurations": [],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [],
+      "usp": "Cybersecurity training course offered by Cyberhost",
+      "units_left": null,
+      "offer_expiry": null
+    },
+    {
+      "listing_id": "cybersecurity_specialist_program_csp",
+      "name": "Cybersecurity Specialist Program (CSP)",
+      "builder": "Cyberhost",
+      "location": "India",
+      "micro_market": "",
+      "configurations": [],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [],
+      "usp": "Cybersecurity training course offered by Cyberhost",
+      "units_left": null,
+      "offer_expiry": null
+    },
+    {
+      "listing_id": "soc_analyst_training",
+      "name": "SOC Analyst training",
+      "builder": "Cyberhost",
+      "location": "India",
+      "micro_market": "",
+      "configurations": [],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [],
+      "usp": "Cybersecurity training course offered by Cyberhost",
+      "units_left": null,
+      "offer_expiry": null
+    }
+  ],
+  "preset": "english"
+}

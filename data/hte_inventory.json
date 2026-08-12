@@ -1,0 +1,71 @@
+{
+  "properties": [
+    {
+      "listing_id": "vapt_course",
+      "name": "VAPT (Vulnerability Assessment & Penetration Testing)",
+      "builder": "THECYBERHOST",
+      "location": "India (IN)",
+      "micro_market": "",
+      "configurations": [
+        "live online batches"
+      ],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [
+        "hands-on courses",
+        "cohort-based courses",
+        "real lab environments",
+        "browser-accessible practice labs"
+      ],
+      "usp": "Features browser-accessible practice labs and real lab environments",
+      "units_left": null,
+      "offer_expiry": null
+    },
+    {
+      "listing_id": "cybersecurity_specialist_program",
+      "name": "Cybersecurity Specialist Program (CSP)",
+      "builder": "THECYBERHOST",
+      "location": "India (IN)",
+      "micro_market": "",
+      "configurations": [
+        "live online batches"
+      ],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [
+        "hands-on courses",
+        "cohort-based courses",
+        "real lab environments",
+        "browser-accessible practice labs"
+      ],
+      "usp": "Features browser-accessible practice labs and real lab environments",
+      "units_left": null,
+      "offer_expiry": null
+    },
+    {
+      "listing_id": "soc_analyst_training",
+      "name": "SOC Analyst training",
+      "builder": "THECYBERHOST",
+      "location": "India (IN)",
+      "micro_market": "",
+      "configurations": [
+        "live online batches"
+      ],
+      "price_range": "",
+      "possession": "",
+      "rera_id": "",
+      "amenities": [
+        "hands-on courses",
+        "cohort-based courses",
+        "real lab environments",
+        "browser-accessible practice labs"
+      ],
+      "usp": "Features browser-accessible practice labs and real lab environments",
+      "units_left": null,
+      "offer_expiry": null
+    }
+  ],
+  "preset": "hte"
+}

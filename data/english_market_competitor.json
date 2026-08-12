@@ -1,0 +1,21 @@
+{
+  "micro_markets": [],
+  "competitors": [],
+  "objection_scripts": {
+    "price_too_high": "I completely understand your concern about the fees, but investing in Cyberhost is an investment in your career. Our VAPT and SOC Analyst training programs are designed to give you immediate, practical skills.",
+    "need_to_think": "Please take your time to think it over, as choosing the right cybersecurity path is important. Whenever you are ready, Cyberhost will be here to help you start your Cybersecurity Specialist Program.",
+    "other_builder_cheaper": "While other institutes might offer lower fees, Cyberhost focuses strictly on specialized training like our Cybersecurity Specialist Program. We ensure you get the quality education needed for an immediate career transformation.",
+    "location_far": "Since our leads come directly through our website and social media, you can access Cyberhost's training without worrying about any commute. We bring our VAPT and SOC Analyst expertise directly to you anywhere in India.",
+    "will_wait_for_rates_to_fall": "Waiting might delay your career progression in the fast-growing cybersecurity field. By starting your training with Cyberhost now, you can gain immediate skills in VAPT and SOC Analysis.",
+    "not_ready_to_move": "That is perfectly fine; you can begin your training whenever you feel ready. Cyberhost will be happy to welcome you to our Cybersecurity Specialist Program when the time is right for you."
+  },
+  "objection_stories": {
+    "price_too_high": "Rest assured, many students who joined Cyberhost found great value in our SOC Analyst and VAPT training. We focus on delivering an immediate transformation for your career rather than just a basic course.",
+    "need_to_think": "We have had many professionals take their time before joining Cyberhost. Once they enrolled in our Cybersecurity Specialist Program, they truly appreciated the immediate focus on practical skills.",
+    "other_builder_cheaper": "Many of our current learners at Cyberhost also explored other options first. They ultimately chose us for our dedicated focus on VAPT and SOC Analyst training.",
+    "location_far": "Distance is never a barrier for our learners at Cyberhost. Because we connect with students across India through our website, you get seamless access to our cybersecurity courses from your own space.",
+    "will_wait_for_rates_to_fall": "We often hear this, but students who started their journey with Cyberhost immediately are already building their cybersecurity skills. Delaying might just delay your entry into the SOC Analyst field.",
+    "not_ready_to_move": "There is absolutely no rush, as many students at Cyberhost wait until they are fully prepared to commit. When you are ready, our Cybersecurity Specialist Program will be here for you."
+  },
+  "preset": "english"
+}

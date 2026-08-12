@@ -1,0 +1,208 @@
+{
+  "faq": [
+    {
+      "id": "company_industry_overview",
+      "category": "company",
+      "questions": [
+        "What does your company do?",
+        "What is Cyberhost?",
+        "Cyberhost kya hai?",
+        "What services do you offer?",
+        "Tell me about your company",
+        "Kya sikhate ho aap?",
+        "What kind of education do you provide?",
+        "Are you an education company?",
+        "What is the business of Cyberhost?"
+      ],
+      "answer": "We at Cyberhost are an education company based in India. We provide specialized cybersecurity training courses."
+    },
+    {
+      "id": "courses_offered",
+      "category": "product",
+      "questions": [
+        "Which courses do you offer?",
+        "What training is available?",
+        "Kaun se courses hain?",
+        "Do you teach VAPT?",
+        "What is CSP?",
+        "Tell me about SOC Analyst training",
+        "Kya courses provide karte ho?",
+        "List your courses",
+        "What can I learn there?",
+        "Cybersecurity courses details"
+      ],
+      "answer": "Cyberhost offers excellent cybersecurity training, including VAPT, the Cybersecurity Specialist Program or CSP, and SOC Analyst training."
+    },
+    {
+      "id": "contact_person_cto",
+      "category": "company",
+      "questions": [
+        "Who is the contact person?",
+        "Who is Asif?",
+        "Who is the CTO?",
+        "Can I speak to the CTO?",
+        "Asif kaun hai?",
+        "Who is in charge?",
+        "Who is the main contact?",
+        "Contact person details",
+        "CTO ka naam kya hai?"
+      ],
+      "answer": "Our CTO and main contact person at Cyberhost is Asif."
+    },
+    {
+      "id": "contact_email",
+      "category": "company",
+      "questions": [
+        "What is your email ID?",
+        "How can I email you?",
+        "Email address kya hai?",
+        "Where can I send an email?",
+        "Cyberhost email ID",
+        "Do you have an email?",
+        "Email batao",
+        "What's the contact email?",
+        "Send me your email"
+      ],
+      "answer": "You can reach out to Cyberhost by emailing us at lava232104@gmail.com."
+    },
+    {
+      "id": "contact_phone",
+      "category": "company",
+      "questions": [
+        "What is your phone number?",
+        "How can I call you?",
+        "Phone number kya hai?",
+        "Contact number dijiye",
+        "Can I get your number?",
+        "What number should I dial?",
+        "Cyberhost contact number",
+        "Mobile number batao",
+        "Give me your phone number"
+      ],
+      "answer": "You can contact Cyberhost directly by calling 9773974383."
+    },
+    {
+      "id": "website_url",
+      "category": "company",
+      "questions": [
+        "What is your website?",
+        "Website link kya hai?",
+        "Where can I find you online?",
+        "Do you have a website?",
+        "Cyberhost website",
+        "Web address batao",
+        "How to visit your site?",
+        "Is there a website for Cyberhost?",
+        "Give me the website link"
+      ],
+      "answer": "You can visit our official Cyberhost website at thecyberhostacademy.com."
+    },
+    {
+      "id": "company_size",
+      "category": "company",
+      "questions": [
+        "How big is your company?",
+        "Kitne employees hain?",
+        "What is your company size?",
+        "How many people work there?",
+        "Team size kya hai?",
+        "Are you a big company?",
+        "Number of employees",
+        "Cyberhost team size",
+        "How large is Cyberhost?"
+      ],
+      "answer": "Cyberhost is a close-knit team with a company size of 1 to 10 members."
+    },
+    {
+      "id": "operating_country",
+      "category": "company",
+      "questions": [
+        "Where are you located?",
+        "Which country do you operate in?",
+        "Kahan based ho?",
+        "Are you in India?",
+        "Cyberhost location",
+        "Where is your company from?",
+        "Aapka office kahan hai?",
+        "Which country?",
+        "Base location kya hai?"
+      ],
+      "answer": "Cyberhost primarily operates right here in India."
+    },
+    {
+      "id": "target_audience",
+      "category": "company",
+      "questions": [
+        "Who are your customers?",
+        "Who do you sell to?",
+        "Target audience kya hai?",
+        "Do you teach individuals?",
+        "Is it B2B or B2C?",
+        "Who can join?",
+        "Kisko padhate ho?",
+        "Who is this for?",
+        "Customer segment kya hai?"
+      ],
+      "answer": "At Cyberhost, our target customer segment is B2C, so we cater directly to individual learners."
+    },
+    {
+      "id": "supported_languages",
+      "category": "company",
+      "questions": [
+        "What languages do you speak?",
+        "Hindi aati hai?",
+        "Can we speak in English?",
+        "Kaun si language bolte ho?",
+        "Do you teach in Hindi?",
+        "Language options",
+        "Which languages are supported?",
+        "English or Hindi?",
+        "Bhasha kaun si hai?"
+      ],
+      "answer": "We cater to our audience in both English and Hindi here at Cyberhost."
+    },
+    {
+      "id": "lead_source",
+      "category": "process",
+      "questions": [
+        "Where did you get my number?",
+        "How did you find me?",
+        "Mera number kahan se mila?",
+        "Why are you calling me?",
+        "Did I fill a form?",
+        "Meta ads se call hai?",
+        "Website form bhara tha kya?",
+        "Lead source kya hai?",
+        "Social media se number mila?"
+      ],
+      "answer": "We are calling because you showed interest through our website form or social media Meta ads for Cyberhost."
+    },
+    {
+      "id": "timezone_info",
+      "category": "company",
+      "questions": [
+        "What is your timezone?",
+        "Kaun se timezone mein ho?",
+        "Operating hours timezone?",
+        "Are you in IST?",
+        "UTC time kya hai?",
+        "Timezone details",
+        "What time zone does your office use?",
+        "Cyberhost timezone",
+        "Aapka time zone kya hai?"
+      ],
+      "answer": "Cyberhost operates in the UTC+05:30 timezone."
+    }
+  ],
+  "hot_facts": [
+    "The company name is Cyberhost, operating in the Education industry in India.",
+    "Cyberhost offers VAPT, Cybersecurity Specialist Program (CSP), and SOC Analyst training.",
+    "The main contact person is Asif, who serves as the CTO.",
+    "The contact email is lava232104@gmail.com and the phone number is 9773974383.",
+    "The official website is https://thecyberhostacademy.com/.",
+    "The company size is 1-10 employees.",
+    "The target customer segment is B2C.",
+    "The audience languages supported are English and Hindi."
+  ],
+  "preset": "english"
+}
