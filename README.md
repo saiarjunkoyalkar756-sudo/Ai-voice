@@ -140,3 +140,23 @@ speaksy-platform/
 - [ ] TLS reverse proxy (Caddy/nginx) in front of port 8000
 - [ ] Firewall: only expose 80/443
 - [ ] Log rotation configured
+
+
+## Why Ai-voice?
+
+Ai-voice is a multi-tenant Python voice-agent platform for real-time calling, knowledge retrieval, and configurable AI workflows. It is a practical starting point for developers building voice-enabled assistants for business use cases.
+
+## Test the Project Locally
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+python -m pytest -q
+```
+
+Review `.env.example` before connecting external services. Keep API keys in environment variables and never commit secrets.
+
+## Contributing
+
+Bug reports, documentation improvements, test coverage, and focused feature pull requests are welcome. Please include reproducible steps, explain the expected behavior, and add or update tests when behavior changes. If this project is useful to you, a star helps other developers discover it; forks are welcome for experiments and extensions.
