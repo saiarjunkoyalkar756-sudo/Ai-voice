@@ -99,7 +99,7 @@ def test_faq_lookup_unchanged_after_precompute():
             assert len(entry) == 5
             assert isinstance(entry[4], frozenset)
 
-    hit = store.lookup_faq("who founded the company", "tinglish")
+    hit = store.lookup_faq("What does your company do", "english")
     assert hit is not None and hit.confidence >= 0.45
 
 

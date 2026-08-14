@@ -51,5 +51,6 @@ def test_english_knowledge_pack_loads():
 
     preload_knowledge_packs()
     store = get_store()
-    lines = store.lookup_inventory("Prestige Clairmont price", "english", force=True)
+    lines = store.lookup_inventory("VAPT training", "english", force=True)
     assert lines
+    assert any("VAPT" in line for line in lines)
