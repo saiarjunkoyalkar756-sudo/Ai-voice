@@ -141,11 +141,25 @@ def build_soniox_stt(
     http_session: Any | None = None,
 ):
     """
-    Configured livekit.plugins.soniox.STT for production calls.
-
-    Interim (non-final) + final tokens stream by default — use
-    session.on("user_input_transcribed") for partial vs is_final.
+    Configured STT for production calls (Soniox or Sarvam).
     """
+    sarvam_key = (
+        getattr(call_cfg, "sarvam_api_key", None)
+        or os.environ.get("SARVAM_API_KEY")
+        or get_secret("SARVAM_API_KEY")
+    )
+    env_provider = (os.environ.get("STT_PROVIDER") or "").strip().lower()
+    cfg_provider = (live_config.get("stt_provider") or "").strip().lower()
+
+    if env_provider == "sarvam" or cfg_provider == "sarvam" or os.environ.get("FORCE_SARVAM_STT", "1") == "1":
+        if sarvam_key:
+            from livekit.plugins import sarvam
+            lang = live_config.get("stt_language") or "te-IN"
+            if lang in ("unknown", "auto", ""):
+                lang = "te-IN"
+            logger.info("[STT] Using Sarvam AI Realtime STT (language=%s)", lang)
+            return sarvam.STT(api_key=str(sarvam_key).strip(), language=lang)
+
     from livekit.plugins.soniox import STT, STTOptions
 
     api_key = _resolve_api_key(call_cfg, get_secret)

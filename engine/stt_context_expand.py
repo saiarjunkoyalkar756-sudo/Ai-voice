@@ -9,7 +9,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-logger = logging.getLogger("speaksy-engine")
+logger = logging.getLogger("voicely-engine")
 
 _MAX_TERMS = 40
 

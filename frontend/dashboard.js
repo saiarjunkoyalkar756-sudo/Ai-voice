@@ -1,5 +1,5 @@
 /**
- * Speaksy unified dashboard — Home, Leads, Hot Leads, Performance, Listings, Reports, Settings
+ * Voicely unified dashboard — Home, Leads, Hot Leads, Performance, Listings, Reports, Settings
  */
 (function () {
   const state = {
@@ -108,8 +108,8 @@
     const booked = labels.booked || (clientMode ? "Booked" : "Booked");
     const escalate = labels.escalate || (clientMode ? "Call team" : "Escalate");
 
-    const btn = (action, label, variant, extra = "", speaksy = false) => `
-      <button type="button" class="lead-action-btn lead-action-btn--${variant}${speaksy ? " btn-speaksy btn-speaksy--soft" : ""}" data-action="${action}" data-id="${id}"${extra}>
+    const btn = (action, label, variant, extra = "", voicely = false) => `
+      <button type="button" class="lead-action-btn lead-action-btn--${variant}${voicely ? " btn-voicely btn-voicely--soft" : ""}" data-action="${action}" data-id="${id}"${extra}>
         ${leadActionIcon(variant)}
         <span class="lead-action-label">${label}</span>
       </button>
@@ -203,7 +203,7 @@
 
     const series = analytics?.hourly_series || [];
     const total = series.reduce((s, p) => s + (p.calls || 0), 0);
-    const green = getComputedStyle(document.documentElement).getPropertyValue("--speaksy-green").trim() || "#63dcb4";
+    const green = getComputedStyle(document.documentElement).getPropertyValue("--voicely-green").trim() || "#63dcb4";
     const faint = getComputedStyle(document.documentElement).getPropertyValue("--color-text-faint").trim() || "rgba(255,255,255,0.35)";
     const padL = 8;
     const padR = 8;
@@ -328,7 +328,7 @@
             <p class="vk-needs-summary">${l.intent_summary || "Interested in property — follow up soon."}</p>
             <div class="vk-needs-meta">${phone} · ${l.last_call_date ? timeAgo(l.last_call_date) : `${l.hours_since_call || 0}h ago`}</div>
             <div class="vk-needs-actions">
-              ${tel ? `<a class="btn btn-primary btn-sm btn-speaksy" href="${tel}">Call back</a>` : ""}
+              ${tel ? `<a class="btn btn-primary btn-sm btn-voicely" href="${tel}">Call back</a>` : ""}
               <button type="button" class="btn btn-secondary btn-sm" onclick="navigateTo('hot-leads')">Details</button>
             </div>
           </div>
@@ -641,7 +641,7 @@
 
     const max = Math.max(1, ...data.map((d) => Math.max(d.calls || 0, d.converted || 0)));
     const step = (w - 40) / data.length;
-    const green = getComputedStyle(document.documentElement).getPropertyValue("--speaksy-green").trim() || "#63dcb4";
+    const green = getComputedStyle(document.documentElement).getPropertyValue("--voicely-green").trim() || "#63dcb4";
 
     data.forEach((point, i) => {
       const x = 20 + i * step + step / 4;
@@ -854,7 +854,7 @@
 
   /* ── API Keys panel ── */
 
-  const API_SETTINGS_TOKEN_KEY = "speaksy-api-settings-token";
+  const API_SETTINGS_TOKEN_KEY = "voicely-api-settings-token";
 
   function getApiSettingsToken() {
     return sessionStorage.getItem(API_SETTINGS_TOKEN_KEY);

@@ -1,5 +1,5 @@
 """
-KB Compiler — SPEAKSY_PLATFORM_MASTER_PLAN §4, end to end.
+KB Compiler — VOICELY_PLATFORM_MASTER_PLAN §4, end to end.
 
 Drop a knowledge base + one client.yaml → validated, grounded cartridge:
     ingest → extract → synthesize → validate → critic → bake → (human gate) → apply

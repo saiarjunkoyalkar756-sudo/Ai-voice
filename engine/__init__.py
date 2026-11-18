@@ -1,7 +1,7 @@
 """
-Speaksy Conversation Engine package.
+Voicely Conversation Engine package.
 
-Implements the fused architecture from SPEAKSY_ENGINE_MASTER_PLAN:
+Implements the fused architecture from VOICELY_ENGINE_MASTER_PLAN:
   transport → stt → ConversationEngine → llm → tts → metrics tail
 
 agent.py remains the LiveKit worker host; business turn logic and

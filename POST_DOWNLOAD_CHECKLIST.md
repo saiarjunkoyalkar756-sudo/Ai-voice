@@ -1,4 +1,4 @@
-# Post-download checklist — run the shipped Speaksy client
+# Post-download checklist — run the shipped Voicely client
 
 Complete list only. Do in order.
 
@@ -155,7 +155,7 @@ Complete list only. Do in order.
 ## Quick command block
 
 ```bash
-cd speaksy-client-<id>-*/
+cd voicely-client-<id>-*/
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env

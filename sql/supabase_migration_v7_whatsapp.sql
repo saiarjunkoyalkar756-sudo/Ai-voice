@@ -1,5 +1,5 @@
 -- ══════════════════════════════════════════════════════════════════════════════
--- SPEAKSY — WhatsApp session persistence (migration v7)
+-- VOICELY — WhatsApp session persistence (migration v7)
 -- Run in Supabase SQL Editor (safe to re-run).
 --
 -- Prerequisite: organizations table (from supabase_migration_v6_orgs.sql).

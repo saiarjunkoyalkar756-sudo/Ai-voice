@@ -73,7 +73,7 @@ const PAGE_SUBTITLES = {
   analytics: "Call volume, outcomes, and performance charts",
   calendar: "Site visits and appointments booked by your voice agents",
   knowledge: "Global knowledge management",
-  integrations: "Connect your Speaksy account with other services to enhance your workflow.",
+  integrations: "Connect your Voicely account with other services to enhance your workflow.",
   campaigns: "Bulk outbound calling campaigns",
   settings: "Agents, tone, hours, notifications, and config",
   billing: "Usage and subscription management",
@@ -84,7 +84,7 @@ const PAGE_SUBTITLES = {
   organisation: "Role dashboards, team access, and feature permissions",
 };
 
-const AUTH_TOKEN_KEY = "speaksy-auth-token";
+const AUTH_TOKEN_KEY = "voicely-auth-token";
 
 /* ── Auth & API ── */
 
@@ -394,8 +394,8 @@ function callStatusBadge(row) {
 
 /* ── Navigation ── */
 
-const SPEAKSY_TAB_LOADER_MIN_MS = 280;
-let speaksyTabNavToken = 0;
+const VOICELY_TAB_LOADER_MIN_MS = 280;
+let voicelyTabNavToken = 0;
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -410,15 +410,15 @@ function asPageLoadPromise(fn) {
   }
 }
 
-function resolveSpeaksyLoaderTheme() {
+function resolveVoicelyLoaderTheme() {
   return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
 
-function showSpeaksyTabLoader() {
-  const el = document.getElementById("speaksy-tab-loader");
+function showVoicelyTabLoader() {
+  const el = document.getElementById("voicely-tab-loader");
   if (!el) return;
-  const theme = resolveSpeaksyLoaderTheme();
-  const pill = el.querySelector(".speaksy-loader-pill");
+  const theme = resolveVoicelyLoaderTheme();
+  const pill = el.querySelector(".voicely-loader-pill");
   el.dataset.theme = theme;
   if (pill) {
     pill.classList.toggle("dark", theme === "dark");
@@ -428,15 +428,15 @@ function showSpeaksyTabLoader() {
   el.setAttribute("aria-hidden", "false");
 }
 
-function hideSpeaksyTabLoader() {
-  const el = document.getElementById("speaksy-tab-loader");
+function hideVoicelyTabLoader() {
+  const el = document.getElementById("voicely-tab-loader");
   if (!el) return;
   el.classList.remove("is-active");
   el.setAttribute("aria-hidden", "true");
 }
 
-async function runWithSpeaksyTabLoader(callback, navToken) {
-  const el = document.getElementById("speaksy-tab-loader");
+async function runWithVoicelyTabLoader(callback, navToken) {
+  const el = document.getElementById("voicely-tab-loader");
 
   if (!el) {
     await callback();
@@ -444,9 +444,9 @@ async function runWithSpeaksyTabLoader(callback, navToken) {
   }
 
   const main = document.getElementById("content");
-  const minMs = prefersReducedMotion() ? 0 : SPEAKSY_TAB_LOADER_MIN_MS;
+  const minMs = prefersReducedMotion() ? 0 : VOICELY_TAB_LOADER_MIN_MS;
 
-  showSpeaksyTabLoader();
+  showVoicelyTabLoader();
   main?.classList.add("page-swapping");
 
   try {
@@ -455,11 +455,11 @@ async function runWithSpeaksyTabLoader(callback, navToken) {
       minMs ? new Promise((resolve) => setTimeout(resolve, minMs)) : Promise.resolve(),
     ]);
   } catch (err) {
-    console.error("[Speaksy] Tab navigation failed:", err);
+    console.error("[Voicely] Tab navigation failed:", err);
   } finally {
-    if (navToken === speaksyTabNavToken) {
+    if (navToken === voicelyTabNavToken) {
       main?.classList.remove("page-swapping");
-      hideSpeaksyTabLoader();
+      hideVoicelyTabLoader();
     }
   }
 }
@@ -470,23 +470,23 @@ function syncNavActive(page) {
     if (!el.dataset.page) return;
     const isActive = el.dataset.page === navPage;
     el.classList.toggle("active", isActive);
-    el.classList.toggle("btn-speaksy", isActive);
-    el.classList.toggle("btn-speaksy--soft", isActive);
+    el.classList.toggle("btn-voicely", isActive);
+    el.classList.toggle("btn-voicely--soft", isActive);
   });
 }
 
 async function setPage(page, options = {}) {
   const { skipLoader = false } = options;
   if (!skipLoader && page !== state.currentPage) {
-    const navToken = ++speaksyTabNavToken;
-    await runWithSpeaksyTabLoader(() => applyPage(page, navToken), navToken);
+    const navToken = ++voicelyTabNavToken;
+    await runWithVoicelyTabLoader(() => applyPage(page, navToken), navToken);
     return;
   }
   await applyPage(page);
 }
 
 async function applyPage(page, navToken) {
-  if (navToken != null && navToken !== speaksyTabNavToken) return;
+  if (navToken != null && navToken !== voicelyTabNavToken) return;
 
   window.CallLogs?.stopAudio?.();
   state.currentPage = page;
@@ -540,7 +540,7 @@ async function applyPage(page, navToken) {
 
   await Promise.allSettled(loads);
 
-  if (navToken != null && navToken !== speaksyTabNavToken) return;
+  if (navToken != null && navToken !== voicelyTabNavToken) return;
 
   if (window.innerWidth <= 900) closeMobileSidebar();
 }
@@ -550,10 +550,10 @@ async function openAgentDetail(agentId, name = "Agent", purpose = "") {
   document.getElementById("agent-detail-name").textContent = name;
   document.getElementById("agent-detail-purpose").textContent = (purpose || "Voice AI Assistant").replace(/_/g, " ");
   setAgentTab(state.currentAgentTab || "assistant-details", { skipLoader: true });
-  const navToken = ++speaksyTabNavToken;
-  await runWithSpeaksyTabLoader(async () => {
+  const navToken = ++voicelyTabNavToken;
+  await runWithVoicelyTabLoader(async () => {
     await applyPage("agent-detail", navToken);
-    if (navToken !== speaksyTabNavToken) return;
+    if (navToken !== voicelyTabNavToken) return;
     if (window.AgentDetail) await window.AgentDetail.load(agentId);
   }, navToken);
 }
@@ -576,8 +576,8 @@ async function setAgentTab(tabId, options = {}) {
   };
 
   if (!skipLoader && state.currentPage === "agent-detail") {
-    const navToken = ++speaksyTabNavToken;
-    await runWithSpeaksyTabLoader(() => apply(), navToken);
+    const navToken = ++voicelyTabNavToken;
+    await runWithVoicelyTabLoader(() => apply(), navToken);
     return;
   }
   await apply();
@@ -1698,7 +1698,7 @@ window.openTestCallModal = openTestCallModal;
 
 /* ── Main agent — Make Call modal ── */
 
-const RECENT_CALLS_KEY = "speaksy_recent_call_phones";
+const RECENT_CALLS_KEY = "voicely_recent_call_phones";
 const RECENT_CALLS_MAX = 6;
 let makeCallDispatching = false;
 
@@ -2398,7 +2398,7 @@ const NAV_LUCIDE_ICONS = {
 function renderLucideIcons(root) {
   const lucide = window.lucide;
   if (!lucide?.createIcons || !lucide?.icons) {
-    console.warn("[Speaksy] Lucide failed to load — check /static/vendor/lucide/lucide.min.js in Network tab");
+    console.warn("[Voicely] Lucide failed to load — check /static/vendor/lucide/lucide.min.js in Network tab");
     return false;
   }
   const options = {
@@ -2414,7 +2414,7 @@ function renderLucideIcons(root) {
     lucide.createIcons(options);
     return true;
   } catch (err) {
-    console.error("[Speaksy] Lucide createIcons failed:", err);
+    console.error("[Voicely] Lucide createIcons failed:", err);
     return false;
   }
 }
@@ -2467,7 +2467,7 @@ function setupSidebar() {
       sidebar.classList.contains("open") ? closeMobileSidebar() : openMobileSidebar();
     } else {
       shell.classList.toggle("sidebar-collapsed");
-      localStorage.setItem("speaksy-sidebar-collapsed", shell.classList.contains("sidebar-collapsed") ? "1" : "0");
+      localStorage.setItem("voicely-sidebar-collapsed", shell.classList.contains("sidebar-collapsed") ? "1" : "0");
       syncSidebarToggleState();
       renderLucideIcons(document.getElementById("nav"));
     }
@@ -2476,7 +2476,7 @@ function setupSidebar() {
   closeBtn?.addEventListener("click", closeMobileSidebar);
   backdrop?.addEventListener("click", closeMobileSidebar);
 
-  if (!isMobile() && localStorage.getItem("speaksy-sidebar-collapsed") === "1") {
+  if (!isMobile() && localStorage.getItem("voicely-sidebar-collapsed") === "1") {
     shell.classList.add("sidebar-collapsed");
   }
   syncSidebarToggleState();
@@ -2621,13 +2621,13 @@ function getTheme() {
 
 function setTheme(mode) {
   document.documentElement.setAttribute("data-theme", mode);
-  localStorage.setItem("speaksy-theme", mode);
+  localStorage.setItem("voicely-theme", mode);
   const icon = document.getElementById("theme-icon");
   if (icon) icon.innerHTML = THEME_ICONS[mode] || THEME_ICONS.light;
 }
 
 function setupTheme() {
-  const saved = localStorage.getItem("speaksy-theme");
+  const saved = localStorage.getItem("voicely-theme");
   const initial = saved === "light" || saved === "dark" ? saved : "light";
   setTheme(initial);
   document.getElementById("theme-toggle")?.addEventListener("click", () => {

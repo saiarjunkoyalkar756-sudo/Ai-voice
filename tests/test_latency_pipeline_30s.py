@@ -1,10 +1,10 @@
 """
 Automated latency pipeline test — 30 second wall-clock budget.
 
-Simulates Speaksy turn stages (STT → inject → LLM TTFT → buffer → TTS)
+Simulates Voicely turn stages (STT → inject → LLM TTFT → buffer → TTS)
 using the production engine metrics path. No LiveKit, no network LLM.
 
-Exit criteria (production targets from SPEAKSY_ENGINE_MASTER_PLAN):
+Exit criteria (production targets from VOICELY_ENGINE_MASTER_PLAN):
   - Entire test module finishes in < 30s
   - Simulated turn e2e (inject+llm+tts components) under stage budgets
   - TTFT policy hard cap ≤ 1800ms
@@ -58,7 +58,7 @@ def _simulate_turn_pipeline(
     coll.note_tts_ttfa(tts_ms, reply_cache_hit=reply_cache_hit)
     coll.end_turn()
     exp = coll.export()
-    assert exp["schema"] == "speaksy.turn_metrics.v1"
+    assert exp["schema"] == "voicely.turn_metrics.v1"
     return exp
 
 

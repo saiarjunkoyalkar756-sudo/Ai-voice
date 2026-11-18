@@ -131,18 +131,18 @@
         <article class="agent-form-card glass-card" style="padding:14px 16px">
           <div class="agent-form-title-row" style="margin-bottom:6px">
             <div>
-              <h3 class="agent-form-title" style="margin:0">Speaksy Flow Studio</h3>
+              <h3 class="agent-form-title" style="margin:0">Voicely Flow Studio</h3>
               <p class="muted" style="margin:4px 0 0;font-size:12.5px">
-                Visual call stages — Start · Agenda · Global rules · End. Drag nodes, connect ports, test the path. Speaksy-branded workflow builder.
+                Visual call stages — Start · Agenda · Global rules · End. Drag nodes, connect ports, test the path. Voicely-branded workflow builder.
               </p>
             </div>
-            <button type="button" class="btn btn-primary btn-sm btn-speaksy" id="sfs-persist-btn">Save flow to agent</button>
+            <button type="button" class="btn btn-primary btn-sm btn-voicely" id="sfs-persist-btn">Save flow to agent</button>
           </div>
         </article>
         <div id="sfs-mount"></div>
       </div>`;
     const mount = $("sfs-mount");
-    if (!mount || !window.SpeaksyFlowStudio) {
+    if (!mount || !window.VoicelyFlowStudio) {
       if (mount) {
         mount.innerHTML = `<div class="agent-loading glass-card">Flow studio failed to load. Hard-refresh the dashboard.</div>`;
       }
@@ -151,7 +151,7 @@
     if (_flowStudio) {
       try { _flowStudio.destroy(); } catch (_) { /* */ }
     }
-    _flowStudio = window.SpeaksyFlowStudio.mount(mount, {
+    _flowStudio = window.VoicelyFlowStudio.mount(mount, {
       sections: detail.flowSections,
       agentName: agent.name || "Agent",
       onChange(sections) {
@@ -525,11 +525,11 @@
           <div class="agent-form-title-row">
             <h3 class="agent-form-title">Conversational Flow</h3>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button type="button" class="btn btn-primary btn-sm btn-speaksy" id="flow-open-studio">◈ Open Flow Studio</button>
+              <button type="button" class="btn btn-primary btn-sm btn-voicely" id="flow-open-studio">◈ Open Flow Studio</button>
               <button type="button" class="btn btn-secondary btn-sm" id="flow-add-section">+ Add Section</button>
             </div>
           </div>
-          <p class="muted" style="font-size:12.5px;margin:0 0 10px">Prefer the visual builder for Start → Agenda → End paths (Speaksy Flow Studio).</p>
+          <p class="muted" style="font-size:12.5px;margin:0 0 10px">Prefer the visual builder for Start → Agenda → End paths (Voicely Flow Studio).</p>
           <div id="flow-sections-list" class="flow-sections-list">${renderFlowSectionsList()}</div>
         </article>
       </div>

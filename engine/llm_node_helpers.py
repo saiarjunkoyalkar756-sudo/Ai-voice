@@ -11,7 +11,7 @@ import time
 from collections.abc import AsyncIterator, Callable
 from typing import Any
 
-logger = logging.getLogger("speaksy-engine")
+logger = logging.getLogger("voicely-engine")
 
 
 def apply_turn_token_cap(model_settings: Any, live_config: dict[str, Any]) -> None:

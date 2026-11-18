@@ -1,27 +1,27 @@
 {
-  "agent_name": "sumeet",
-  "agent_purpose": "ecommerce",
-  "agent_instructions": "You are Sumeet, working at the front desk for Cyberhost. Your speaking style is professional, warm Indian English. You should sound natural on the phone, occasionally using common Indian English phrases to build rapport. Example phrases include: 'Namaste, how are you doing today?', 'Kindly allow me to assist you with that.', and 'That is perfectly fine, sir.' You are calling to discuss our cybersecurity training courses including VAPT, the Cybersecurity Specialist Program (CSP), and SOC Analyst training. Your primary goal is to engage leads generated from Website Form and Social Media. You must strictly follow these rules: Keep all your replies short, limited to 1-2 sentences maximum. You must always end every single response with a relevant question to keep the conversation moving forward. Do not invent any details, prices, or numbers not provided in your knowledge base. There are no specific compliance lines required for this campaign.",
-  "first_line": "Namaste, this is Sumeet calling from the front desk at Cyberhost. How are you doing today?",
+  "agent_name": "voicely-agent",
+  "agent_purpose": "voice_ai_consulting",
+  "agent_instructions": "You are an intelligent voice consultant representing Voicely. Your speaking style is professional, warm, and natural Indian English. You assist businesses in understanding and deploying real-time AI voice agents for sales, support, and automated customer qualification. Keep your replies concise (1 to 2 sentences maximum) and conversational, always ending with a relevant question to keep the dialogue moving forward.",
+  "first_line": "Hello! This is Voicely AI. How are you doing today?",
   "language": "te",
   "languages": [
     "te",
     "en-in"
   ],
   "lang_preset": "english",
-  "tts_provider": "cartesia",
+  "tts_provider": "sarvam",
   "cartesia_tts_model": "sonic-3.5",
   "gemini_tts_model": "gemini-3.1-flash-tts-preview",
-  "stt_provider": "soniox",
+  "stt_provider": "sarvam",
   "stt_model": "stt-rt-v5",
   "stt_language": "unknown",
   "llm_provider": "gemini",
-  "gemini_model": "gemini-2.5-flash-lite",
+  "gemini_model": "gemini-3.5-flash-lite",
   "llm_max_completion_tokens": 200,
   "llm_temperature": 0.7,
   "max_turns": 40,
   "max_call_duration_seconds": 400,
-  "tts_voice": "6cb25f72-380e-4d76-acc4-75d95df97ee9",
+  "tts_voice": "ashutosh",
   "tts_voice_display": "Nivas Telugu/EN",
   "tts_voice_tab": "recommended",
   "tts_language": "te-IN",
@@ -43,7 +43,7 @@
       "bye bye",
       "bye"
     ],
-    "message": "Thank you andi! VK Realty tho matladinanduku. Site visit fix ayyaka malli matladukundam. Goodbye!"
+    "message": "Thank you for speaking with Voicely. Have a wonderful day ahead! Goodbye."
   },
   "user_idle": {
     "threshold_sec": 30,
@@ -75,14 +75,14 @@
   "min_interruption_duration": 0.35,
   "min_interruption_words": 2,
   "noise_reduction": true,
-  "livekit_url": "wss://YOUR_PROJECT.livekit.cloud",
+  "livekit_url": "wss://voicely-eq2rrk4q.livekit.cloud",
   "livekit_api_key": "",
   "livekit_api_secret": "",
   "supabase_url": "https://YOUR_PROJECT.supabase.co",
   "supabase_key": "",
   "sarvam_api_key": "",
   "gemini_api_key": "",
-  "llm_model": "gemini-2.5-flash-lite",
+  "llm_model": "gemini-3.5-flash-lite",
   "groq_model": "",
   "llm_startup_probe": false,
   "tone_preset": "professional",
@@ -207,7 +207,7 @@
         "enabled": true
       }
     },
-    "system_prompt": "You are Arjun, a Senior Real Estate Consultant at VK Realty, specializing in premium and mid-segment residential properties in Hyderabad — Kokapet, Financial District, Neopolis, Narsingi, and Gachibowli.\n\nYou are warm, confident, and human-like. Speak natural SPOKEN Telugish (Telugu + English) — match the caller. Never pure literary Telugu, Hindi, Tamil, or Marathi.\n- Telugish: Telugu connectors (andi, garu, avunu, sare) + English for numbers (1.2 Cr, 3 BHK), budgets, site visit, EMI, parking, place names (Kokapet, Gachibowli), and property terms.\n- English-only caller → clear Indian English with the same English property terms.\n- Sound like a real phone consultant, not a textbook or news bulletin.\nKeep responses short, natural, and conversational (1–2 sentences).",
+    "system_prompt": "You are Arjun, a Senior Real Estate Consultant at VK Realty, specializing in premium and mid-segment residential properties in Hyderabad \u2014 Kokapet, Financial District, Neopolis, Narsingi, and Gachibowli.\n\nYou are warm, confident, and human-like. Speak natural SPOKEN Telugish (Telugu + English) \u2014 match the caller. Never pure literary Telugu, Hindi, Tamil, or Marathi.\n- Telugish: Telugu connectors (andi, garu, avunu, sare) + English for numbers (1.2 Cr, 3 BHK), budgets, site visit, EMI, parking, place names (Kokapet, Gachibowli), and property terms.\n- English-only caller \u2192 clear Indian English with the same English property terms.\n- Sound like a real phone consultant, not a textbook or news bulletin.\nKeep responses short, natural, and conversational (1\u20132 sentences).",
     "max_turns": 40,
     "max_call_duration_seconds": 400
   },

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Speaksy LiveKit agent — thin entry shim (SPEAKSY_ENGINE_MASTER_PLAN 01-001).
+Voicely LiveKit agent — thin entry shim (VOICELY_ENGINE_MASTER_PLAN 01-001).
 
 All runtime logic lives in engine.agent_runtime. Keep this file under ~80 lines
 so deploys, supervisord, and `python agent.py start` stay stable.
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     # Local/dev machines often sit at CPU load ≈ 1.0 (macOS load monitors can
     # report fully busy), which makes prod load_threshold=0.7 mark the worker
     # WS_FULL so LiveKit never assigns outbound dispatches. Override when
-    # SPEAKSY_FORCE_WORKER_AVAILABLE=1 (or always report low load under that flag).
-    force_available = (os.environ.get("SPEAKSY_FORCE_WORKER_AVAILABLE") or "").strip().lower() in {
+    # VOICELY_FORCE_WORKER_AVAILABLE=1 (or always report low load under that flag).
+    force_available = (os.environ.get("VOICELY_FORCE_WORKER_AVAILABLE") or "").strip().lower() in {
         "1",
         "true",
         "yes",

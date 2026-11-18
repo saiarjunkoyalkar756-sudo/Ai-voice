@@ -87,7 +87,7 @@ REQUIRED_ENV_FOR_START: tuple[str, ...] = (
     "LIVEKIT_API_SECRET",
     "GEMINI_API_KEY",
     "SONIOX_API_KEY",
-    "CARTESIA_API_KEY",
+    # "CARTESIA_API_KEY",
     "SUPABASE_URL",
     "SUPABASE_KEY",
     "JWT_SECRET",

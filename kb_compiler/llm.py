@@ -27,9 +27,9 @@ logger = logging.getLogger("kb-compiler")
 #
 # Defaults use IDs that exist on generativelanguage.googleapis.com/v1beta
 # (bare gemini-3.1-pro / gemini-3.1-flash 404 — use -preview / 3.5-flash).
-SYNTH_MODEL = os.environ.get("SPEAKSY_COMPILER_MODEL", "gemini-3.1-pro-preview")
-EXTRACT_MODEL = os.environ.get("SPEAKSY_COMPILER_EXTRACT_MODEL", "gemini-3.5-flash")
-CRITIC_MODEL = os.environ.get("SPEAKSY_COMPILER_CRITIC_MODEL", "gemini-3.5-flash")
+SYNTH_MODEL = os.environ.get("VOICELY_COMPILER_MODEL", "gemini-3.1-pro-preview")
+EXTRACT_MODEL = os.environ.get("VOICELY_COMPILER_EXTRACT_MODEL", "gemini-3.5-flash")
+CRITIC_MODEL = os.environ.get("VOICELY_COMPILER_CRITIC_MODEL", "gemini-3.5-flash")
 
 # Back-compat alias — lockfiles and the dashboard treat the synthesis model
 # as "the" compiler model.
@@ -135,7 +135,7 @@ async def generate_json(
                 detail = (resp.text or "")[:240]
                 raise CompilerLLMError(
                     f"HTTP {resp.status_code} for model {use_model}: {detail}. "
-                    f"Set SPEAKSY_COMPILER_EXTRACT_MODEL / SPEAKSY_COMPILER_MODEL to a valid Gemini id."
+                    f"Set VOICELY_COMPILER_EXTRACT_MODEL / VOICELY_COMPILER_MODEL to a valid Gemini id."
                 )
             resp.raise_for_status()
             data = resp.json()

@@ -12,7 +12,7 @@ from typing import Any
 
 from engine.turn_result import TurnResult
 
-logger = logging.getLogger("speaksy-engine")
+logger = logging.getLogger("voicely-engine")
 
 
 class ConversationEngine:

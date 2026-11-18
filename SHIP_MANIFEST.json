@@ -1,9 +1,9 @@
 {
-  "format": "speaksy.client.codebase",
+  "format": "voicely.client.codebase",
   "format_version": "1.1",
   "client_id": "sp-345122",
   "shipped_at": "2026-07-10T18:00:41.216341+00:00",
-  "shipped_by": "dev@local.speaksy",
+  "shipped_by": "dev@local.voicely",
   "approved": true,
   "full_production": true,
   "pack_id": "english",
@@ -1636,17 +1636,17 @@
       "sha256": "c1e00f98455a6bdc"
     },
     {
-      "path": "frontend/vendor/images/speaksy-brand-mark.png",
+      "path": "frontend/vendor/images/voicely-brand-mark.png",
       "bytes": 2475038,
       "sha256": "a54ba25908552f52"
     },
     {
-      "path": "frontend/vendor/images/speaksy-logo-powered.png",
+      "path": "frontend/vendor/images/voicely-logo-powered.png",
       "bytes": 313030,
       "sha256": "e9c8d50c0cc574e7"
     },
     {
-      "path": "frontend/vendor/images/speaksy-logo.png",
+      "path": "frontend/vendor/images/voicely-logo.png",
       "bytes": 835288,
       "sha256": "3a1ea631998540d2"
     },

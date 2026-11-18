@@ -208,7 +208,7 @@ async def sync_dashboard_action_to_crm(
         call_duration=0,
         sentiment="neutral",
         assigned_agent=performed_by,
-        notes=f"Speaksy dashboard action: {action}",
+        notes=f"Voicely dashboard action: {action}",
         caller_name=getattr(profile, "stable_name", "") if profile else "",
     )
     due = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()

@@ -1,11 +1,11 @@
 /**
- * Speaksy Agent Flow Studio — visual call-flow builder
- * Dograh-style node graph · Speaksy brand · vanilla JS (no React)
+ * Voicely Agent Flow Studio — visual call-flow builder
+ * Dograh-style node graph · Voicely brand · vanilla JS (no React)
  *
  * Public API:
- *   SpeaksyFlowStudio.mount(container, { sections, onChange, agentName })
- *   SpeaksyFlowStudio.getSections(instance)
- *   SpeaksyFlowStudio.destroy(instance)
+ *   VoicelyFlowStudio.mount(container, { sections, onChange, agentName })
+ *   VoicelyFlowStudio.getSections(instance)
+ *   VoicelyFlowStudio.destroy(instance)
  */
 (function (global) {
   "use strict";
@@ -46,7 +46,7 @@
       id: "global_rules",
       title: "Global Node",
       content:
-        "# ALWAYS REMEMBER\n- Stay on brand for Speaksy.\n- 1–2 sentences, then a question.\n- Never claim to be human if asked — deflect with identity shield style.\n- End call only when the goal is done or the caller insists.",
+        "# ALWAYS REMEMBER\n- Stay on brand for Voicely.\n- 1–2 sentences, then a question.\n- Never claim to be human if asked — deflect with identity shield style.\n- End call only when the goal is done or the caller insists.",
       enabled: true,
       order: 0,
       node_type: "global",
@@ -120,7 +120,7 @@
   }
 
   function mount(container, opts) {
-    if (!container) throw new Error("SpeaksyFlowStudio: container required");
+    if (!container) throw new Error("VoicelyFlowStudio: container required");
     const options = opts || {};
     const state = {
       sections: normalizeSections(options.sections, options.agentName),
@@ -143,11 +143,11 @@
         <div class="sfs-main">
           <div class="sfs-toolbar">
             <span class="sfs-title">Call flow</span>
-            <span class="sfs-sub">Visual stages · Speaksy Studio</span>
+            <span class="sfs-sub">Visual stages · Voicely Studio</span>
             <span class="sfs-badge draft" data-sfs-badge>Draft</span>
             <button type="button" class="btn btn-secondary btn-sm" data-sfs-act="add-agent">+ Agenda</button>
             <button type="button" class="btn btn-secondary btn-sm" data-sfs-act="add-global">+ Global</button>
-            <button type="button" class="btn btn-primary btn-sm btn-speaksy" data-sfs-act="save">Save flow</button>
+            <button type="button" class="btn btn-primary btn-sm btn-voicely" data-sfs-act="save">Save flow</button>
           </div>
           <div class="sfs-canvas-wrap" data-sfs-canvas>
             <div class="sfs-world" data-sfs-world>
@@ -311,7 +311,7 @@
             </div>
             <div class="sfs-chat-input-row">
               <input type="text" placeholder="Type as caller…" data-sfs-chat-input />
-              <button type="button" class="btn btn-primary btn-sm btn-speaksy" data-sfs-act="chat-send">Send</button>
+              <button type="button" class="btn btn-primary btn-sm btn-voicely" data-sfs-act="chat-send">Send</button>
             </div>
             <button type="button" class="sfs-run-btn" data-sfs-act="chat-run">▶ Run stage walkthrough</button>
           </div>`;
@@ -362,7 +362,7 @@
 
       els.railBody.innerHTML = `
         <h4>${esc(n.title)}</h4>
-        <p class="muted">Stage instructions become call guidance for the Speaksy voice engine.</p>
+        <p class="muted">Stage instructions become call guidance for the Voicely voice engine.</p>
         <label class="sfs-field"><span>Title</span>
           <input data-sfs-field="title" value="${esc(n.title)}" /></label>
         <label class="sfs-field"><span>Type</span>
@@ -663,5 +663,5 @@
     };
   }
 
-  global.SpeaksyFlowStudio = { mount, defaultGraph, normalizeSections };
+  global.VoicelyFlowStudio = { mount, defaultGraph, normalizeSections };
 })(typeof window !== "undefined" ? window : globalThis);

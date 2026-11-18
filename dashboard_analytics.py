@@ -1,4 +1,4 @@
-"""Analytics, leads, and reporting helpers for the Speaksy dashboard."""
+"""Analytics, leads, and reporting helpers for the Voicely dashboard."""
 
 from __future__ import annotations
 

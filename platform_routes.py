@@ -1,5 +1,5 @@
 """
-Platform routes — the KB-compiler dashboard (SPEAKSY_PLATFORM_MASTER_PLAN §4).
+Platform routes — the KB-compiler dashboard (VOICELY_PLATFORM_MASTER_PLAN §4).
 
 /platform            → the UI (create client, drop KB, compile, review, approve)
 /api/platform/...    → the APIs the UI drives (all auth-gated)
@@ -270,7 +270,7 @@ async def api_platform_ship_download(client_id: str, user: str = Depends(require
         media_type="application/zip",
         headers={
             "Content-Disposition": f'attachment; filename="{filename}"',
-            "X-Speaksy-Ship-Format": "speaksy.client.codebase/1.0",
+            "X-Voicely-Ship-Format": "voicely.client.codebase/1.0",
             "Cache-Control": "no-store",
         },
     )
@@ -306,9 +306,9 @@ async def api_platform_download_knowledge(client_id: str, user: str = Depends(re
     )
     headers = {
         "Content-Disposition": f'attachment; filename="{filename}"',
-        "X-Speaksy-Export-Format": "speaksy.knowledge.cartridge/1.0",
-        "X-Speaksy-Client-Id": client_id,
-        "X-Speaksy-File-Count": str((meta.get("package") or {}).get("file_count") or 0),
+        "X-Voicely-Export-Format": "voicely.knowledge.cartridge/1.0",
+        "X-Voicely-Client-Id": client_id,
+        "X-Voicely-File-Count": str((meta.get("package") or {}).get("file_count") or 0),
         "Cache-Control": "no-store",
     }
     return StreamingResponse(
@@ -484,7 +484,7 @@ async def api_platform_fix(client_id: str, request: Request, user: str = Depends
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# THE UI — /platform (token from localStorage 'speaksy-auth-token')
+# THE UI — /platform (token from localStorage 'voicely-auth-token')
 # ═════════════════════════════════════════════════════════════════════════════
 
 @router.get("/platform", response_class=HTMLResponse, include_in_schema=False)
@@ -495,8 +495,8 @@ async def platform_page():
 _PLATFORM_HTML = r"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>try{var t=localStorage.getItem('speaksy-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
-<title>Speaksy Platform — Client Compiler</title>
+<script>try{var t=localStorage.getItem('voicely-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<title>Voicely Platform — Client Compiler</title>
 <style>
 @font-face{font-family:"Cy Grotesk Wide";
   src:url("/static/vendor/fonts/cy-grotesk-wide-light.ttf") format("truetype");
@@ -794,7 +794,7 @@ details.styleblock summary{cursor:pointer;color:var(--faint);font-size:12px;marg
 <div id="app">
   <div class="topbar">
     <div class="brand">
-      <span class="word">SPEAKSY <em>PLATFORM</em></span>
+      <span class="word">VOICELY <em>PLATFORM</em></span>
       <span class="tag">drop a knowledge base · ship an agent</span>
     </div>
     <div class="spacer"></div>
@@ -868,7 +868,7 @@ details.styleblock summary{cursor:pointer;color:var(--faint);font-size:12px;marg
 <div id="toasts"></div>
 
 <script>
-const T = localStorage.getItem('speaksy-auth-token') || '';
+const T = localStorage.getItem('voicely-auth-token') || '';
 const H = {'Authorization':'Bearer '+T,'Content-Type':'application/json'};
 const STAGES = ['ingest','extract','synthesize','validate','critic','bake'];
 let SEL=null, POLL=null, CLIENTS=[], ART=null;
@@ -1088,7 +1088,7 @@ async function downloadKnowledge(){
       throw new Error(msg);
     }
     const blob=await r.blob();
-    let name=`speaksy-knowledge-${SEL}.zip`;
+    let name=`voicely-knowledge-${SEL}.zip`;
     const cd=r.headers.get('Content-Disposition')||'';
     const m=cd.match(/filename="?([^";]+)"?/i);
     if(m)name=m[1];
@@ -1096,7 +1096,7 @@ async function downloadKnowledge(){
     const a=document.createElement('a');
     a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
     setTimeout(()=>URL.revokeObjectURL(url),4000);
-    const nFiles=r.headers.get('X-Speaksy-File-Count')||'';
+    const nFiles=r.headers.get('X-Voicely-File-Count')||'';
     toast('Downloaded '+name+(nFiles?' · '+nFiles+' files':''),'ok');
   }catch(e){toast(e.message||'Download failed','err')}
   finally{if(btn){btn.disabled=false;btn.textContent=prev||'⬇ Download knowledge'}}
@@ -1124,7 +1124,7 @@ async function downloadShip(){
       throw new Error(msg);
     }
     const blob=await r.blob();
-    let name=`speaksy-client-${SEL}.zip`;
+    let name=`voicely-client-${SEL}.zip`;
     const cd=r.headers.get('Content-Disposition')||'';
     const m=cd.match(/filename="?([^";]+)"?/i);
     if(m)name=m[1];

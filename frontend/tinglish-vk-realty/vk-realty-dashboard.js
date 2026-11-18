@@ -48,7 +48,7 @@
 
   const origFetch = window.fetch;
   window.fetch = function (input, init) {
-    const token = localStorage.getItem("speaksy-auth-token");
+    const token = localStorage.getItem("voicely-auth-token");
     if (token) {
       init = init || {};
       init.headers = new Headers(init.headers || {});
@@ -61,7 +61,7 @@
 
   function patchAuthRedirects() {
     window.redirectToLogin = function () {
-      localStorage.removeItem("speaksy-auth-token");
+      localStorage.removeItem("voicely-auth-token");
       window.location.replace("/tinglish-vk-realty#login");
     };
   }
@@ -366,7 +366,7 @@
     if (!main || document.getElementById("vk-data-help")) return;
     const logs = window.state?.logs;
     const hasData = Array.isArray(logs) && logs.length > 0;
-    const token = localStorage.getItem("speaksy-auth-token");
+    const token = localStorage.getItem("voicely-auth-token");
     if (hasData || token) return;
 
     const el = document.createElement("div");
@@ -545,7 +545,7 @@
     const latest = logs.find((r) => String(r.recording_url || "").trim());
     const btns = [];
     if (latest) {
-      btns.push(`<button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft vk-brief-btn" id="vk-brief-listen">
+      btns.push(`<button type="button" class="btn btn-primary btn-voicely btn-voicely--soft vk-brief-btn" id="vk-brief-listen">
         <span class="vk-brief-btn-icon" aria-hidden="true">&#9654;</span> Listen to the last call</button>`);
     }
     if (followUps) {

@@ -23,7 +23,7 @@ def apply_engine_canary(live_config: dict[str, Any], seed: str) -> dict[str, Any
         if merged.get("conversational_iq_v2_enabled") is None:
             import os
 
-            env_iq = os.environ.get("SPEAKSY_IQ_V2", "").strip().lower()
+            env_iq = os.environ.get("VOICELY_IQ_V2", "").strip().lower()
             if env_iq in ("1", "true", "yes", "on"):
                 merged["conversational_iq_v2_enabled"] = True
             elif env_iq in ("0", "false", "no", "off"):

@@ -91,7 +91,7 @@
 
   function recordingStreamUrl(callId) {
     if (!callId) return "";
-    const token = localStorage.getItem("speaksy-auth-token") || "";
+    const token = localStorage.getItem("voicely-auth-token") || "";
     const qs = token ? `?token=${encodeURIComponent(token)}` : "";
     return `/api/calls/${encodeURIComponent(callId)}/recording${qs}`;
   }

@@ -1,4 +1,4 @@
-"""Engine package smoke + unit tests (SPEAKSY_ENGINE_MASTER_PLAN Phase 0–1)."""
+"""Engine package smoke + unit tests (VOICELY_ENGINE_MASTER_PLAN Phase 0–1)."""
 from __future__ import annotations
 
 import asyncio
@@ -45,7 +45,7 @@ def test_turn_metrics_collector_stages():
     assert row["stages_ms"]["tts_ttfa"] == 80.0
     assert row["e2e_ms"] is not None
     exp = c.export()
-    assert exp["schema"] == "speaksy.turn_metrics.v1"
+    assert exp["schema"] == "voicely.turn_metrics.v1"
     assert "stage_p50" in exp
 
 

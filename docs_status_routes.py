@@ -113,7 +113,7 @@ _DOCS_TAB_HTML = r"""<div style="padding: 20px;">
     <a href="/docs" style="color: #d4a843; text-decoration: none; font-weight: 600;">
       → Open Full Documentation Site
     </a><br/>
-    <a href="https://github.com/sushrutdeshpande0202/speaksy/blob/main/DOCUMENTATION_MASTER_PLAN.md"
+    <a href="https://github.com/sushrutdeshpande0202/voicely/blob/main/DOCUMENTATION_MASTER_PLAN.md"
        style="color: #8b949e; text-decoration: none; font-size: 12px; margin-top: 8px; display: block;">
       Master Plan (GitHub)
     </a>

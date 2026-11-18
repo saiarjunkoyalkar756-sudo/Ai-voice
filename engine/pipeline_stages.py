@@ -18,7 +18,7 @@ PIPELINE_STAGES: tuple[TurnStage, ...] = (
 )
 
 STAGE_DIAGRAM = """
-Speaksy turn pipeline (LiveKit Agents SDK host):
+Voicely turn pipeline (LiveKit Agents SDK host):
 
   [PSTN/WebRTC] → STT final
        → ConversationEngine (identity · inject waves · length policy)

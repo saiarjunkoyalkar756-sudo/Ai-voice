@@ -54,7 +54,7 @@ async def warm_gemini_context_cache(
             client.caches.create,
             model=model,
             config=types.CreateCachedContentConfig(
-                display_name=f"speaksy-{cfg.get('lang_preset', 'tinglish')}",
+                display_name=f"voicely-{cfg.get('lang_preset', 'tinglish')}",
                 system_instruction=text,
                 ttl=f"{max(300, ttl_sec)}s",
             ),

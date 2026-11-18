@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyberhost — Dashboard</title>
-  <script>try{if(localStorage.getItem("speaksy-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+  <script>try{if(localStorage.getItem("voicely-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
   <link rel="icon" type="image/png" href="/static/favicon.png">
   <link rel="apple-touch-icon" href="/static/favicon.png">
   <link rel="preload" as="font" type="font/ttf" href="/static/vendor/fonts/cy-grotesk-wide-light.ttf" crossorigin>
@@ -27,7 +27,7 @@
             <div class="icon-mark vk-brand-collapsed-mark" aria-hidden="true">
               <img
                 class="icon-mark-img"
-                src="/static/vendor/images/speaksy-logo-powered.png?v=20260725"
+                src="/static/vendor/images/voicely-logo-powered.png?v=20260725"
                 alt=""
                 width="48"
                 height="14"
@@ -115,7 +115,7 @@
             <span class="nav-icon" data-lucide="megaphone" aria-hidden="true"></span>
             <span class="nav-label">Outbound lists</span>
           </button>
-          <a class="nav-item nav-btn vk-ops-only" href="/platform" title="Speaksy Platform — client compiler">
+          <a class="nav-item nav-btn vk-ops-only" href="/platform" title="Voicely Platform — client compiler">
             <span class="nav-icon" data-lucide="factory" aria-hidden="true"></span>
             <span class="nav-label">Platform</span>
           </a>
@@ -144,7 +144,7 @@
         </nav>
 
         <div class="sidebar-cta vk-ops-only">
-          <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft vk-brief-btn btn-deploy" id="v2-deploy-btn">
+          <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft vk-brief-btn btn-deploy" id="v2-deploy-btn">
             <span class="vk-brief-btn-icon" aria-hidden="true">+</span> Add AI assistant
           </button>
         </div>
@@ -162,15 +162,15 @@
             <span class="nav-icon" data-lucide="help-circle" aria-hidden="true"></span>
             <span>Help &amp; support</span>
           </a>
-          <div class="vk-sidebar-powered" aria-label="Powered by Speaksy">
+          <div class="vk-sidebar-powered" aria-label="Powered by Voicely">
             <span class="vk-powered-label">Powered by</span>
             <img
               class="vk-powered-logo vk-powered-logo--sidebar"
-              src="/static/vendor/images/speaksy-logo-powered.png?v=20260725"
-              alt="Speaksy"
+              src="/static/vendor/images/voicely-logo-powered.png?v=20260725"
+              alt="Voicely"
               width="395"
               height="112"
-              title="Powered by Speaksy"
+              title="Powered by Voicely"
               loading="lazy"
               decoding="async"
             >
@@ -215,7 +215,7 @@
             <p id="agent-detail-purpose" class="muted">Purpose</p>
           </div>
           <div class="agent-detail-actions">
-            <button type="button" class="btn btn-primary btn-sm btn-speaksy" id="agent-activate-btn">▶ Run Agent</button>
+            <button type="button" class="btn btn-primary btn-sm btn-voicely" id="agent-activate-btn">▶ Run Agent</button>
             <button type="button" class="btn btn-secondary btn-sm" id="agent-test-call-btn">Test Call</button>
             <button type="button" class="btn btn-secondary btn-sm" id="agent-save-btn">Save Changes</button>
             <button type="button" class="btn btn-ghost btn-sm btn-danger" id="agent-delete-btn">Delete Agent</button>
@@ -254,7 +254,7 @@
           <div class="main-agent-hero-actions">
             <p id="as-status" class="main-agent-status main-agent-status--muted vk-skeleton">Loading…</p>
             <div class="main-agent-actions">
-              <button type="button" class="btn btn-primary btn-sm btn-speaksy ma-make-call-btn" id="ma-make-call-btn">
+              <button type="button" class="btn btn-primary btn-sm btn-voicely ma-make-call-btn" id="ma-make-call-btn">
                 <span class="ma-make-call-icon" data-lucide="phone-outgoing" aria-hidden="true"></span>
                 Make Call
               </button>
@@ -488,20 +488,20 @@
             <div class="agents-use-cases">
               <span class="agents-use-cases-label">Focus areas</span>
               <div class="agents-pill-group" id="use-case-chips">
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="lead_generation">Leads</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="appointments">Appointments</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="support">Support</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="admissions">Admissions</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="sales">Sales</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="onboarding">Onboarding</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="negotiation">Negotiation</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="collections">Collections</button>
-                <button type="button" class="agents-pill chip btn-speaksy btn-speaksy--soft" data-use-case="surveys">Surveys</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="lead_generation">Leads</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="appointments">Appointments</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="support">Support</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="admissions">Admissions</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="sales">Sales</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="onboarding">Onboarding</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="negotiation">Negotiation</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="collections">Collections</button>
+                <button type="button" class="agents-pill chip btn-voicely btn-voicely--soft" data-use-case="surveys">Surveys</button>
               </div>
             </div>
             <footer class="agents-composer-footer">
               <div class="agents-composer-actions">
-                <button type="button" class="agents-btn-primary btn-speaksy btn-speaksy--soft" id="create-assistant-btn">
+                <button type="button" class="agents-btn-primary btn-voicely btn-voicely--soft" id="create-assistant-btn">
                   <span id="create-assistant-btn-label">Generate</span>
                 </button>
                 <button type="button" class="agents-btn-ghost" id="create-blank-agent-btn" title="Create a minimal agent without AI generation">
@@ -1034,15 +1034,15 @@
             <span class="vk-powered-label">Platform powered by</span>
             <img
               class="vk-powered-logo"
-              src="/static/vendor/images/speaksy-logo-powered.png?v=20260725"
-              alt="Speaksy"
+              src="/static/vendor/images/voicely-logo-powered.png?v=20260725"
+              alt="Voicely"
               width="141"
               height="40"
               loading="lazy"
               decoding="async"
             >
           </div>
-          <p class="muted vk-platform-powered-copy">Cyberhost is your brand on the front. Speaksy provides the voice AI platform underneath.</p>
+          <p class="muted vk-platform-powered-copy">Cyberhost is your brand on the front. Voicely provides the voice AI platform underneath.</p>
         </article>
 
         <nav class="tab-bar" id="settings-tabs" aria-label="Settings tabs">
@@ -1381,7 +1381,7 @@
               <h3>Integrations</h3>
               <p class="muted">Link WhatsApp and other channels. Use <strong>Add Number</strong> to connect Phone WhatsApp via QR scan.</p>
             </div>
-            <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="integrations-add-number-btn">
+            <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="integrations-add-number-btn">
               <span data-lucide="smartphone" aria-hidden="true"></span>
               Add Number
             </button>
@@ -1443,7 +1443,7 @@
               </div>
               <footer class="wa-chat-composer" id="wa-chat-composer" hidden>
                 <textarea class="input wa-chat-composer-input" id="wa-chat-composer-input" rows="2" placeholder="Type a message…" aria-label="Message"></textarea>
-                <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="wa-chat-send-btn">Send</button>
+                <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="wa-chat-send-btn">Send</button>
               </footer>
             </div>
           </div>
@@ -1559,7 +1559,7 @@
               </div>
 
               <div class="campaign-actions">
-                <button type="button" class="btn btn-primary btn-speaksy" id="campaign-dispatch-btn">Dispatch campaign</button>
+                <button type="button" class="btn btn-primary btn-voicely" id="campaign-dispatch-btn">Dispatch campaign</button>
                 <button type="button" class="btn btn-ghost" id="campaign-clear-btn">Clear list</button>
                 <span class="muted" id="campaign-status"></span>
               </div>
@@ -1698,7 +1698,7 @@
           <h2>Voice AI that feels<br>completely human.</h2>
           <p class="billing-hero-sub vk-billing-powered">
             <span class="vk-powered-label">Powered by</span>
-            <img class="vk-powered-logo vk-powered-logo--billing" src="/static/vendor/images/speaksy-logo-powered.png?v=20260725" alt="Speaksy" width="155" height="44" loading="lazy" decoding="async">
+            <img class="vk-powered-logo vk-powered-logo--billing" src="/static/vendor/images/voicely-logo-powered.png?v=20260725" alt="Voicely" width="155" height="44" loading="lazy" decoding="async">
             — sub-40ms latency, studio-grade output, every Indian language. Built for sales teams that demand perfection.
           </p>
         </header>
@@ -1808,7 +1808,7 @@
         <span data-lucide="x" aria-hidden="true"></span>
       </button>
       <h3 id="wa-connect-title">Add a number</h3>
-      <p class="wa-connect-sub muted">Choose how to connect WhatsApp or a phone channel to Speaksy.</p>
+      <p class="wa-connect-sub muted">Choose how to connect WhatsApp or a phone channel to Voicely.</p>
 
       <div id="wa-connect-methods">
         <div class="integrations-grid wa-connect-methods-grid" id="wa-connect-methods-grid"></div>
@@ -1834,7 +1834,7 @@
         <p class="muted">Inbound WhatsApp messages will get AI replies and appear in Call History.</p>
         <div class="wa-connect-actions">
           <button type="button" class="btn btn-ghost" id="wa-connect-disconnect-btn">Disconnect</button>
-          <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="wa-connect-done-btn">Done</button>
+          <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="wa-connect-done-btn">Done</button>
         </div>
       </div>
 
@@ -1842,7 +1842,7 @@
         <p class="wa-connect-error-title">WhatsApp disconnected</p>
         <p class="muted">This number was unlinked from your phone. Scan a new QR code to reconnect.</p>
         <div class="wa-connect-actions">
-          <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="wa-connect-rescan-btn">Scan again</button>
+          <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="wa-connect-rescan-btn">Scan again</button>
         </div>
       </div>
 
@@ -1850,7 +1850,7 @@
         <p class="wa-connect-error-title">Could not connect</p>
         <p class="muted" id="wa-connect-error-msg">Something went wrong.</p>
         <div class="wa-connect-actions">
-          <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="wa-connect-retry-btn">Try again</button>
+          <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="wa-connect-retry-btn">Try again</button>
         </div>
       </div>
     </div>
@@ -1886,7 +1886,7 @@
           <span class="make-call-recent-label">Recent</span>
           <div class="make-call-recent-chips" id="make-call-recent-chips"></div>
         </div>
-        <button type="submit" class="btn btn-primary btn-speaksy make-call-submit" id="make-call-submit">
+        <button type="submit" class="btn btn-primary btn-voicely make-call-submit" id="make-call-submit">
           <span data-lucide="phone" aria-hidden="true"></span>
           <span class="make-call-submit-text">Call now</span>
         </button>
@@ -1912,7 +1912,7 @@
           <input class="input" id="test-call-phone" type="tel" placeholder="+91XXXXXXXXXX" required autocomplete="tel">
         </label>
         <div class="modal-actions" style="justify-content: flex-start; gap: 0.5rem; flex-wrap: wrap;">
-          <button type="submit" class="btn btn-primary btn-speaksy" id="test-call-submit">Call Now</button>
+          <button type="submit" class="btn btn-primary btn-voicely" id="test-call-submit">Call Now</button>
           <button type="button" class="btn btn-ghost" data-close-modal>Cancel</button>
         </div>
         <div id="test-call-result" class="test-call-result muted"></div>
@@ -1979,16 +1979,16 @@
   <div id="toast-root" class="toast-root" aria-live="polite"></div>
 
   <div
-    class="speaksy-loading-overlay"
-    id="speaksy-tab-loader"
+    class="voicely-loading-overlay"
+    id="voicely-tab-loader"
     data-theme="light"
     aria-hidden="true"
     role="status"
     aria-label="Loading"
   >
-    <div class="speaksy-loader">
-      <div class="speaksy-loader-pill light" aria-hidden="true">
-        <span>Speaksy.</span>
+    <div class="voicely-loader">
+      <div class="voicely-loader-pill light" aria-hidden="true">
+        <span>Voicely.</span>
         <span class="shimmer" aria-hidden="true"></span>
       </div>
     </div>

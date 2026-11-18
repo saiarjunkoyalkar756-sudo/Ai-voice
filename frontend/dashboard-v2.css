@@ -1,5 +1,5 @@
 /**
- * Speaksy Dashboard v2 — Studio shell
+ * Voicely Dashboard v2 — Studio shell
  * UX inspired by dashh design system; built on vercel-ui.css tokens.
  * Scoped to .vui-v2 — v1 dashboard unchanged.
  */
@@ -23,10 +23,10 @@
   --ds-sidebar: 260px;
   --ds-topbar: 64px;
   --ds-max-content: 1440px;
-  --speaksy-green: var(--ds-mint);
-  --speaksy-green-hover: #7ae8c8;
-  --speaksy-green-dim: var(--ds-mint-dim);
-  --speaksy-void: var(--ds-void);
+  --voicely-green: var(--ds-mint);
+  --voicely-green-hover: #7ae8c8;
+  --voicely-green-dim: var(--ds-mint-dim);
+  --voicely-void: var(--ds-void);
   --color-bg: var(--ds-void);
   --color-surface: var(--ds-graphite);
   --color-surface-2: var(--ds-surface-raised);
@@ -214,7 +214,7 @@
   padding: 16px 24px 0;
 }
 
-/* btn-deploy styling lives in vk-realty-dashboard.css (.btn-speaksy) */
+/* btn-deploy styling lives in vk-realty-dashboard.css (.btn-voicely) */
 
 .vui-v2 .sidebar-links {
   padding: 16px 24px 0;
@@ -499,7 +499,7 @@
   background: linear-gradient(160deg, var(--ds-glass), rgba(99, 220, 180, 0.04));
 }
 
-.vui-v2 .agents-btn-primary:not(.btn-speaksy) {
+.vui-v2 .agents-btn-primary:not(.btn-voicely) {
   background: var(--ds-mint);
   color: #003829;
   font-weight: 700;
@@ -593,7 +593,7 @@
   background: rgba(99, 220, 180, 0.08);
 }
 
-/* ma-make-call-btn typography → .btn-speaksy (Cy Grotesk) in vk-realty-dashboard.css */
+/* ma-make-call-btn typography → .btn-voicely (Cy Grotesk) in vk-realty-dashboard.css */
 
 .vui-v2 .as-modal-card--advanced .as-modal-head h3 {
   font-family: "Syne", sans-serif;

@@ -1,21 +1,21 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   Speaksy — Voice AI Studio
-   Brand: speaksy_brand_identity.html · Layout: SQL Query Browser
+   Voicely — Voice AI Studio
+   Brand: voicely_brand_identity.html · Layout: SQL Query Browser
    Typography: Syne (display) · Space Grotesk (body) · JetBrains Mono (UI)
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ─── 1. Design tokens ───────────────────────────────────────────────────── */
 :root,
 [data-theme="light"] {
-  /* Speaksy brand palette */
-  --speaksy-green: #63dcb4;
-  --speaksy-green-hover: #7de8c2;
-  --speaksy-green-dim: #1a8f72;
-  --speaksy-void: #09090b;
-  --speaksy-signal: #fafafa;
-  --speaksy-forest: #0d2b22;
-  --speaksy-obsidian: #1a1a1f;
-  --speaksy-error: #e55a5a;
+  /* Voicely brand palette */
+  --voicely-green: #63dcb4;
+  --voicely-green-hover: #7de8c2;
+  --voicely-green-dim: #1a8f72;
+  --voicely-void: #09090b;
+  --voicely-signal: #fafafa;
+  --voicely-forest: #0d2b22;
+  --voicely-obsidian: #1a1a1f;
+  --voicely-error: #e55a5a;
   /* Compact dashboard type scale (14px base) */
   --text-xs: 0.6875rem;   /* 11px — labels, meta */
   --text-sm: 0.8125rem;   /* 13px — UI, table, nav */
@@ -44,12 +44,12 @@
   --color-text: #28251d;
   --color-text-muted: #696760;
   --color-text-faint: #9a9891;
-  --color-primary: var(--speaksy-green-dim);
+  --color-primary: var(--voicely-green-dim);
   --color-primary-hover: #157a60;
   --color-primary-highlight: rgba(99, 220, 180, 0.14);
   --color-success: #2e5c10;
   --color-warning: #964219;
-  --color-danger: var(--speaksy-error);
+  --color-danger: var(--voicely-error);
   --color-chip: #ece9e2;
 
   --radius-sm: 0.375rem;
@@ -97,20 +97,20 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: var(--speaksy-void);
-  --color-surface: var(--speaksy-obsidian);
+  --color-bg: var(--voicely-void);
+  --color-surface: var(--voicely-obsidian);
   --color-surface-2: #141416;
-  --color-surface-offset: var(--speaksy-forest);
+  --color-surface-offset: var(--voicely-forest);
   --color-border: rgba(255, 255, 255, 0.08);
-  --color-text: var(--speaksy-signal);
+  --color-text: var(--voicely-signal);
   --color-text-muted: rgba(250, 250, 250, 0.55);
   --color-text-faint: rgba(250, 250, 250, 0.35);
-  --color-primary: var(--speaksy-green);
-  --color-primary-hover: var(--speaksy-green-hover);
+  --color-primary: var(--voicely-green);
+  --color-primary-hover: var(--voicely-green-hover);
   --color-primary-highlight: rgba(99, 220, 180, 0.08);
-  --color-success: var(--speaksy-green);
+  --color-success: var(--voicely-green);
   --color-warning: #d8956b;
-  --color-danger: var(--speaksy-error);
+  --color-danger: var(--voicely-error);
   --color-chip: rgba(255, 255, 255, 0.04);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
@@ -267,7 +267,7 @@ h1, h2, h3, h4 {
   margin-bottom: var(--space-4);
 }
 
-/* Speaksy brand lockup */
+/* Voicely brand lockup */
 .brand {
   display: flex;
   align-items: center;
@@ -282,7 +282,7 @@ h1, h2, h3, h4 {
   width: 38px;
   height: 38px;
   border-radius: 12px;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,11 +295,11 @@ h1, h2, h3, h4 {
 }
 
 .icon-mark-bar {
-  fill: var(--speaksy-void);
+  fill: var(--voicely-void);
 }
 
 [data-theme="light"] .icon-mark-bar {
-  fill: var(--speaksy-void);
+  fill: var(--voicely-void);
 }
 
 .brand-copy {
@@ -321,7 +321,7 @@ h1, h2, h3, h4 {
 }
 
 .wordmark-sy {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   position: relative;
 }
 
@@ -336,7 +336,7 @@ h1, h2, h3, h4 {
 }
 
 [data-theme="light"] .wordmark-sy {
-  color: var(--speaksy-green-dim);
+  color: var(--voicely-green-dim);
 }
 
 [data-theme="light"] .wordmark-sy::after {
@@ -466,7 +466,7 @@ h1, h2, h3, h4 {
   color: var(--color-text);
   border-color: transparent;
   font-weight: 500;
-  box-shadow: inset 3px 0 0 var(--speaksy-green);
+  box-shadow: inset 3px 0 0 var(--voicely-green);
 }
 
 .sidebar-group-label {
@@ -488,7 +488,7 @@ h1, h2, h3, h4 {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   display: block;
 }
 
@@ -522,7 +522,7 @@ h1, h2, h3, h4 {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   flex-shrink: 0;
 }
 
@@ -743,7 +743,7 @@ svg.bottom-nav-icon,
   font-weight: 600;
 }
 
-/* Speaksy waveform (brand hero) */
+/* Voicely waveform (brand hero) */
 .voicemark {
   display: flex;
   align-items: center;
@@ -756,7 +756,7 @@ svg.bottom-nav-icon,
 .voicemark .vbar {
   width: 3px;
   border-radius: 2px;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   height: 4px;
   animation: vwave var(--d, 1s) ease-in-out infinite alternate;
   opacity: 0.75;
@@ -881,7 +881,7 @@ svg.bottom-nav-icon,
 
 .campaign-stat-pill strong {
   font-size: var(--text-lg);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .campaign-layout {
@@ -924,7 +924,7 @@ svg.bottom-nav-icon,
 
 .campaign-dropzone:hover,
 .campaign-dropzone.is-dragover {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   background: rgba(99, 220, 180, 0.09);
 }
 
@@ -939,7 +939,7 @@ svg.bottom-nav-icon,
   display: grid;
   place-items: center;
   background: rgba(99, 220, 180, 0.14);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-size: 18px;
   font-weight: 700;
 }
@@ -972,7 +972,7 @@ svg.bottom-nav-icon,
   border: none;
   background: none;
   padding: 0;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -1176,8 +1176,8 @@ svg.bottom-nav-icon,
 
 .integrations-filter-chip.is-active {
   background: rgba(99, 220, 180, 0.14);
-  border-color: var(--speaksy-green);
-  color: var(--speaksy-green);
+  border-color: var(--voicely-green);
+  color: var(--voicely-green);
 }
 
 .integrations-filter-count {
@@ -1315,12 +1315,12 @@ svg.bottom-nav-icon,
 
 .integration-timing--during-call {
   background: rgba(99, 220, 180, 0.12);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   border: 1px solid rgba(99, 220, 180, 0.25);
 }
 
 .integration-timing--during-call .integration-timing-dot {
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
 }
 
 .integration-timing--post-call {
@@ -1362,7 +1362,7 @@ svg.bottom-nav-icon,
 .integration-connected-badge {
   font-size: var(--text-xs);
   font-weight: 700;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .integrations-empty {
@@ -1456,7 +1456,7 @@ a.settings-card {
 .pill-live {
   background: rgba(99, 220, 180, 0.08);
   border: 1px solid rgba(99, 220, 180, 0.2);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.06em;
@@ -1542,21 +1542,21 @@ a.settings-card {
 }
 
 .btn-primary {
-  background: var(--speaksy-green);
-  color: var(--speaksy-void);
-  border-color: var(--speaksy-green);
+  background: var(--voicely-green);
+  color: var(--voicely-void);
+  border-color: var(--voicely-green);
 }
 
 .btn-primary:hover {
-  background: var(--speaksy-green-hover);
-  border-color: var(--speaksy-green-hover);
+  background: var(--voicely-green-hover);
+  border-color: var(--voicely-green-hover);
   transform: translateY(-1px);
 }
 
 [data-theme="light"] .btn-primary {
-  background: var(--speaksy-green-dim);
+  background: var(--voicely-green-dim);
   color: #fff;
-  border-color: var(--speaksy-green-dim);
+  border-color: var(--voicely-green-dim);
 }
 
 .btn-primary:disabled {
@@ -1778,7 +1778,7 @@ select.input:focus {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   z-index: 2;
   animation: voicePulse 2.8s ease-in-out infinite;
 }
@@ -1787,7 +1787,7 @@ select.input:focus {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px solid var(--speaksy-green);
+  border: 1px solid var(--voicely-green);
   opacity: 0.2;
   animation: voiceWave 3s ease-out infinite;
 }
@@ -2050,7 +2050,7 @@ select.input:focus {
 
 .kb-dropzone:hover,
 .kb-dropzone.is-dragover {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   background: rgba(99, 220, 180, 0.09);
 }
 
@@ -2065,7 +2065,7 @@ select.input:focus {
   display: grid;
   place-items: center;
   background: rgba(99, 220, 180, 0.14);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-size: 18px;
   font-weight: 700;
 }
@@ -2095,7 +2095,7 @@ select.input:focus {
 
 .kb-browse-link {
   display: inline;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
@@ -2356,14 +2356,14 @@ select.input:focus {
 }
 
 .flow-toggle input:checked + .flow-toggle-track {
-  background: var(--speaksy-green);
-  border-color: var(--speaksy-green);
+  background: var(--voicely-green);
+  border-color: var(--voicely-green);
 }
 
 .flow-toggle input:checked + .flow-toggle-track .flow-toggle-text {
   left: 8px;
   right: auto;
-  color: var(--speaksy-void);
+  color: var(--voicely-void);
 }
 
 .flow-toggle input:checked + .flow-toggle-track .flow-toggle-knob {
@@ -2540,7 +2540,7 @@ select.input:focus {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   background: rgba(99, 220, 180, 0.12);
   border: 1px solid rgba(99, 220, 180, 0.22);
 }
@@ -2608,7 +2608,7 @@ select.input:focus {
 }
 
 .crm-insights-stat-pill.is-booked {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   background: rgba(99, 220, 180, 0.14);
   border: 1px solid rgba(99, 220, 180, 0.28);
 }
@@ -2763,7 +2763,7 @@ select.input:focus {
 }
 
 .crm-insights-call.is-latest .crm-insights-call-dot {
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   box-shadow: 0 0 0 4px rgba(99, 220, 180, 0.15);
 }
 
@@ -2819,7 +2819,7 @@ select.input:focus {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .crm-insights-call-summary {
@@ -2850,7 +2850,7 @@ select.input:focus {
 }
 
 .crm-row.selected td:first-child {
-  box-shadow: inset 3px 0 0 var(--speaksy-green);
+  box-shadow: inset 3px 0 0 var(--voicely-green);
 }
 
 .list {
@@ -3754,12 +3754,12 @@ select.input:focus {
 .call-logs-detail-btn {
   border: 1px solid rgba(99, 220, 180, 0.4);
   background: rgba(99, 220, 180, 0.12);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .call-logs-detail-btn:hover {
   background: rgba(99, 220, 180, 0.2);
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   box-shadow: 0 2px 10px rgba(99, 220, 180, 0.15);
   transform: translateY(-0.5px);
 }
@@ -3783,7 +3783,7 @@ select.input:focus {
 
 .call-logs-detail-btn:focus-visible,
 .call-logs-recording-btn:focus-visible {
-  outline: 2px solid var(--speaksy-green);
+  outline: 2px solid var(--voicely-green);
   outline-offset: 2px;
 }
 
@@ -4090,7 +4090,7 @@ select.input:focus {
   height: 24px;
   border-radius: 50%;
   background: rgba(99, 220, 180, 0.15);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-size: 12px;
 }
 
@@ -4110,7 +4110,7 @@ select.input:focus {
   border-radius: 999px;
   border: 1px solid rgba(99, 220, 180, 0.4);
   background: rgba(99, 220, 180, 0.12);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-family: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -4122,7 +4122,7 @@ select.input:focus {
 
 .call-summary-regen:hover:not(:disabled) {
   background: rgba(99, 220, 180, 0.2);
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   box-shadow: 0 0 0 1px rgba(99, 220, 180, 0.15), 0 4px 14px rgba(99, 220, 180, 0.18);
   transform: translateY(-1px);
 }
@@ -4132,7 +4132,7 @@ select.input:focus {
 }
 
 .call-summary-regen:focus-visible {
-  outline: 2px solid var(--speaksy-green);
+  outline: 2px solid var(--voicely-green);
   outline-offset: 2px;
 }
 
@@ -4187,29 +4187,29 @@ select.input:focus {
 }
 
 .call-modal-btn--primary {
-  border: 1px solid var(--speaksy-green);
-  background: var(--speaksy-green);
-  color: var(--speaksy-void);
+  border: 1px solid var(--voicely-green);
+  background: var(--voicely-green);
+  color: var(--voicely-void);
   box-shadow: 0 2px 10px rgba(99, 220, 180, 0.22);
 }
 
 .call-modal-btn--primary:hover {
-  background: var(--speaksy-green-hover, #7ee8c8);
-  border-color: var(--speaksy-green-hover, #7ee8c8);
+  background: var(--voicely-green-hover, #7ee8c8);
+  border-color: var(--voicely-green-hover, #7ee8c8);
   box-shadow: 0 4px 16px rgba(99, 220, 180, 0.3);
   transform: translateY(-1px);
-  color: var(--speaksy-void);
+  color: var(--voicely-void);
 }
 
 .call-modal-btn--outline {
   border: 1px solid rgba(99, 220, 180, 0.45);
   background: rgba(99, 220, 180, 0.08);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .call-modal-btn--outline:hover {
   background: rgba(99, 220, 180, 0.16);
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   box-shadow: 0 0 0 1px rgba(99, 220, 180, 0.12);
   transform: translateY(-1px);
 }
@@ -4219,7 +4219,7 @@ select.input:focus {
 }
 
 .call-modal-btn:focus-visible {
-  outline: 2px solid var(--speaksy-green);
+  outline: 2px solid var(--voicely-green);
   outline-offset: 2px;
 }
 
@@ -4378,8 +4378,8 @@ select.input:focus {
   flex-shrink: 0;
   border: none;
   border-radius: 50%;
-  background: var(--speaksy-green);
-  color: var(--speaksy-void);
+  background: var(--voicely-green);
+  color: var(--voicely-void);
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(99, 220, 180, 0.28);
   transition: transform 120ms ease, box-shadow 140ms ease, background 140ms ease;
@@ -4395,7 +4395,7 @@ select.input:focus {
 }
 
 .call-audio-play:focus-visible {
-  outline: 2px solid var(--speaksy-green);
+  outline: 2px solid var(--voicely-green);
   outline-offset: 3px;
 }
 
@@ -4429,7 +4429,7 @@ select.input:focus {
   inset: 0 auto 0 0;
   width: 0%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(99, 220, 180, 0.55), var(--speaksy-green));
+  background: linear-gradient(90deg, rgba(99, 220, 180, 0.55), var(--voicely-green));
   pointer-events: none;
   transition: width 80ms linear;
 }
@@ -4495,7 +4495,7 @@ select.input:focus {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   animation: call-audio-pulse 1s ease-in-out infinite;
 }
 
@@ -4546,7 +4546,7 @@ select.input:focus {
 .call-audio-error-link {
   border: 1px solid rgba(99, 220, 180, 0.35);
   background: rgba(99, 220, 180, 0.1);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .call-audio-player.is-playing .call-audio-play {
@@ -4913,7 +4913,7 @@ select.input:focus {
   }
 }
 
-/* ─── Dashboard polish (Speaksy) ─────────────────────────────────────────── */
+/* ─── Dashboard polish (Voicely) ─────────────────────────────────────────── */
 .metric-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -5171,7 +5171,7 @@ select.input:focus {
 }
 
 .lead-action-btn:focus-visible {
-  outline: 2px solid var(--speaksy-green);
+  outline: 2px solid var(--voicely-green);
   outline-offset: 2px;
 }
 
@@ -5190,7 +5190,7 @@ select.input:focus {
 .lead-action-btn--listing {
   background: rgba(99, 220, 180, 0.1);
   border-color: rgba(99, 220, 180, 0.28);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .lead-action-btn--listing:hover {
@@ -5305,7 +5305,7 @@ select.input:focus {
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .hot-intent {
@@ -5337,7 +5337,7 @@ select.input:focus {
   height: 40px;
   border-radius: var(--radius-md);
   background: rgba(99, 220, 180, 0.1);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5357,10 +5357,10 @@ select.input:focus {
 }
 
 .badge-booked { background: var(--success-subtle); color: var(--color-success); border-color: rgba(99, 220, 180, 0.2); }
-.badge-interested { background: rgba(99, 220, 180, 0.08); color: var(--speaksy-green); }
+.badge-interested { background: rgba(99, 220, 180, 0.08); color: var(--voicely-green); }
 .badge-follow-up { background: var(--warning-subtle); color: var(--color-warning); }
 .badge-not-interested { background: var(--danger-subtle); color: var(--color-danger); }
-.badge-hot { background: rgba(99, 220, 180, 0.12); color: var(--speaksy-green); }
+.badge-hot { background: rgba(99, 220, 180, 0.12); color: var(--voicely-green); }
 .badge-muted { background: var(--color-chip); color: var(--color-text-faint); }
 
 .pagination-row {
@@ -5391,7 +5391,7 @@ select.input:focus {
 
 .progress-fill {
   height: 100%;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   border-radius: var(--radius-pill);
 }
 
@@ -5609,9 +5609,9 @@ select.input:focus {
 }
 
 .day-toggle input:checked + span {
-  background: var(--speaksy-green);
-  border-color: var(--speaksy-green);
-  color: var(--speaksy-void);
+  background: var(--voicely-green);
+  border-color: var(--voicely-green);
+  color: var(--voicely-void);
   box-shadow: 0 1px 4px rgba(99, 220, 180, 0.25);
 }
 
@@ -5644,7 +5644,7 @@ select.input:focus {
 }
 
 .tone-card.selected {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   box-shadow: inset 0 0 0 1px rgba(99, 220, 180, 0.15);
 }
 
@@ -5702,7 +5702,7 @@ select.input:focus {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   margin: 0 0 var(--space-1);
 }
 
@@ -5755,7 +5755,7 @@ select.input:focus {
 }
 
 .pricing-card-featured {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   box-shadow: 0 0 0 1px rgba(99, 220, 180, 0.2), var(--shadow-md);
   position: relative;
 }
@@ -5763,7 +5763,7 @@ select.input:focus {
 .pricing-popular {
   display: inline-block;
   align-self: flex-start;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   color: #09090b;
   font-size: 10px;
   font-weight: 700;
@@ -5847,7 +5847,7 @@ select.input:focus {
 }
 
 .pricing-effective strong {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-weight: 600;
 }
 
@@ -5874,7 +5874,7 @@ select.input:focus {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   opacity: 0.85;
   margin-top: 1px;
 }
@@ -5915,12 +5915,12 @@ select.input:focus {
 }
 
 .pricing-btn-filled {
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   color: #09090b;
 }
 
 .pricing-btn-filled:hover {
-  background: var(--speaksy-green-hover);
+  background: var(--voicely-green-hover);
 }
 
 /* ─── Voice Cloning add‑on ────────────────────────────────────────────────── */
@@ -5950,8 +5950,8 @@ select.input:focus {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--speaksy-green);
-  background: linear-gradient(135deg, var(--speaksy-green) 0%, var(--speaksy-green-dim) 100%);
+  background: var(--voicely-green);
+  background: linear-gradient(135deg, var(--voicely-green) 0%, var(--voicely-green-dim) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5970,7 +5970,7 @@ select.input:focus {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   margin: 0 0 1px;
 }
 
@@ -6034,7 +6034,7 @@ select.input:focus {
 
 /* ─── Assistant Settings + Agent Control ─────────────────────────────────── */
 
-/* Outlined zone system — inspired panel layout, Speaksy-native */
+/* Outlined zone system — inspired panel layout, Voicely-native */
 .ma-layout {
   display: flex;
   flex-direction: column;
@@ -6050,9 +6050,9 @@ select.input:focus {
 }
 
 .ma-zone--dirty {
-  border-color: color-mix(in srgb, var(--speaksy-green) 40%, var(--color-border));
+  border-color: color-mix(in srgb, var(--voicely-green) 40%, var(--color-border));
   box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--speaksy-green) 12%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--voicely-green) 12%, transparent),
     0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
@@ -6104,8 +6104,8 @@ select.input:focus {
   text-transform: uppercase;
   padding: 0.3rem 0.55rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--speaksy-green) 40%, var(--color-border));
-  color: var(--speaksy-green);
+  border: 1px solid color-mix(in srgb, var(--voicely-green) 40%, var(--color-border));
+  color: var(--voicely-green);
   background: var(--color-primary-highlight);
 }
 
@@ -6161,12 +6161,12 @@ select.input:focus {
 
 .ma-field-box:focus-within,
 .ma-field-box--highlight:focus-within {
-  border-color: color-mix(in srgb, var(--speaksy-green) 55%, var(--color-border));
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--speaksy-green) 14%, transparent);
+  border-color: color-mix(in srgb, var(--voicely-green) 55%, var(--color-border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--voicely-green) 14%, transparent);
 }
 
 .ma-field-box--highlight {
-  border-color: color-mix(in srgb, var(--speaksy-green) 35%, var(--color-border));
+  border-color: color-mix(in srgb, var(--voicely-green) 35%, var(--color-border));
   background: color-mix(in srgb, var(--color-primary-highlight) 35%, var(--color-surface) 65%);
 }
 
@@ -6183,8 +6183,8 @@ select.input:focus {
 
 .ma-input-outline:focus {
   outline: none !important;
-  border-color: var(--speaksy-green) !important;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--speaksy-green) 16%, transparent) !important;
+  border-color: var(--voicely-green) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--voicely-green) 16%, transparent) !important;
 }
 
 .ma-editor-row {
@@ -6244,7 +6244,7 @@ select.input:focus {
 
 .ma-pick-card:hover,
 .ma-pick-card:focus-visible {
-  border-color: color-mix(in srgb, var(--speaksy-green) 45%, var(--color-border)) !important;
+  border-color: color-mix(in srgb, var(--voicely-green) 45%, var(--color-border)) !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transform: translateY(-1px);
 }
@@ -6274,7 +6274,7 @@ select.input:focus {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .main-agent-hero h3 {
@@ -6363,7 +6363,7 @@ select.input:focus {
   z-index: 1;
   width: 1.65rem;
   height: 1.65rem;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .make-call-card h3 {
@@ -6439,7 +6439,7 @@ select.input:focus {
 }
 
 .make-call-recent-chip:hover:not(:disabled) {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   background: rgba(99, 220, 180, 0.08);
 }
 
@@ -6485,7 +6485,7 @@ select.input:focus {
 }
 
 .make-call-status.is-success {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .make-call-status.is-error {
@@ -6634,7 +6634,7 @@ select.input:focus {
 }
 
 .as-setting-row:hover {
-  background: color-mix(in srgb, var(--color-surface-2) 70%, var(--speaksy-green) 30%);
+  background: color-mix(in srgb, var(--color-surface-2) 70%, var(--voicely-green) 30%);
 }
 
 .as-setting-row.is-on {
@@ -6646,7 +6646,7 @@ select.input:focus {
 }
 
 .as-setting-row.is-on .as-setting-sub {
-  color: color-mix(in srgb, var(--color-text-muted) 55%, var(--speaksy-green) 45%);
+  color: color-mix(in srgb, var(--color-text-muted) 55%, var(--voicely-green) 45%);
 }
 
 .as-setting-copy {
@@ -6673,7 +6673,7 @@ select.input:focus {
   font-size: 0.7rem;
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
-  background: color-mix(in srgb, var(--color-surface-2) 80%, var(--speaksy-green) 20%);
+  background: color-mix(in srgb, var(--color-surface-2) 80%, var(--voicely-green) 20%);
 }
 
 .as-setting-switch.toggle {
@@ -6697,7 +6697,7 @@ select.input:focus {
 }
 
 .as-setting-switch input:checked + .toggle-slider {
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   border-color: transparent;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
@@ -6708,7 +6708,7 @@ select.input:focus {
 }
 
 .as-setting-switch input:focus-visible + .toggle-slider {
-  outline: 2px solid color-mix(in srgb, var(--speaksy-green) 65%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--voicely-green) 65%, transparent);
   outline-offset: 2px;
 }
 
@@ -6749,7 +6749,7 @@ select.input:focus {
   border-radius: 999px;
   border: 1px solid var(--color-border);
 }
-.ac-state-pill--ok { color: var(--speaksy-green); border-color: var(--speaksy-green); background: rgba(99, 220, 180, 0.08); }
+.ac-state-pill--ok { color: var(--voicely-green); border-color: var(--voicely-green); background: rgba(99, 220, 180, 0.08); }
 .ac-state-pill--muted { color: var(--color-text-muted); }
 
 .ac-status-grid {
@@ -6770,7 +6770,7 @@ select.input:focus {
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
 }
-.ac-proc-pid { font-family: var(--font-mono); color: var(--speaksy-green); }
+.ac-proc-pid { font-family: var(--font-mono); color: var(--voicely-green); }
 
 .ac-log-output {
   margin: 0;
@@ -6812,11 +6812,11 @@ select.input:focus {
 }
 
 .as-quick-grid .as-pick-card:hover {
-  border-color: color-mix(in srgb, var(--speaksy-green) 42%, var(--color-border) 58%) !important;
+  border-color: color-mix(in srgb, var(--voicely-green) 42%, var(--color-border) 58%) !important;
   transform: translateY(-1px);
   box-shadow:
     0 8px 22px rgba(0, 0, 0, 0.1),
-    0 0 0 1px color-mix(in srgb, var(--speaksy-green) 14%, transparent);
+    0 0 0 1px color-mix(in srgb, var(--voicely-green) 14%, transparent);
 }
 
 .as-quick-grid .as-pick-card:active {
@@ -6828,7 +6828,7 @@ select.input:focus {
   outline: none;
   box-shadow:
     0 0 0 2px var(--color-surface),
-    0 0 0 4px color-mix(in srgb, var(--speaksy-green) 70%, transparent);
+    0 0 0 4px color-mix(in srgb, var(--voicely-green) 70%, transparent);
 }
 
 .as-pick-accent {
@@ -6843,7 +6843,7 @@ select.input:focus {
 }
 
 .as-pick-card[data-pick="languages"] .as-pick-accent { background: #5b9fd4; opacity: 1; }
-.as-pick-card[data-pick="voice"] .as-pick-accent { background: var(--speaksy-green); opacity: 1; }
+.as-pick-card[data-pick="voice"] .as-pick-accent { background: var(--voicely-green); opacity: 1; }
 .as-pick-card[data-pick="llm"] .as-pick-accent { background: #c9a227; opacity: 1; }
 .as-pick-card[data-pick="stt"] .as-pick-accent { background: #7b8cff; opacity: 1; }
 .as-pick-card[data-pick="advanced"] .as-pick-accent { background: #8b9dc3; opacity: 1; }
@@ -6874,7 +6874,7 @@ select.input:focus {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   opacity: 0.9;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -6914,7 +6914,7 @@ select.input:focus {
 }
 
 .as-pick-mark--voice {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   background: linear-gradient(135deg, rgba(99, 220, 180, 0.28), rgba(99, 220, 180, 0.08));
 }
 
@@ -6941,14 +6941,14 @@ select.input:focus {
 .as-pick-chevron {
   font-size: 1.25rem;
   line-height: 1;
-  color: color-mix(in srgb, var(--color-text-muted) 55%, var(--speaksy-green) 45%);
+  color: color-mix(in srgb, var(--color-text-muted) 55%, var(--voicely-green) 45%);
   font-weight: 300;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .as-pick-card:hover .as-pick-chevron {
   transform: translateX(2px);
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
 }
 
 .as-pick-label {
@@ -7018,7 +7018,7 @@ body.as-modal-open { overflow: hidden; }
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  border: 1px solid color-mix(in srgb, var(--color-border) 70%, var(--speaksy-green) 30%);
+  border: 1px solid color-mix(in srgb, var(--color-border) 70%, var(--voicely-green) 30%);
   box-shadow:
     0 24px 80px rgba(0, 0, 0, 0.45),
     0 0 0 1px color-mix(in srgb, #fff 4%, transparent);
@@ -7100,7 +7100,7 @@ body.as-modal-open { overflow: hidden; }
 
 .as-modal-accent {
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--speaksy-green), transparent);
+  background: linear-gradient(90deg, transparent, var(--voicely-green), transparent);
   opacity: 0.85;
 }
 
@@ -7135,7 +7135,7 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-modal-mark--lang { color: #5b9fd4; background: linear-gradient(135deg, rgba(91,159,212,0.2), rgba(91,159,212,0.05)); }
-.as-modal-mark--voice { color: var(--speaksy-green); background: linear-gradient(135deg, rgba(99,220,180,0.25), rgba(99,220,180,0.06)); }
+.as-modal-mark--voice { color: var(--voicely-green); background: linear-gradient(135deg, rgba(99,220,180,0.25), rgba(99,220,180,0.06)); }
 .as-modal-mark--llm { color: #c9a227; background: linear-gradient(135deg, rgba(201,162,39,0.22), rgba(201,162,39,0.06)); }
 .as-modal-mark--stt { color: #7b8cff; background: linear-gradient(135deg, rgba(123,140,255,0.22), rgba(123,140,255,0.06)); }
 .as-modal-mark--ambient { color: #8b9dc3; background: linear-gradient(135deg, rgba(139,157,195,0.22), rgba(139,157,195,0.06)); }
@@ -7219,7 +7219,7 @@ body.as-modal-open { overflow: hidden; }
 
 .as-modal-close:hover {
   color: var(--color-text);
-  border-color: color-mix(in srgb, var(--speaksy-green) 40%, var(--color-border));
+  border-color: color-mix(in srgb, var(--voicely-green) 40%, var(--color-border));
   background: var(--color-primary-highlight);
 }
 
@@ -7234,7 +7234,7 @@ body.as-modal-open { overflow: hidden; }
   flex: 1;
   min-height: 0;
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--speaksy-green) 35%, transparent) transparent;
+  scrollbar-color: color-mix(in srgb, var(--voicely-green) 35%, transparent) transparent;
 }
 
 .as-modal-foot {
@@ -7295,7 +7295,7 @@ body.as-modal-open { overflow: hidden; }
   padding: 1.1rem 1.25rem;
   border-radius: 14px;
   border: 1px solid var(--color-border);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--color-surface-2) 80%, var(--speaksy-green) 20%), var(--color-surface-2));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-surface-2) 80%, var(--voicely-green) 20%), var(--color-surface-2));
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -7305,7 +7305,7 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-voice-hero.has-selection {
-  border-color: color-mix(in srgb, var(--speaksy-green) 45%, var(--color-border));
+  border-color: color-mix(in srgb, var(--voicely-green) 45%, var(--color-border));
   box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 6%, transparent);
 }
 
@@ -7313,7 +7313,7 @@ body.as-modal-open { overflow: hidden; }
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 12px;
-  background: color-mix(in srgb, var(--speaksy-green) 12%, var(--color-surface));
+  background: color-mix(in srgb, var(--voicely-green) 12%, var(--color-surface));
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -7329,7 +7329,7 @@ body.as-modal-open { overflow: hidden; }
 .as-voice-wave-bar {
   width: 3px;
   border-radius: 2px;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   height: calc(var(--h) * 2px);
   animation: as-wave-pulse 1.2s ease-in-out infinite;
   animation-delay: calc(var(--i, 0) * 0.08s);
@@ -7426,7 +7426,7 @@ body.as-modal-open { overflow: hidden; }
 .as-seg-btn.active {
   color: var(--color-text);
   background: var(--color-surface);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), inset 0 0 0 1px color-mix(in srgb, var(--speaksy-green) 35%, transparent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12), inset 0 0 0 1px color-mix(in srgb, var(--voicely-green) 35%, transparent);
 }
 
 .as-voice-list-wrap {
@@ -7480,17 +7480,17 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-voice-row:hover {
-  border-color: color-mix(in srgb, var(--speaksy-green) 35%, var(--color-border));
-  background: color-mix(in srgb, var(--color-surface) 82%, var(--speaksy-green) 18%);
+  border-color: color-mix(in srgb, var(--voicely-green) 35%, var(--color-border));
+  background: color-mix(in srgb, var(--color-surface) 82%, var(--voicely-green) 18%);
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .as-voice-row.is-selected {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   background: var(--color-primary-highlight);
   box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--speaksy-green) 28%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--voicely-green) 28%, transparent),
     0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -7503,13 +7503,13 @@ body.as-modal-open { overflow: hidden; }
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: var(--speaksy-green);
-  background: color-mix(in srgb, var(--speaksy-green) 14%, var(--color-surface-2));
+  color: var(--voicely-green);
+  background: color-mix(in srgb, var(--voicely-green) 14%, var(--color-surface-2));
   flex-shrink: 0;
 }
 
 .as-voice-row.is-selected .as-voice-row-avatar {
-  background: color-mix(in srgb, var(--speaksy-green) 28%, var(--color-surface));
+  background: color-mix(in srgb, var(--voicely-green) 28%, var(--color-surface));
   color: var(--color-text);
 }
 
@@ -7534,11 +7534,11 @@ body.as-modal-open { overflow: hidden; }
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   padding: 0.22rem 0.5rem;
   border-radius: 6px;
-  border: 1px solid color-mix(in srgb, var(--speaksy-green) 30%, var(--color-border));
-  background: color-mix(in srgb, var(--speaksy-green) 10%, var(--color-surface-2));
+  border: 1px solid color-mix(in srgb, var(--voicely-green) 30%, var(--color-border));
+  background: color-mix(in srgb, var(--voicely-green) 10%, var(--color-surface-2));
 }
 
 .as-voice-row-badge {
@@ -7548,7 +7548,7 @@ body.as-modal-open { overflow: hidden; }
   display: grid;
   place-items: center;
   color: #fff;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   opacity: 0;
   transform: scale(0.6);
   transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
@@ -7588,7 +7588,7 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-lang-count strong {
-  color: var(--speaksy-green);
+  color: var(--voicely-green);
   font-size: 1rem;
 }
 
@@ -7613,14 +7613,14 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-lang-card:hover {
-  border-color: color-mix(in srgb, var(--speaksy-green) 40%, var(--color-border));
+  border-color: color-mix(in srgb, var(--voicely-green) 40%, var(--color-border));
   transform: translateY(-1px);
 }
 
 .as-lang-card.is-selected {
-  border-color: var(--speaksy-green);
+  border-color: var(--voicely-green);
   background: var(--color-primary-highlight);
-  box-shadow: 0 4px 16px color-mix(in srgb, var(--speaksy-green) 18%, transparent);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--voicely-green) 18%, transparent);
 }
 
 .as-lang-card--shake {
@@ -7640,7 +7640,7 @@ body.as-modal-open { overflow: hidden; }
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   color: #fff;
   display: grid;
   place-items: center;
@@ -7734,8 +7734,8 @@ body.as-modal-open { overflow: hidden; }
   padding: 0.25rem 0.6rem;
   border-radius: 8px;
   background: var(--color-surface-2);
-  color: var(--speaksy-green);
-  border: 1px solid color-mix(in srgb, var(--speaksy-green) 35%, var(--color-border));
+  color: var(--voicely-green);
+  border: 1px solid color-mix(in srgb, var(--voicely-green) 35%, var(--color-border));
   min-width: 3.25rem;
   text-align: center;
 }
@@ -7768,8 +7768,8 @@ body.as-modal-open { overflow: hidden; }
   border-radius: inherit;
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, var(--speaksy-green) 75%, #fff 25%),
-    var(--speaksy-green)
+    color-mix(in srgb, var(--voicely-green) 75%, #fff 25%),
+    var(--voicely-green)
   );
   transition: width 0.08s ease-out;
 }
@@ -7811,7 +7811,7 @@ body.as-modal-open { overflow: hidden; }
 .as-slider-input:focus-visible::-webkit-slider-thumb,
 .as-range:focus-visible::-webkit-slider-thumb {
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--speaksy-green) 22%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--voicely-green) 22%, transparent),
     0 2px 8px rgba(0, 0, 0, 0.28);
 }
 
@@ -7831,7 +7831,7 @@ body.as-modal-open { overflow: hidden; }
   margin-top: -8px;
   border-radius: 50%;
   border: 2px solid #fff;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
   cursor: grab;
   transition: transform 0.12s ease;
@@ -7857,7 +7857,7 @@ body.as-modal-open { overflow: hidden; }
   height: 22px;
   border-radius: 50%;
   border: 2px solid #fff;
-  background: var(--speaksy-green);
+  background: var(--voicely-green);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
   cursor: grab;
 }
@@ -7907,8 +7907,8 @@ body.as-modal-open { overflow: hidden; }
 }
 
 .as-flow-card.is-enabled {
-  border-color: color-mix(in srgb, var(--speaksy-green) 50%, var(--color-border) 50%);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--speaksy-green) 12%, transparent);
+  border-color: color-mix(in srgb, var(--voicely-green) 50%, var(--color-border) 50%);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--voicely-green) 12%, transparent);
 }
 
 .as-flow-card:not(.is-enabled) {

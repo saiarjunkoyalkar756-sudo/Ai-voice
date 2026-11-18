@@ -213,7 +213,7 @@ class TurnMetricsCollector:
         from turn_latency import summarize_turn_latencies, reply_cache_metrics
 
         return {
-            "schema": "speaksy.turn_metrics.v1",
+            "schema": "voicely.turn_metrics.v1",
             "room_id": self.room_id,
             "config_hash": self.config_hash,
             "turns": rows,

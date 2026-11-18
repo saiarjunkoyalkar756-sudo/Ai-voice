@@ -1,4 +1,4 @@
-﻿# Speaksy AI Voice Agent Platform
+﻿# Voicely AI Voice Agent Platform
 
 Multi-tenant AI phone agent SaaS platform powering real-time voice AI for Indian businesses.
 
@@ -19,7 +19,7 @@ Multi-tenant AI phone agent SaaS platform powering real-time voice AI for Indian
 ### 2. Setup
 
 `ash
-cd speaksy-platform/
+cd voicely-platform/
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -89,8 +89,10 @@ This codebase has been hardened against all findings from the 2026-08-10 penetra
 
 | Finding | Fix Applied |
 |---|---|
-| CRITICAL-1: Public call recordings | ecording.py now returns signed URLs only |
-| CRITICAL-2: Broken tenant isolation | 	enancy.py + equire_org_scope enforced on all DB queries |
+| CRITICAL-1: Public call recordings | 
+ecording.py now returns signed URLs only |
+| CRITICAL-2: Broken tenant isolation | 	enancy.py + 
+equire_org_scope enforced on all DB queries |
 | CRITICAL-3: Sequential transcript IDs | UUID-based log IDs via v10 migration |
 | CRITICAL-4: Unauthenticated live calls | Auth required on all /api/local/* endpoints |
 | CRITICAL-5: Outbound call abuse | /api/call/* gated by owner/dmin role |
@@ -107,7 +109,7 @@ This codebase has been hardened against all findings from the 2026-08-10 penetra
 ## Architecture
 
 `
-speaksy-platform/
+voicely-platform/
 ├── agent.py                  Entry point: LiveKit voice agent worker
 ├── ui_server.py              FastAPI dashboard (131 API routes)
 ├── auth.py                   JWT authentication + RBAC

@@ -15,7 +15,7 @@
     {
       id: "twilio_import",
       name: "Twilio Import",
-      desc: "Import an existing Twilio WhatsApp sender into Speaksy.",
+      desc: "Import an existing Twilio WhatsApp sender into Voicely.",
       live: false,
       logo: `<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#F22F46"/><circle cx="20" cy="20" r="8" fill="#fff"/><circle cx="20" cy="20" r="4" fill="#F22F46"/></svg>`,
     },
@@ -89,7 +89,7 @@
         </div>
         <p class="integration-desc muted">${esc(m.desc)}</p>
         <div class="integration-card-foot">
-          <button type="button" class="btn btn-primary btn-sm btn-speaksy btn-speaksy--soft wa-method-btn" data-method="${m.id}" ${m.live ? "" : "disabled"}>
+          <button type="button" class="btn btn-primary btn-sm btn-voicely btn-voicely--soft wa-method-btn" data-method="${m.id}" ${m.live ? "" : "disabled"}>
             ${m.live ? "Connect" : "Notify me"}
           </button>
         </div>

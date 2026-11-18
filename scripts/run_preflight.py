@@ -30,7 +30,7 @@ except ImportError:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Speaksy production preflight")
+    parser = argparse.ArgumentParser(description="Voicely production preflight")
     parser.add_argument("--strict", action="store_true", help="Treat warnings as failures")
     parser.add_argument("--json", action="store_true", help="Machine-readable report")
     parser.add_argument(

@@ -77,7 +77,7 @@ body.vui-v2 {
   --accent: var(--vk-green);
   --accent-hover: var(--vk-green-hover);
   --accent-muted: var(--vk-green-muted);
-  /* Speaksy button bezel — machined near-black ring in dark theme,
+  /* Voicely button bezel — machined near-black ring in dark theme,
      absent in light (the "remove black border" variant). */
   --sbtn-ring: 0 0 0 1.5px #05070a;
   --sbtn-surface:
@@ -100,7 +100,7 @@ body.vui-v2 {
     0 1px 2px rgba(0, 0, 0, 0.20),
     0 4px 12px -4px rgba(20, 80, 44, 0.28),
     0 6px 16px -8px rgba(90, 180, 120, 0.32);
-  /* Precision build (speaksy-button-v2) — hero / magical CTAs only */
+  /* Precision build (voicely-button-v2) — hero / magical CTAs only */
   --sbtn-magic-surface:
     linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.10) 20%, rgba(0, 0, 0, 0) 45%),
     radial-gradient(120% 90% at 8% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 42%),
@@ -154,15 +154,15 @@ body.vui-v2 {
    and vercel-ui/styles.css consume them directly. -dim doubles as a solid
    button fill with white text, so it must stay a solid hex. */
 :root {
-  --speaksy-green: #34d399;
-  --speaksy-green-hover: #56e0aa;
-  --speaksy-green-dim: #0d9d76;
+  --voicely-green: #34d399;
+  --voicely-green-hover: #56e0aa;
+  --voicely-green-dim: #0d9d76;
 }
 
 [data-theme="light"] {
-  --speaksy-green: #047857;
-  --speaksy-green-hover: #065f46;
-  --speaksy-green-dim: #047857;
+  --voicely-green: #047857;
+  --voicely-green-hover: #065f46;
+  --voicely-green-dim: #047857;
 }
 
 .brand-wordmark {
@@ -325,7 +325,7 @@ body.vui-v2 {
   color: var(--vk-green) !important;
 }
 
-/* ── Speaksy primary button — machined green pill ─────────────────
+/* ── Voicely primary button — machined green pill ─────────────────
    The showpiece button, distilled to scale at real UI sizes. One green
    surface across both themes; the difference is the shadow signature:
    dark theme carries the machined near-black bezel (--sbtn-ring), light
@@ -407,40 +407,40 @@ body.vui-v2 {
 }
 
 /* Animated green ramp — runs only while :hover is active */
-@property --speaksy-magic-angle {
+@property --voicely-magic-angle {
   syntax: "<angle>";
   inherits: false;
   initial-value: 145deg;
 }
 
-@keyframes speaksy-magic-gradient-flow {
+@keyframes voicely-magic-gradient-flow {
   0%, 100% {
-    --speaksy-magic-angle: 120deg;
+    --voicely-magic-angle: 120deg;
     filter: brightness(1.04);
   }
   50% {
-    --speaksy-magic-angle: 168deg;
+    --voicely-magic-angle: 168deg;
     filter: brightness(1.08);
   }
 }
 
-@keyframes speaksy-magic-sheen {
+@keyframes voicely-magic-sheen {
   0%   { background-position: -140% 0; }
   100% { background-position: 240% 0; }
 }
 
-/* ── Speaksy precision button — v2 build for magical CTAs only ──
-   Distilled from speaksy-button-v2.html: machined shell, layered green
+/* ── Voicely precision button — v2 build for magical CTAs only ──
+   Distilled from voicely-button-v2.html: machined shell, layered green
    surface, cyan bloom, Cy Grotesk Wide label. No black bezel ring in any
-   theme (--sbtn-magic-ring). Add .btn-speaksy--soft for 10px radius. */
-body.vui-v2 .btn-speaksy,
-body.vui-v2 .btn.btn-speaksy,
-body.vui-v2 .agents-btn-primary.btn-speaksy,
-body.vui-v2 .nav-item.btn-speaksy,
-body.vui-v2 .nav-btn.btn-speaksy,
-body.vui-v2 .agents-pill.btn-speaksy.selected,
-body.vui-v2 .lead-action-btn.btn-speaksy,
-body.vui-v2 .integration-connect-btn.btn-speaksy {
+   theme (--sbtn-magic-ring). Add .btn-voicely--soft for 10px radius. */
+body.vui-v2 .btn-voicely,
+body.vui-v2 .btn.btn-voicely,
+body.vui-v2 .agents-btn-primary.btn-voicely,
+body.vui-v2 .nav-item.btn-voicely,
+body.vui-v2 .nav-btn.btn-voicely,
+body.vui-v2 .agents-pill.btn-voicely.selected,
+body.vui-v2 .lead-action-btn.btn-voicely,
+body.vui-v2 .integration-connect-btn.btn-voicely {
   position: relative;
   z-index: 0;
   isolation: isolate;
@@ -451,13 +451,13 @@ body.vui-v2 .integration-connect-btn.btn-speaksy {
   font-family: var(--font-display) !important;
   font-weight: 500;
   letter-spacing: -0.01em;
-  --speaksy-magic-angle: 145deg;
+  --voicely-magic-angle: 145deg;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.10) 20%, rgba(0, 0, 0, 0) 45%),
     radial-gradient(120% 90% at 8% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 42%),
     radial-gradient(120% 90% at 95% 0%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 40%),
     linear-gradient(
-      var(--speaksy-magic-angle),
+      var(--voicely-magic-angle),
       #0e2410 0%, #163d18 18%, #245c28 36%,
       #397e39 54%, #4c9349 72%, #5aa652 88%, #6fbf6c 100%
     );
@@ -468,37 +468,37 @@ body.vui-v2 .integration-connect-btn.btn-speaksy {
     filter 0.35s ease;
 }
 
-body.vui-v2 .btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .btn.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .nav-item.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .nav-btn.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .agents-btn-primary.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .agents-pill.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .lead-action-btn.btn-speaksy.btn-speaksy--soft,
-body.vui-v2 .integration-connect-btn.btn-speaksy.btn-speaksy--soft {
+body.vui-v2 .btn-voicely.btn-voicely--soft,
+body.vui-v2 .btn.btn-voicely.btn-voicely--soft,
+body.vui-v2 .nav-item.btn-voicely.btn-voicely--soft,
+body.vui-v2 .nav-btn.btn-voicely.btn-voicely--soft,
+body.vui-v2 .agents-btn-primary.btn-voicely.btn-voicely--soft,
+body.vui-v2 .agents-pill.btn-voicely.btn-voicely--soft,
+body.vui-v2 .lead-action-btn.btn-voicely.btn-voicely--soft,
+body.vui-v2 .integration-connect-btn.btn-voicely.btn-voicely--soft {
   border-radius: 10px;
 }
 
-body.vui-v2 .btn-speaksy > *,
-body.vui-v2 .btn.btn-speaksy > *,
-body.vui-v2 .agents-btn-primary.btn-speaksy > *,
-body.vui-v2 .nav-item.btn-speaksy > *,
-body.vui-v2 .nav-btn.btn-speaksy > *,
-body.vui-v2 .agents-pill.btn-speaksy.selected > *,
-body.vui-v2 .lead-action-btn.btn-speaksy > *,
-body.vui-v2 .integration-connect-btn.btn-speaksy > * {
+body.vui-v2 .btn-voicely > *,
+body.vui-v2 .btn.btn-voicely > *,
+body.vui-v2 .agents-btn-primary.btn-voicely > *,
+body.vui-v2 .nav-item.btn-voicely > *,
+body.vui-v2 .nav-btn.btn-voicely > *,
+body.vui-v2 .agents-pill.btn-voicely.selected > *,
+body.vui-v2 .lead-action-btn.btn-voicely > *,
+body.vui-v2 .integration-connect-btn.btn-voicely > * {
   position: relative;
   z-index: 2;
 }
 
-body.vui-v2 .btn-speaksy::before,
-body.vui-v2 .btn.btn-speaksy::before,
-body.vui-v2 .agents-btn-primary.btn-speaksy::before,
-body.vui-v2 .nav-item.btn-speaksy::before,
-body.vui-v2 .nav-btn.btn-speaksy::before,
-body.vui-v2 .agents-pill.btn-speaksy.selected::before,
-body.vui-v2 .lead-action-btn.btn-speaksy::before,
-body.vui-v2 .integration-connect-btn.btn-speaksy::before {
+body.vui-v2 .btn-voicely::before,
+body.vui-v2 .btn.btn-voicely::before,
+body.vui-v2 .agents-btn-primary.btn-voicely::before,
+body.vui-v2 .nav-item.btn-voicely::before,
+body.vui-v2 .nav-btn.btn-voicely::before,
+body.vui-v2 .agents-pill.btn-voicely.selected::before,
+body.vui-v2 .lead-action-btn.btn-voicely::before,
+body.vui-v2 .integration-connect-btn.btn-voicely::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -512,14 +512,14 @@ body.vui-v2 .integration-connect-btn.btn-speaksy::before {
   z-index: 1;
 }
 
-body.vui-v2 .btn-speaksy::after,
-body.vui-v2 .btn.btn-speaksy::after,
-body.vui-v2 .agents-btn-primary.btn-speaksy::after,
-body.vui-v2 .nav-item.btn-speaksy::after,
-body.vui-v2 .nav-btn.btn-speaksy::after,
-body.vui-v2 .agents-pill.btn-speaksy.selected::after,
-body.vui-v2 .lead-action-btn.btn-speaksy::after,
-body.vui-v2 .integration-connect-btn.btn-speaksy::after {
+body.vui-v2 .btn-voicely::after,
+body.vui-v2 .btn.btn-voicely::after,
+body.vui-v2 .agents-btn-primary.btn-voicely::after,
+body.vui-v2 .nav-item.btn-voicely::after,
+body.vui-v2 .nav-btn.btn-voicely::after,
+body.vui-v2 .agents-pill.btn-voicely.selected::after,
+body.vui-v2 .lead-action-btn.btn-voicely::after,
+body.vui-v2 .integration-connect-btn.btn-voicely::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -536,41 +536,41 @@ body.vui-v2 .integration-connect-btn.btn-speaksy::after {
   z-index: 1;
 }
 
-body.vui-v2 .btn-speaksy:hover:not(:disabled),
-body.vui-v2 .btn.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .nav-item.btn-speaksy:hover,
-body.vui-v2 .nav-btn.btn-speaksy:hover,
-body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled),
-body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled) {
+body.vui-v2 .btn-voicely:hover:not(:disabled),
+body.vui-v2 .btn.btn-voicely:hover:not(:disabled),
+body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled),
+body.vui-v2 .nav-item.btn-voicely:hover,
+body.vui-v2 .nav-btn.btn-voicely:hover,
+body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled),
+body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled),
+body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled) {
   color: #ffffff !important;
   transform: translateY(-1px);
   box-shadow: var(--sbtn-magic-shadow-hover);
 }
 
-body.vui-v2 .nav-item.btn-speaksy:hover,
-body.vui-v2 .nav-btn.btn-speaksy:hover {
+body.vui-v2 .nav-item.btn-voicely:hover,
+body.vui-v2 .nav-btn.btn-voicely:hover {
   filter: brightness(1.035);
 }
 
 /* Flowing green ramp + sheen — action CTAs only (Generate, Deploy, Connect, …) */
-body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled),
-body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled),
+body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled),
+body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled),
+body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled),
+body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled),
 body.vui-v2 #create-assistant-btn:hover:not(:disabled) {
-  animation: speaksy-magic-gradient-flow 2.2s ease-in-out infinite;
+  animation: voicely-magic-gradient-flow 2.2s ease-in-out infinite;
 }
 
-body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled)::after,
-body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled)::after,
-body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled)::after,
-body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled)::after,
+body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled)::after,
+body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled)::after,
+body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled)::after,
+body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled)::after,
 body.vui-v2 #create-assistant-btn:hover:not(:disabled)::after {
   background:
     linear-gradient(
@@ -588,26 +588,26 @@ body.vui-v2 #create-assistant-btn:hover:not(:disabled)::after {
   background-size: 42% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: -140% 0, 0 0, 0 0, 0 0, 0 0;
-  animation: speaksy-magic-sheen 2.2s ease-in-out infinite;
+  animation: voicely-magic-sheen 2.2s ease-in-out infinite;
 }
 
 /* Light theme — same button look; slightly stronger hover sweep only */
-[data-theme="light"] body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-[data-theme="light"] body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-[data-theme="light"] body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled),
-[data-theme="light"] body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled),
-[data-theme="light"] body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled),
-[data-theme="light"] body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled),
+[data-theme="light"] body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+[data-theme="light"] body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+[data-theme="light"] body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled),
+[data-theme="light"] body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled),
+[data-theme="light"] body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled),
+[data-theme="light"] body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled),
 [data-theme="light"] body.vui-v2 #create-assistant-btn:hover:not(:disabled) {
-  animation: speaksy-magic-gradient-flow-light 2s ease-in-out infinite;
+  animation: voicely-magic-gradient-flow-light 2s ease-in-out infinite;
 }
 
-[data-theme="light"] body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-[data-theme="light"] body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-[data-theme="light"] body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled)::after,
-[data-theme="light"] body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled)::after,
-[data-theme="light"] body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled)::after,
-[data-theme="light"] body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled)::after,
+[data-theme="light"] body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+[data-theme="light"] body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+[data-theme="light"] body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled)::after,
+[data-theme="light"] body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled)::after,
+[data-theme="light"] body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled)::after,
+[data-theme="light"] body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled)::after,
 [data-theme="light"] body.vui-v2 #create-assistant-btn:hover:not(:disabled)::after {
   background:
     linear-gradient(
@@ -623,49 +623,49 @@ body.vui-v2 #create-assistant-btn:hover:not(:disabled)::after {
     radial-gradient(46% 80% at 88% 42%, rgba(200, 255, 190, 0.16) 0%, rgba(200, 255, 190, 0) 70%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 20%);
   background-size: 52% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  animation: speaksy-magic-sheen 1.9s ease-in-out infinite;
+  animation: voicely-magic-sheen 1.9s ease-in-out infinite;
 }
 
-@keyframes speaksy-magic-gradient-flow-light {
+@keyframes voicely-magic-gradient-flow-light {
   0%, 100% {
-    --speaksy-magic-angle: 112deg;
+    --voicely-magic-angle: 112deg;
     filter: brightness(1.06);
   }
   50% {
-    --speaksy-magic-angle: 172deg;
+    --voicely-magic-angle: 172deg;
     filter: brightness(1.11);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-  body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn),
-  body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled),
-  body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled),
-  body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled),
-  body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled) {
+  body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+  body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn),
+  body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled),
+  body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled),
+  body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled),
+  body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled) {
     animation: none;
     filter: brightness(1.035);
   }
 
-  body.vui-v2 .btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-  body.vui-v2 .btn.btn-speaksy:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
-  body.vui-v2 .agents-btn-primary.btn-speaksy:hover:not(:disabled)::after,
-  body.vui-v2 .agents-pill.btn-speaksy.selected:hover:not(:disabled)::after,
-  body.vui-v2 .lead-action-btn.btn-speaksy:hover:not(:disabled)::after,
-  body.vui-v2 .integration-connect-btn.btn-speaksy:hover:not(:disabled)::after {
+  body.vui-v2 .btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+  body.vui-v2 .btn.btn-voicely:hover:not(:disabled):not(.nav-item):not(.nav-btn)::after,
+  body.vui-v2 .agents-btn-primary.btn-voicely:hover:not(:disabled)::after,
+  body.vui-v2 .agents-pill.btn-voicely.selected:hover:not(:disabled)::after,
+  body.vui-v2 .lead-action-btn.btn-voicely:hover:not(:disabled)::after,
+  body.vui-v2 .integration-connect-btn.btn-voicely:hover:not(:disabled)::after {
     animation: none;
   }
 }
 
-body.vui-v2 .btn-speaksy:active:not(:disabled),
-body.vui-v2 .btn.btn-speaksy:active:not(:disabled),
-body.vui-v2 .agents-btn-primary.btn-speaksy:active:not(:disabled),
-body.vui-v2 .nav-item.btn-speaksy:active,
-body.vui-v2 .nav-btn.btn-speaksy:active,
-body.vui-v2 .agents-pill.btn-speaksy.selected:active:not(:disabled),
-body.vui-v2 .lead-action-btn.btn-speaksy:active:not(:disabled),
-body.vui-v2 .integration-connect-btn.btn-speaksy:active:not(:disabled) {
+body.vui-v2 .btn-voicely:active:not(:disabled),
+body.vui-v2 .btn.btn-voicely:active:not(:disabled),
+body.vui-v2 .agents-btn-primary.btn-voicely:active:not(:disabled),
+body.vui-v2 .nav-item.btn-voicely:active,
+body.vui-v2 .nav-btn.btn-voicely:active,
+body.vui-v2 .agents-pill.btn-voicely.selected:active:not(:disabled),
+body.vui-v2 .lead-action-btn.btn-voicely:active:not(:disabled),
+body.vui-v2 .integration-connect-btn.btn-voicely:active:not(:disabled) {
   transform: translateY(1px) scale(0.994);
   filter: brightness(0.99);
   box-shadow:
@@ -676,47 +676,47 @@ body.vui-v2 .integration-connect-btn.btn-speaksy:active:not(:disabled) {
     0 20px 36px -14px rgba(150, 205, 255, 0.22);
 }
 
-body.vui-v2 .btn-speaksy:active:not(:disabled)::after,
-body.vui-v2 .btn.btn-speaksy:active:not(:disabled)::after,
-body.vui-v2 .agents-btn-primary.btn-speaksy:active:not(:disabled)::after,
-body.vui-v2 .nav-item.btn-speaksy:active::after,
-body.vui-v2 .nav-btn.btn-speaksy:active::after,
-body.vui-v2 .agents-pill.btn-speaksy.selected:active:not(:disabled)::after,
-body.vui-v2 .lead-action-btn.btn-speaksy:active:not(:disabled)::after,
-body.vui-v2 .integration-connect-btn.btn-speaksy:active:not(:disabled)::after {
+body.vui-v2 .btn-voicely:active:not(:disabled)::after,
+body.vui-v2 .btn.btn-voicely:active:not(:disabled)::after,
+body.vui-v2 .agents-btn-primary.btn-voicely:active:not(:disabled)::after,
+body.vui-v2 .nav-item.btn-voicely:active::after,
+body.vui-v2 .nav-btn.btn-voicely:active::after,
+body.vui-v2 .agents-pill.btn-voicely.selected:active:not(:disabled)::after,
+body.vui-v2 .lead-action-btn.btn-voicely:active:not(:disabled)::after,
+body.vui-v2 .integration-connect-btn.btn-voicely:active:not(:disabled)::after {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
     inset 0 -8px 14px rgba(0, 0, 0, 0.48);
 }
 
-body.vui-v2 .btn-speaksy:focus-visible,
-body.vui-v2 .btn.btn-speaksy:focus-visible,
-body.vui-v2 .agents-btn-primary.btn-speaksy:focus-visible,
-body.vui-v2 .nav-item.btn-speaksy:focus-visible,
-body.vui-v2 .nav-btn.btn-speaksy:focus-visible,
-body.vui-v2 .agents-pill.btn-speaksy.selected:focus-visible,
-body.vui-v2 .lead-action-btn.btn-speaksy:focus-visible,
-body.vui-v2 .integration-connect-btn.btn-speaksy:focus-visible {
+body.vui-v2 .btn-voicely:focus-visible,
+body.vui-v2 .btn.btn-voicely:focus-visible,
+body.vui-v2 .agents-btn-primary.btn-voicely:focus-visible,
+body.vui-v2 .nav-item.btn-voicely:focus-visible,
+body.vui-v2 .nav-btn.btn-voicely:focus-visible,
+body.vui-v2 .agents-pill.btn-voicely.selected:focus-visible,
+body.vui-v2 .lead-action-btn.btn-voicely:focus-visible,
+body.vui-v2 .integration-connect-btn.btn-voicely:focus-visible {
   outline: none;
   box-shadow:
     var(--sbtn-magic-shadow),
     0 0 0 3px var(--vk-green-glow);
 }
 
-body.vui-v2 .btn-speaksy:disabled,
-body.vui-v2 .btn.btn-speaksy:disabled,
-body.vui-v2 .agents-btn-primary.btn-speaksy:disabled,
-body.vui-v2 .agents-pill.btn-speaksy.selected:disabled,
-body.vui-v2 .lead-action-btn.btn-speaksy:disabled,
-body.vui-v2 .integration-connect-btn.btn-speaksy:disabled {
+body.vui-v2 .btn-voicely:disabled,
+body.vui-v2 .btn.btn-voicely:disabled,
+body.vui-v2 .agents-btn-primary.btn-voicely:disabled,
+body.vui-v2 .agents-pill.btn-voicely.selected:disabled,
+body.vui-v2 .lead-action-btn.btn-voicely:disabled,
+body.vui-v2 .integration-connect-btn.btn-voicely:disabled {
   opacity: 0.45;
   cursor: not-allowed;
   transform: none;
   filter: none;
 }
 
-/* Focus-area chips — speaksy class on all; gradient only when selected */
-body.vui-v2 .agents-pill.btn-speaksy:not(.selected) {
+/* Focus-area chips — voicely class on all; gradient only when selected */
+body.vui-v2 .agents-pill.btn-voicely:not(.selected) {
   background: rgba(255, 255, 255, 0.05);
   color: var(--ds-on-muted, var(--muted));
   box-shadow: none;
@@ -725,39 +725,39 @@ body.vui-v2 .agents-pill.btn-speaksy:not(.selected) {
   font-weight: 500;
 }
 
-body.vui-v2 .agents-pill.btn-speaksy:not(.selected)::before,
-body.vui-v2 .agents-pill.btn-speaksy:not(.selected)::after {
+body.vui-v2 .agents-pill.btn-voicely:not(.selected)::before,
+body.vui-v2 .agents-pill.btn-voicely:not(.selected)::after {
   display: none;
 }
 
-body.vui-v2 .agents-pill.btn-speaksy:not(.selected):hover {
+body.vui-v2 .agents-pill.btn-voicely:not(.selected):hover {
   background: rgba(255, 255, 255, 0.08);
   color: var(--ds-on-surface, var(--text));
   transform: none;
   filter: none;
 }
 
-[data-theme="light"] body.vui-v2 .agents-pill.btn-speaksy:not(.selected) {
+[data-theme="light"] body.vui-v2 .agents-pill.btn-voicely:not(.selected) {
   background: rgba(0, 0, 0, 0.04);
   border-color: rgba(0, 0, 0, 0.08);
 }
 
-body.vui-v2 .nav-item.btn-speaksy {
+body.vui-v2 .nav-item.btn-voicely {
   font-weight: 500;
   text-align: left;
 }
 
-body.vui-v2 .nav-item.btn-speaksy .nav-icon,
-body.vui-v2 .nav-btn.btn-speaksy .nav-icon {
+body.vui-v2 .nav-item.btn-voicely .nav-icon,
+body.vui-v2 .nav-btn.btn-voicely .nav-icon {
   color: #ffffff;
   opacity: 1;
 }
 
-body.vui-v2 .lead-action-btn.btn-speaksy {
+body.vui-v2 .lead-action-btn.btn-voicely {
   border: 0;
 }
 
-body.vui-v2 .integration-connect-btn.btn-speaksy {
+body.vui-v2 .integration-connect-btn.btn-voicely {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -766,21 +766,21 @@ body.vui-v2 .integration-connect-btn.btn-speaksy {
   font-size: 0.8125rem;
 }
 
-body.vui-v2 .integration-connect-btn.btn-speaksy .integration-ext-icon {
+body.vui-v2 .integration-connect-btn.btn-voicely .integration-ext-icon {
   position: relative;
   z-index: 2;
   opacity: 1;
   color: #ffffff;
 }
 
-body.vui-v2 .make-call-submit.btn-speaksy {
+body.vui-v2 .make-call-submit.btn-voicely {
   width: 100%;
   justify-content: center;
   min-height: 46px;
   font-size: 1rem;
 }
 
-body.vui-v2 .ma-make-call-btn.btn-speaksy {
+body.vui-v2 .ma-make-call-btn.btn-voicely {
   font-weight: 500;
 }
 
@@ -858,7 +858,7 @@ body.vui-v2 .ma-make-call-btn.btn-speaksy {
 .vui-v2 .btn,
 .vui .btn {
   min-height: 36px;
-  border-radius: 999px; /* full pill — the Speaksy signature */
+  border-radius: 999px; /* full pill — the Voicely signature */
   padding: 0 18px;
 }
 
@@ -887,7 +887,7 @@ body.vui-v2 .ma-make-call-btn.btn-speaksy {
   color: var(--vk-green);
 }
 
-/* ── Speaksy powered-by branding ──────────────────────────────── */
+/* ── Voicely powered-by branding ──────────────────────────────── */
 
 .vk-powered-label {
   font-size: 10px;
@@ -959,7 +959,7 @@ body.vui-v2 .ma-make-call-btn.btn-speaksy {
 
 /* ── Sidebar “Powered by” — edit tokens below to iterate ─────────
    HTML : tinglish-vk-realty/dashboard.html → .vk-sidebar-powered
-   Image: frontend/vendor/images/speaksy-logo-powered.png
+   Image: frontend/vendor/images/voicely-logo-powered.png
    Also : .vk-powered-label (global) ~30 lines above for font size   */
 .vk-sidebar-powered {
   --vk-powered-pad-x: 0.75rem;   /* horizontal inset — match .vk-support-link */
@@ -1341,7 +1341,7 @@ body.vui-v2 .ma-make-call-btn.btn-speaksy {
 }
 
 .api-keys-restart-toggle input {
-  accent-color: var(--ds-mint, var(--speaksy-green));
+  accent-color: var(--ds-mint, var(--voicely-green));
 }
 
 .api-keys-actions {
@@ -1410,7 +1410,7 @@ body.vui-v2 .btn-primary {
   color: var(--vk-on-green);
 }
 
-/* Active sidebar nav → .btn-speaksy.btn-speaksy--soft (toggled in app.js) */
+/* Active sidebar nav → .btn-voicely.btn-voicely--soft (toggled in app.js) */
 
 /* Status badges — fix the mint-background/accent-text clash from
    vercel-ui (same selectors, later file wins the specificity tie). */
@@ -1625,7 +1625,7 @@ body.vui-v2 .btn-primary {
 
 /* Briefing hero — pair primary + secondary on the same corner radius */
 body.vui-v2 .vk-briefing-actions .vk-brief-btn,
-body.vui-v2 .vk-briefing-actions .btn-speaksy.btn-speaksy--soft,
+body.vui-v2 .vk-briefing-actions .btn-voicely.btn-voicely--soft,
 body.vui-v2 .vk-briefing-actions .btn-secondary.vk-brief-btn {
   border-radius: 10px;
 }
@@ -1937,7 +1937,7 @@ body.vui-v2 .vk-briefing-actions .btn-secondary.vk-brief-btn {
   padding: 12px 14px 4px;
 }
 
-/* Sidebar CTA — .btn-speaksy.btn-speaksy--soft */
+/* Sidebar CTA — .btn-voicely.btn-voicely--soft */
 .vui-v2 .sidebar-cta .btn-deploy {
   width: 100%;
   justify-content: center;
@@ -2383,9 +2383,9 @@ body.vui-v2 .lp-toggle input[type="checkbox"]:checked:focus-visible {
     0 0 0 3px var(--vk-green-glow);
 }
 
-/* Connections — force speaksy (10px) over cached btn-secondary / btn-primary */
-body.vui-v2 .integration-card-foot .integration-connect-btn.btn-speaksy,
-body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy {
+/* Connections — force voicely (10px) over cached btn-secondary / btn-primary */
+body.vui-v2 .integration-card-foot .integration-connect-btn.btn-voicely,
+body.vui-v2 .integration-modal-actions #integration-save-btn.btn-voicely {
   border: 0 !important;
   border-radius: 10px !important;
   color: #ffffff !important;
@@ -2395,14 +2395,14 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy {
   letter-spacing: -0.01em;
 }
 
-body.vui-v2 .integration-card-foot .integration-connect-btn.btn-speaksy:hover:not(:disabled),
-body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:not(:disabled) {
+body.vui-v2 .integration-card-foot .integration-connect-btn.btn-voicely:hover:not(:disabled),
+body.vui-v2 .integration-modal-actions #integration-save-btn.btn-voicely:hover:not(:disabled) {
   box-shadow: var(--sbtn-magic-shadow-hover) !important;
   transform: translateY(-1px);
 }
 
-/* ── Speaksy tab loader (no wave rings) ─────────────────────────── */
-.speaksy-loading-overlay {
+/* ── Voicely tab loader (no wave rings) ─────────────────────────── */
+.voicely-loading-overlay {
   position: fixed;
   inset: 0;
   display: flex;
@@ -2415,26 +2415,26 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
   z-index: 9999;
 }
 
-.speaksy-loading-overlay.is-active {
+.voicely-loading-overlay.is-active {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
 }
 
-.speaksy-loading-overlay[data-theme="dark"] {
+.voicely-loading-overlay[data-theme="dark"] {
   background: #05070a;
 }
 
-.speaksy-loading-overlay[data-theme="light"] {
+.voicely-loading-overlay[data-theme="light"] {
   background: #f4f6f5;
 }
 
-.speaksy-loader {
+.voicely-loader {
   position: relative;
   display: inline-flex;
 }
 
-.speaksy-loader-pill {
+.voicely-loader-pill {
   --h: 76px;
   --pad: calc(var(--h) * 0.62);
   --fs: calc(var(--h) * 0.40);
@@ -2461,15 +2461,15 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
     radial-gradient(120% 92% at 8% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 44%),
     radial-gradient(120% 92% at 96% 4%, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0) 42%),
     linear-gradient(145deg, #0e2410 0%, #163d18 22%, #245c28 46%, #397e39 66%, #4c9349 84%, #5aa652 100%);
-  animation: speaksy-loader-breathe 2.4s ease-in-out infinite;
+  animation: voicely-loader-breathe 2.4s ease-in-out infinite;
 }
 
-@keyframes speaksy-loader-breathe {
+@keyframes voicely-loader-breathe {
   0%, 100% { transform: scale(1); filter: brightness(1); }
   50% { transform: scale(1.035); filter: brightness(1.08); }
 }
 
-.speaksy-loader-pill::before {
+.voicely-loader-pill::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -2480,7 +2480,7 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
   box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 0.22), inset 0 -30% 40px rgba(0, 0, 0, 0.34);
 }
 
-.speaksy-loader-pill::after {
+.voicely-loader-pill::after {
   content: "";
   position: absolute;
   left: 8%;
@@ -2493,7 +2493,7 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
   background: radial-gradient(70% 100% at 50% 100%, rgba(150, 225, 130, 0.40) 0%, rgba(150, 225, 130, 0) 68%);
 }
 
-.speaksy-loader-pill.dark {
+.voicely-loader-pill.dark {
   box-shadow:
     0 0 0 1.5px #05070a,
     0 1px 2px rgba(0, 0, 0, 0.4),
@@ -2501,14 +2501,14 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
     0 12px 28px -10px rgba(90, 180, 120, 0.45);
 }
 
-.speaksy-loader-pill.light {
+.voicely-loader-pill.light {
   box-shadow:
     0 1px 2px rgba(14, 60, 30, 0.16),
     0 10px 22px -8px rgba(20, 80, 44, 0.30),
     0 16px 34px -14px rgba(40, 120, 70, 0.34);
 }
 
-.speaksy-loader-pill > span:first-child {
+.voicely-loader-pill > span:first-child {
   position: relative;
   z-index: 2;
   font-family: inherit;
@@ -2517,7 +2517,7 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
   letter-spacing: inherit;
 }
 
-.speaksy-loader-pill .shimmer {
+.voicely-loader-pill .shimmer {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2526,10 +2526,10 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
   pointer-events: none;
   background: linear-gradient(75deg, transparent 0%, rgba(255, 255, 255, 0.16) 45%, transparent 90%);
   transform: translateX(-160%);
-  animation: speaksy-loader-shimmer 2.8s ease-in-out infinite;
+  animation: voicely-loader-shimmer 2.8s ease-in-out infinite;
 }
 
-@keyframes speaksy-loader-shimmer {
+@keyframes voicely-loader-shimmer {
   0% { transform: translateX(-160%); }
   55%, 100% { transform: translateX(220%); }
 }
@@ -2540,8 +2540,8 @@ body.vui-v2 .integration-modal-actions #integration-save-btn.btn-speaksy:hover:n
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .speaksy-loader-pill,
-  .speaksy-loader-pill .shimmer,
+  .voicely-loader-pill,
+  .voicely-loader-pill .shimmer,
   .vui-v2 .main.page-swapping {
     animation: none;
     transition: none;

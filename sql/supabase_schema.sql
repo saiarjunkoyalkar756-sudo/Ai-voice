@@ -1,5 +1,5 @@
 -- ══════════════════════════════════════════════════════════════════════════════
--- SPEAKSY — COMPLETE SUPABASE SCHEMA (final)
+-- VOICELY — COMPLETE SUPABASE SCHEMA (final)
 -- ══════════════════════════════════════════════════════════════════════════════
 --
 -- Run this ONCE in Supabase SQL Editor on a fresh project, or on an existing
@@ -800,7 +800,7 @@ INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_typ
 VALUES (
     'call-recordings',
     'call-recordings',
-    true,
+    false,
     104857600,
     ARRAY['audio/ogg', 'audio/mpeg', 'audio/wav', 'audio/webm', 'video/mp4']
 )
@@ -821,7 +821,9 @@ VALUES (
 ON CONFLICT (id) DO NOTHING;
 
 DROP POLICY IF EXISTS "Public read recordings" ON storage.objects;
-CREATE POLICY "Public read recordings"
+
+DROP POLICY IF EXISTS "Service role read recordings" ON storage.objects;
+CREATE POLICY "Service role read recordings"
     ON storage.objects FOR SELECT
     USING (bucket_id = 'call-recordings');
 

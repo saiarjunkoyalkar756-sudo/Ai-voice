@@ -271,7 +271,7 @@ def _configure_vobiz_inbound(sip_uri: str, trunk_id: str, number: str) -> tuple[
             trunk_url,
             headers=headers,
             json={
-                "name": trunk.get("name") or "speaksy-inbound",
+                "name": trunk.get("name") or "voicely-inbound",
                 "max_concurrent_calls": trunk.get("concurrent_calls_limit") or 10,
                 "enabled": trunk.get("trunk_status") == "active",
                 "inbound_destination": uri_id,
@@ -330,7 +330,7 @@ async def main() -> int:
             try:
                 out = await sip.update_outbound_trunk_fields(
                     trunk_id,
-                    name="speaksy-outbound",
+                    name="voicely-outbound",
                     address=domain,
                     auth_username=username,
                     auth_password=password,
@@ -342,11 +342,11 @@ async def main() -> int:
                 if exc.code != "not_found":
                     raise
                 print(f"  ⚠ outbound trunk {trunk_id} missing — creating new one")
-        print("Creating outbound trunk speaksy-outbound …")
+        print("Creating outbound trunk voicely-outbound …")
         out = await sip.create_outbound_trunk(
             api.CreateSIPOutboundTrunkRequest(
                 trunk=api.SIPOutboundTrunkInfo(
-                    name="speaksy-outbound",
+                    name="voicely-outbound",
                     address=domain,
                     auth_username=username,
                     auth_password=password,
@@ -363,7 +363,7 @@ async def main() -> int:
             try:
                 inn = await sip.update_inbound_trunk_fields(
                     trunk_id,
-                    name="speaksy-inbound",
+                    name="voicely-inbound",
                     numbers=_inbound_number_variants(number),
                     allowed_addresses=["0.0.0.0/0"],
                     auth_username="",
@@ -375,11 +375,11 @@ async def main() -> int:
                 if exc.code != "not_found":
                     raise
                 print(f"  ⚠ inbound trunk {trunk_id} missing — creating new one")
-        print("Creating inbound trunk speaksy-inbound …")
+        print("Creating inbound trunk voicely-inbound …")
         inn = await sip.create_inbound_trunk(
             api.CreateSIPInboundTrunkRequest(
                 trunk=api.SIPInboundTrunkInfo(
-                    name="speaksy-inbound",
+                    name="voicely-inbound",
                     numbers=_inbound_number_variants(number),
                     allowed_addresses=["0.0.0.0/0"],
                     auth_username="",
@@ -426,7 +426,7 @@ async def main() -> int:
             req.rule.CopyFrom(dispatch_rule)
             req.trunk_ids.append(inbound_id)
             req.room_config.CopyFrom(room_config)
-            req.name = "speaksy-inbound-to-agent"
+            req.name = "voicely-inbound-to-agent"
 
             result = await sip.create_dispatch_rule(req)
             rule_id = result.sip_dispatch_rule_id

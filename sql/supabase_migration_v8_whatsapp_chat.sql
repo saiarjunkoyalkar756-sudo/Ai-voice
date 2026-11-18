@@ -1,5 +1,5 @@
 -- ══════════════════════════════════════════════════════════════════════════════
--- SPEAKSY — WhatsApp chat history (migration v8)
+-- VOICELY — WhatsApp chat history (migration v8)
 -- Run after supabase_migration_v7_whatsapp.sql
 -- Safe to re-run: IF NOT EXISTS / DROP POLICY IF EXISTS throughout
 -- ══════════════════════════════════════════════════════════════════════════════

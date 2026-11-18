@@ -107,7 +107,7 @@
   function chartDefaults() {
     const text = cssVar("--color-text-muted", "rgba(255,255,255,0.55)");
     const grid = cssVar("--color-border", "rgba(255,255,255,0.08)");
-    const green = cssVar("--speaksy-green", "#63dcb4");
+    const green = cssVar("--voicely-green", "#63dcb4");
     return {
       text,
       grid,
@@ -116,8 +116,8 @@
     };
   }
 
-  /* Same 6-stop ramp as .btn-speaksy's --sbtn-magic-surface gradient. */
-  const SPEAKSY_GRADIENT_STOPS = [
+  /* Same 6-stop ramp as .btn-voicely's --sbtn-magic-surface gradient. */
+  const VOICELY_GRADIENT_STOPS = [
     [0, "#0e2410"],
     [0.22, "#163d18"],
     [0.45, "#245c28"],
@@ -126,9 +126,9 @@
     [1, "#5aa652"],
   ];
 
-  function speaksyBarGradient(ctx2d, y0, y1) {
+  function voicelyBarGradient(ctx2d, y0, y1) {
     const gradient = ctx2d.createLinearGradient(0, y0, 0, y1);
-    SPEAKSY_GRADIENT_STOPS.forEach(([stop, color]) => gradient.addColorStop(stop, color));
+    VOICELY_GRADIENT_STOPS.forEach(([stop, color]) => gradient.addColorStop(stop, color));
     return gradient;
   }
 
@@ -145,7 +145,7 @@
     ).toString(16).slice(1)}`;
   }
 
-  function speaksySliceGradient(ctx2d, chartArea, baseColor) {
+  function voicelySliceGradient(ctx2d, chartArea, baseColor) {
     const gradient = ctx2d.createLinearGradient(chartArea.left, chartArea.top, chartArea.right, chartArea.bottom);
     gradient.addColorStop(0, hexShade(baseColor, -0.65));
     gradient.addColorStop(1, hexShade(baseColor, 0.35));
@@ -170,7 +170,7 @@
       if (!val) return `${theme.green}18`;
       const { chart } = ctx;
       if (!chart.chartArea) return `${theme.green}cc`;
-      return speaksyBarGradient(chart.ctx, chart.chartArea.top, chart.chartArea.bottom);
+      return voicelyBarGradient(chart.ctx, chart.chartArea.top, chart.chartArea.bottom);
     };
 
     charts.daily = new Chart(canvas, {
@@ -319,7 +319,7 @@
   }
 
   function outcomePalette() {
-    /* Explicit hues — booked/completed must not share speaksy-green / --color-primary */
+    /* Explicit hues — booked/completed must not share voicely-green / --color-primary */
     return {
       booked: cssVar("--ana-outcome-booked", "#30d158"),
       completed: cssVar("--ana-outcome-completed", "#0a84ff"),
@@ -342,7 +342,7 @@
     const sliceFill = (ctx) => {
       const { chart, dataIndex } = ctx;
       if (!chart.chartArea) return `${colors[dataIndex]}dd`;
-      return speaksySliceGradient(chart.ctx, chart.chartArea, colors[dataIndex]);
+      return voicelySliceGradient(chart.ctx, chart.chartArea, colors[dataIndex]);
     };
 
     charts.outcomes = new Chart(canvas, {

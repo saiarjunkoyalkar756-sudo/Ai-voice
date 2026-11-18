@@ -413,7 +413,7 @@
   });
 
   document.getElementById("btn-book-demo")?.addEventListener("click", () => {
-    window.location.href = "mailto:sales@speaksy.ai?subject=Property%20Demo%20Request";
+    window.location.href = "mailto:sales@voicely.ai?subject=Property%20Demo%20Request";
   });
 
   window.addEventListener("resize", () => {

@@ -50,7 +50,7 @@
               </div>
               <div class="wa-number-card-foot">
                 <a class="btn btn-ghost btn-sm wa-number-chats-link" href="${chatHref(n.id)}" data-number-id="${n.id}">Chats</a>
-                <button type="button" class="btn btn-primary btn-sm btn-speaksy btn-speaksy--soft" data-wa-manage="${n.id}">Manage</button>
+                <button type="button" class="btn btn-primary btn-sm btn-voicely btn-voicely--soft" data-wa-manage="${n.id}">Manage</button>
               </div>
             </article>`
             )
@@ -79,7 +79,7 @@
   function init() {
     if (!$("whatsapp-numbers-panel")) return;
     renderConnectedNumbers();
-    document.addEventListener("speaksy:page-integrations", renderConnectedNumbers);
+    document.addEventListener("voicely:page-integrations", renderConnectedNumbers);
   }
 
   window.WhatsAppNumbers = { renderConnectedNumbers, init };

@@ -54,7 +54,7 @@ async def docs_tab():
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Speaksy Documentation</title>
+    <title>Voicely Documentation</title>
     <style>
         :root {{
             --bg: #0d1117; --card: #161b22; --line: #30363d;
@@ -116,7 +116,7 @@ async def docs_tab():
             <div class="status">Complete documentation with all 22 guides</div>
         </a>
 
-        <a class="link" href="https://github.com/sushrutdeshpande0202/speaksy/blob/main/DOCUMENTATION_MASTER_PLAN.md">
+        <a class="link" href="https://github.com/sushrutdeshpande0202/voicely/blob/main/DOCUMENTATION_MASTER_PLAN.md">
             <strong>→ Master Plan</strong>
             <div class="status">Writing blueprint & verification checklists</div>
         </a>

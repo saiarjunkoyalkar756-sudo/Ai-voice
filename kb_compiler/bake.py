@@ -140,7 +140,7 @@ def build_cartridge_export_zip(cdir: Path, *, exported_by: str = "") -> tuple[by
     """Build an industry-grade knowledge export ZIP for a cartridge.
 
     Layout (folder-in-zip):
-      speaksy-knowledge-{client_id}-{utc}/
+      voicely-knowledge-{client_id}-{utc}/
         README.md
         MANIFEST.json          # checksums, counts, compiler metadata
         client.yaml
@@ -166,7 +166,7 @@ def build_cartridge_export_zip(cdir: Path, *, exported_by: str = "") -> tuple[by
 
     client_id = cdir.name
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    root_name = f"speaksy-knowledge-{client_id}-{stamp}"
+    root_name = f"voicely-knowledge-{client_id}-{stamp}"
     filename = f"{root_name}.zip"
 
     lock = load_lock(cdir) or {}
@@ -239,9 +239,9 @@ def build_cartridge_export_zip(cdir: Path, *, exported_by: str = "") -> tuple[by
         total_bytes += len(data)
 
     export_manifest = {
-        "format": "speaksy.knowledge.cartridge",
+        "format": "voicely.knowledge.cartridge",
         "format_version": "1.0",
-        "generator": "Speaksy Platform KB Compiler",
+        "generator": "Voicely Platform KB Compiler",
         "compiler_version": lock.get("compiler_version") or COMPILER_VERSION,
         "exported_at": datetime.now(timezone.utc).isoformat(),
         "exported_by": exported_by or None,
@@ -283,7 +283,7 @@ def build_cartridge_export_zip(cdir: Path, *, exported_by: str = "") -> tuple[by
     sources_list = "\n".join(
         f"- `knowledge/sources/{n}`" for n in (export_manifest["package"]["contents"]["sources"] or ["—"])
     ) or "- _(none)_"
-    readme = f"""# Speaksy Knowledge Export
+    readme = f"""# Voicely Knowledge Export
 
 | Field | Value |
 |-------|-------|
@@ -355,8 +355,8 @@ PY
 ## Notes
 
 - This archive is a **portable knowledge cartridge**. It is safe to hand to ops, compliance, or a client stakeholder.
-- Installing into a live Speaksy engine is still done via **Platform → Approve & make LIVE** (or your deploy pipeline), not by unzipping into production by hand unless you know the pack paths.
-- Format id: `speaksy.knowledge.cartridge` v1.0
+- Installing into a live Voicely engine is still done via **Platform → Approve & make LIVE** (or your deploy pipeline), not by unzipping into production by hand unless you know the pack paths.
+- Format id: `voicely.knowledge.cartridge` v1.0
 """
     file_payloads.insert(0, ("README.md", readme.encode("utf-8")))
 

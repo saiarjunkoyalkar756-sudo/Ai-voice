@@ -1,6 +1,6 @@
-# Speaksy Engine Package
+# Voicely Engine Package
 
-Production conversation engine extracted per **SPEAKSY_ENGINE_MASTER_PLAN**.
+Production conversation engine extracted per **VOICELY_ENGINE_MASTER_PLAN**.
 
 ## Layout
 
@@ -58,5 +58,5 @@ Turn intelligence → `ConversationEngine`. Metrics → `TurnMetricsCollector`.
 
 ## Realtime S2S (08-006)
 
-Speaksy remains **STT→LLM→TTS** on the sales path so tools (booking, WhatsApp, CRM) stay first-class.  
+Voicely remains **STT→LLM→TTS** on the sales path so tools (booking, WhatsApp, CRM) stay first-class.  
 A speech-to-speech transport can be added as a parallel session type later; it must not replace tool-capable turns.

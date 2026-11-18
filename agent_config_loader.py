@@ -122,14 +122,12 @@ def apply_db_agent_to_live_config(
     merged["first_line"] = agent.welcome_message or merged.get("first_line", "")
     merged["llm_provider"] = "gemini"
     merged["llm_temperature"] = float(agent.temperature)
-    merged["gemini_model"] = "gemini-2.5-flash"
-    merged["llm_model"] = "gemini-2.5-flash"
+    gem_model = os.environ.get("GEMINI_MODEL") or merged.get("gemini_model") or "gemini-3.5-flash-lite"
+    merged["gemini_model"] = gem_model
+    merged["llm_model"] = gem_model
     merged["tts_voice"] = agent.tts_voice_id or merged.get("tts_voice", "kavya")
-    merged["tts_provider"] = agent.tts_provider or merged.get("tts_provider", "gemini")
-    stt_provider = agent.stt_provider or merged.get("stt_provider", "soniox")
-    if (stt_provider or "").lower() != "soniox":
-        logger.info("[CONFIG] Overriding stt_provider '%s' → soniox", stt_provider)
-        stt_provider = "soniox"
+    merged["tts_provider"] = agent.tts_provider or merged.get("tts_provider", "sarvam")
+    stt_provider = os.environ.get("STT_PROVIDER") or agent.stt_provider or merged.get("stt_provider", "sarvam")
     merged["stt_provider"] = stt_provider
     merged["stt_model"] = _normalize_stt_model(stt_provider, agent.stt_model)
     merged["agent_id"] = str(agent.id)

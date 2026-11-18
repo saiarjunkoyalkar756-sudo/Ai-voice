@@ -216,7 +216,7 @@ def get_live_config(phone_number: str | None = None):
         "tts_provider": "cartesia",
         "gemini_tts_model": "gemini-3.1-flash-tts-preview",
         "cartesia_tts_model": "sonic-3.5",
-        "stt_provider": "soniox",
+        "stt_provider": "sarvam",
         "language": "te",
         "stt_language": "unknown",
         "lang_preset": "tinglish",
@@ -2344,7 +2344,7 @@ class VoiceAgentAssistant(Agent):
     ) -> None:
         """Per-turn hook — LiveKit calls this then generate_reply → tts_node.
 
-        Orchestration lives in engine.ConversationEngine (SPEAKSY_ENGINE_MASTER_PLAN).
+        Orchestration lives in engine.ConversationEngine (VOICELY_ENGINE_MASTER_PLAN).
         """
         content = new_message.text_content
         if isinstance(content, list):
@@ -2670,7 +2670,7 @@ def _build_livekit_rtc_config(*, participant_identity: str | None = None):
     """Build RtcConfiguration only when explicitly needed.
 
     Audit finding: TRANSPORT_RELAY with empty ice_servers breaks room.connect() even when
-    JoinResponse carries valid TURN (turns:turn.speaksy.online:443). Default = no override.
+    JoinResponse carries valid TURN (turns:turn.voicely.online:443). Default = no override.
     """
     mode = _livekit_ice_mode()
     turn_urls: list[str] = []
@@ -3590,7 +3590,8 @@ async def entrypoint(ctx: JobContext):
         logger.debug(f"[TTS] Pre-warm skipped: {e}")
 
     logger.info(
-        "[AGENT] Pipeline live: Soniox STT → Gemini LLM → %s TTS — waiting for caller.",
+        "[AGENT] Pipeline live: %s STT → Gemini LLM → %s TTS — waiting for caller.",
+        live_config.get("stt_provider", "sarvam"),
         live_config.get("_effective_tts_provider", "gemini"),
     )
     call_start_time = now_ist()

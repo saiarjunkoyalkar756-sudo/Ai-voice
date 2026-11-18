@@ -18,7 +18,7 @@ from openai.types.chat import ChatCompletionMessageParam, ChatCompletionToolPara
 
 logger = logging.getLogger("inbound-voice-agent")
 
-DEFAULT_GEMINI_CONVERSATION_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_GEMINI_CONVERSATION_MODEL = "gemini-3.5-flash-lite"
 _PATCHED = False
 
 TEMP_RAPPORT = 0.65

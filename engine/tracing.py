@@ -13,12 +13,12 @@ import uuid
 from dataclasses import dataclass, field
 from typing import Any, Iterator
 
-_trace_id: contextvars.ContextVar[str] = contextvars.ContextVar("speaksy_trace_id", default="")
+_trace_id: contextvars.ContextVar[str] = contextvars.ContextVar("voicely_trace_id", default="")
 _span_stack: contextvars.ContextVar[tuple[str, ...]] = contextvars.ContextVar(
-    "speaksy_span_stack", default=()
+    "voicely_span_stack", default=()
 )
 
-logger = logging.getLogger("speaksy.trace")
+logger = logging.getLogger("voicely.trace")
 
 
 def new_trace_id() -> str:

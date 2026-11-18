@@ -13,7 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 # ─── Shared JSONB shapes ──────────────────────────────────────────────────────
 
 class FlowTransition(BaseModel):
-    """Edge from this node to another (Speaksy flow studio / Dograh-style graph)."""
+    """Edge from this node to another (Voicely flow studio / Dograh-style graph)."""
     to: str = ""
     label: str = ""
     condition: str = ""
@@ -25,7 +25,7 @@ class FlowSection(BaseModel):
     content: str = ""
     enabled: bool = True
     order: int = 0
-    # Visual workflow builder (Speaksy Agent Studio)
+    # Visual workflow builder (Voicely Agent Studio)
     node_type: str = "agent"  # start | global | agent | end
     position_x: float = 0
     position_y: float = 0
@@ -275,7 +275,7 @@ class FullAgentConfig(BaseModel):
     def merged_system_prompt(self) -> str:
         """Append enabled flow sections to the base system prompt.
 
-        Speaksy Flow Studio node types are ordered for the voice engine:
+        Voicely Flow Studio node types are ordered for the voice engine:
         global rules → start → agenda steps → end (then any legacy sections).
         """
         base = self.agent.system_prompt.strip()
@@ -292,7 +292,7 @@ class FullAgentConfig(BaseModel):
             key=lambda s: (_rank.get(getattr(s, "node_type", None) or "agent", 2), s.order),
         )
 
-        flow_lines = ["\n\n--- Conversational Flow (Speaksy stages) ---"]
+        flow_lines = ["\n\n--- Conversational Flow (Voicely stages) ---"]
         for section in enabled:
             ntype = getattr(section, "node_type", None) or "agent"
             header = f"{section.title}"

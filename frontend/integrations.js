@@ -1,8 +1,8 @@
 /**
- * Integrations marketplace — connect third-party services to Speaksy voice agents.
+ * Integrations marketplace — connect third-party services to Voicely voice agents.
  */
 (function () {
-  const STORAGE_KEY = "speaksy-integrations-connected";
+  const STORAGE_KEY = "voicely-integrations-connected";
 
   const CATEGORIES = [
     { id: "all", label: "All" },
@@ -223,7 +223,7 @@
           </div>
           <p class="integration-desc muted">${item.description}</p>
           <div class="integration-card-foot">
-            <button type="button" class="btn btn-primary btn-sm btn-speaksy btn-speaksy--soft integration-connect-btn" data-id="${item.id}">
+            <button type="button" class="btn btn-primary btn-sm btn-voicely btn-voicely--soft integration-connect-btn" data-id="${item.id}">
               ${connected ? "Manage" : "Connect"}
               <svg class="integration-ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h7v7"/><path d="M13 3 6 10"/></svg>
             </button>
@@ -272,7 +272,7 @@
         </label>
         <div class="integration-modal-actions">
           ${connected ? `<button type="button" class="btn btn-ghost" id="integration-disconnect-btn">Disconnect</button>` : ""}
-          <button type="button" class="btn btn-primary btn-speaksy btn-speaksy--soft" id="integration-save-btn">${connected ? "Save changes" : "Connect"}</button>
+          <button type="button" class="btn btn-primary btn-voicely btn-voicely--soft" id="integration-save-btn">${connected ? "Save changes" : "Connect"}</button>
         </div>
       </div>
     `;

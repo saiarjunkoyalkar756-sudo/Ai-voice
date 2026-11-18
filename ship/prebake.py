@@ -20,7 +20,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-logger = logging.getLogger("speaksy-ship.prebake")
+logger = logging.getLogger("voicely-ship.prebake")
 
 
 def _ensure_dotenv() -> None:
@@ -334,7 +334,7 @@ def prebake_for_ship(ship_config: dict[str, Any]) -> tuple[dict[str, bytes], dic
     root = Path(__file__).resolve().parents[1]
     host_cache = root / "data" / "greeting_pcm_cache"
 
-    with tempfile.TemporaryDirectory(prefix="speaksy-ship-prebake-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="voicely-ship-prebake-") as tmp:
         cache_dir = Path(tmp) / "greeting_pcm_cache"
         report = _run_prebake_blocking(
             ship_config=ship_config,

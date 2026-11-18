@@ -161,7 +161,7 @@ def ensure_bootstrap() -> None:
     now = _utc_now()
     env_user = (get_secret("dashboard_username") or "admin").strip()
     env_pass = get_secret("dashboard_password") or "change-me-now"
-    email = env_user if "@" in env_user else f"{env_user}@local.speaksy"
+    email = env_user if "@" in env_user else f"{env_user}@local.voicely"
 
     with _conn() as conn:
         org = conn.execute(
@@ -235,7 +235,7 @@ def resolve_membership_user_id(user_id: str) -> str | None:
         return user_id
     ensure_bootstrap()
     env_user = (get_secret("dashboard_username") or "admin").strip()
-    email = env_user if "@" in env_user else f"{env_user}@local.speaksy"
+    email = env_user if "@" in env_user else f"{env_user}@local.voicely"
     user = get_user_by_email(email)
     return user["id"] if user else None
 
@@ -247,6 +247,19 @@ def authenticate(email: str, password: str) -> dict | None:
     if not verify_password(password, user.pop("password_hash", "")):
         return None
     return user
+
+
+def update_user_password(email: str, new_password: str) -> bool:
+    """Update password hash for a registered user."""
+    init_db()
+    now = _utc_now()
+    p_hash = hash_password(new_password)
+    with _conn() as conn:
+        cur = conn.execute(
+            "UPDATE users SET password_hash = ?, updated_at = ? WHERE email = ? COLLATE NOCASE",
+            (p_hash, now, email.strip()),
+        )
+        return cur.rowcount > 0
 
 
 def create_user(

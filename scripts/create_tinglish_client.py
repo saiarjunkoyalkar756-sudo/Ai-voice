@@ -227,7 +227,7 @@ def _write_readme_header() -> None:
     if readme.is_file():
         text = readme.read_text(encoding="utf-8")
         banner = (
-            "# VK Realty Tinglish — Speaksy AI Voice Client\n\n"
+            "# VK Realty Tinglish — Voicely AI Voice Client\n\n"
             "> **Clone of tinglish-vk-realty** with `lang_preset: tinglish` (Telugu + English), "
             "Hyderabad knowledge packs, and isolated `CLIENT_ID` / memory / LiveKit agent name.\n\n"
         )

@@ -40,7 +40,7 @@ Unapproved / blocked cartridges return HTTP 409 and do not produce a ZIP.
 
 ```bash
 python3 scripts/ship_client.py <client_id>
-# → clients/<client_id>/shipments/speaksy-client-….zip
+# → clients/<client_id>/shipments/voicely-client-….zip
 ```
 
 ## Preflight (mandatory)
@@ -70,7 +70,7 @@ Exit **0** required before production start. Exit **2** = missing required secre
 ## What the ZIP contains (full production)
 
 ```
-speaksy-client-<id>-<utc>/
+voicely-client-<id>-<utc>/
   agent.py                 # thin shim → engine.agent_runtime
   engine/                  # full production runtime
   worker_prewarm.py        # greeting + knowledge + IQ prewarm

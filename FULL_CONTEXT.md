@@ -1,6 +1,6 @@
-# Speaksy Client Platform — Full Context (Foundational Template)
+# Voicely Client Platform — Full Context (Foundational Template)
 
-**Repo path:** `tinglish-vk-realty` (within `speaksy-clients`)  
+**Repo path:** `tinglish-vk-realty` (within `voicely-clients`)  
 **Role:** Foundational production Layer-2 voice agent template + Platform KB compiler + client codebase shipper  
 **Last updated:** 2026-07-10  
 **Status:** Production-oriented shipping path live; speaker age/gender profiler implemented (opt-in)
@@ -38,7 +38,7 @@ This document captures the **complete engineering context** for what was built: 
 ┌─────────────────────────────────────────────────────────────────────────┐
 │  SHIP PACKAGER  ship/packager.py                                        │
 │  Template (all engine code) + sanitized config + packs + prebake PCM    │
-│  + speaker_profiler + docs + preflight  →  speaksy-client-<id>-<utc>.zip│
+│  + speaker_profiler + docs + preflight  →  voicely-client-<id>-<utc>.zip│
 │  NO .env, NO live API keys                                              │
 └───────────────────────────────┬─────────────────────────────────────────┘
                                 │ download
@@ -104,7 +104,7 @@ Ship refuses unless **all** are true:
 ```bash
 cd tinglish-vk-realty
 python3 scripts/ship_client.py sp-67223
-# → clients/sp-67223/shipments/speaksy-client-sp-67223-<utc>.zip
+# → clients/sp-67223/shipments/voicely-client-sp-67223-<utc>.zip
 # → LATEST.txt pointer
 ```
 
@@ -115,7 +115,7 @@ python3 scripts/ship_client.py sp-67223
 | Platform | http://127.0.0.1:8000/platform |
 | Dashboard | http://127.0.0.1:8000/ |
 
-Login uses dashboard auth token in `localStorage` (`speaksy-auth-token`). If auth is on, log in on dashboard first, then open `/platform`.
+Login uses dashboard auth token in `localStorage` (`voicely-auth-token`). If auth is on, log in on dashboard first, then open `/platform`.
 
 ---
 
@@ -175,7 +175,7 @@ Login uses dashboard auth token in `localStorage` (`speaksy-auth-token`). If aut
 ### ZIP artifacts always present
 
 ```
-speaksy-client-<id>-<utc>/
+voicely-client-<id>-<utc>/
   agent.py                    # thin shim → engine.agent_runtime
   engine/agent_runtime.py     # full runtime + stt_node speaker tee
   speaker_profiler.py         # age/gender sidecar
@@ -280,7 +280,7 @@ See also: `LATENCY_BEST_FIT_PRODUCTION.md`.
 ### Client first-run sequence
 
 ```bash
-cd speaksy-client-<id>-*/
+cd voicely-client-<id>-*/
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env

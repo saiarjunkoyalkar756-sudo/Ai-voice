@@ -1,5 +1,5 @@
 /**
- * Speaksy Booking Calendar — UI inspired by Thunderbird Appointment.
+ * Voicely Booking Calendar — UI inspired by Thunderbird Appointment.
  */
 (function calendarModule() {
   const IST = "Asia/Kolkata";

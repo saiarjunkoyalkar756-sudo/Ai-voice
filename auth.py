@@ -15,7 +15,7 @@ ALGORITHM = "HS256"
 TOKEN_EXPIRE_HOURS = 24
 API_SETTINGS_TOKEN_MINUTES = 60
 
-AUTH_COOKIE_NAME = "speaksy_auth"
+AUTH_COOKIE_NAME = "voicely_auth"
 
 
 def is_auth_enabled() -> bool:
@@ -80,7 +80,7 @@ def payload_to_auth_context(payload: dict[str, Any]) -> AuthContext:
 def _dev_auth_context() -> AuthContext:
     return AuthContext(
         user_id="dev-user",
-        email="dev@local.speaksy",
+        email="dev@local.voicely",
         org_id=DEFAULT_ORG_ID,
         role="owner",
         is_superadmin=True,

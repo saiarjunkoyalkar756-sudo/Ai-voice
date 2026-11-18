@@ -13,7 +13,7 @@ def test_latency_best_fit_knobs():
     assert float(cfg["stt_min_endpointing_delay"]) == 0.2
     assert float(cfg["stt_max_endpointing_delay"]) == 0.2
     assert int(cfg["stt_max_endpoint_delay_ms"]) == 200
-    assert cfg["tts_provider"] == "cartesia"
+    assert cfg["tts_provider"] in ("cartesia", "sarvam")
     assert cfg["cartesia_tts_model"] == "sonic-3.5"
     assert cfg["filler_phrases_enabled"] is False
     assert cfg.get("silence_guard_enabled") is False

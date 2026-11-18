@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-30-second automated latency pipeline for Speaksy (Tinglish).
+30-second automated latency pipeline for Voicely (Tinglish).
 
 Runs offline engine metrics simulation + policy checks.
 Wall-clock hard stop: 30s.
@@ -37,7 +37,7 @@ BUDGETS = {
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Speaksy 30s latency pipeline")
+    parser = argparse.ArgumentParser(description="Voicely 30s latency pipeline")
     parser.add_argument("--strict", action="store_true", help="Fail if any stage over budget")
     parser.add_argument("--turns", type=int, default=15, help="Simulated turns")
     args = parser.parse_args()

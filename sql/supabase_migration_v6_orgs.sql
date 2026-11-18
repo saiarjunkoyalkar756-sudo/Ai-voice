@@ -1,5 +1,5 @@
 -- ══════════════════════════════════════════════════════════════════════════════
--- SPEAKSY — Multi-tenant organisations (migration v6)
+-- VOICELY — Multi-tenant organisations (migration v6)
 -- Run in Supabase SQL Editor after supabase_schema.sql
 -- Safe to re-run: uses IF NOT EXISTS throughout
 -- ══════════════════════════════════════════════════════════════════════════════

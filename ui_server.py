@@ -41,7 +41,7 @@ logger = logging.getLogger("ui-server")
 
 _IS_PRODUCTION = os.environ.get("ENVIRONMENT", "development").lower() == "production"
 app = FastAPI(
-    title="Speaksy Voice AI Dashboard",
+    title="Voicely Voice AI Dashboard",
     # SECURITY (HIGH-8): Disable public OpenAPI docs in production
     docs_url=None if _IS_PRODUCTION else "/docs",
     redoc_url=None if _IS_PRODUCTION else "/redoc",
@@ -55,8 +55,10 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 if os.path.isdir(FRONTEND_DIR):
     app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+else:
+    logger.error("frontend/ folder not found at %s — CSS, JS, and icons will not load", FRONTEND_DIR)
 
-# Standalone Speaksy Flow Builder (React + xyflow) — separate from CRM dashboard
+# Standalone Voicely Flow Builder (React + xyflow) — separate from CRM dashboard
 _FLOW_BUILDER_DIST = os.path.join(BASE_DIR, "flow-builder", "dist")
 if os.path.isdir(_FLOW_BUILDER_DIST):
     app.mount(
@@ -64,9 +66,6 @@ if os.path.isdir(_FLOW_BUILDER_DIST):
         StaticFiles(directory=_FLOW_BUILDER_DIST, html=True),
         name="flow-builder",
     )
-
-else:
-    logger.error("frontend/ folder not found at %s — CSS, JS, and icons will not load", FRONTEND_DIR)
 
 FAVICON_PATH = os.path.join(FRONTEND_DIR, "favicon.png")
 FAVICON_LINKS = (
@@ -117,6 +116,8 @@ _PUBLIC_PATHS = {
 
 def _is_public_path(path: str) -> bool:
     if path in _PUBLIC_PATHS:
+        return True
+    if path.startswith("/api/auth/"):
         return True
     if path.startswith("/static/"):
         return True
@@ -1318,7 +1319,7 @@ async def _deploy_live_agent(agent_id: UUID) -> dict:
 
 
 @app.post("/api/agents/{agent_id}/run")
-async def api_run_agent(agent_id: UUID, user: str = Depends(require_auth)):
+async def api_run_agent(agent_id: UUID, ctx=Depends(require_superadmin)):  # SECURITY: Superadmin required
     """Kill all other agents, then run this agent with its saved preset."""
     _apply_supabase_env_safe()
     try:
@@ -1331,7 +1332,7 @@ async def api_run_agent(agent_id: UUID, user: str = Depends(require_auth)):
 
 
 @app.post("/api/agents/{agent_id}/activate")
-async def api_activate_agent(agent_id: UUID, user: str = Depends(require_auth)):
+async def api_activate_agent(agent_id: UUID, ctx=Depends(require_superadmin)):  # SECURITY: Superadmin required
     """Alias for /run — kept for older dashboard clients."""
     _apply_supabase_env_safe()
     try:

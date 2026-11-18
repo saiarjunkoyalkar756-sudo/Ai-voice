@@ -20,7 +20,7 @@ if str(ROOT) not in sys.path:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Ship Speaksy client codebase ZIP")
+    parser = argparse.ArgumentParser(description="Ship Voicely client codebase ZIP")
     parser.add_argument("client_id", help="Platform client id (e.g. sp-67223)")
     parser.add_argument(
         "--out",

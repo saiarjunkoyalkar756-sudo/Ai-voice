@@ -1,5 +1,5 @@
 """
-Twenty CRM integration — sales follow-up for Speaksy voice leads.
+Twenty CRM integration — sales follow-up for Voicely voice leads.
 
 Upserts people, opportunities, notes, and tasks via Twenty REST API.
 Caches Twenty record IDs per phone in the KV store for idempotent sync.
@@ -133,7 +133,7 @@ def _opportunity_name(update) -> str:
     listing = getattr(update, "offer_listing_id", None) or ""
     phone = getattr(update, "phone", "") or ""
     stage = getattr(update, "deal_stage", "lead")
-    base = f"Speaksy — {stage.replace('_', ' ').title()}"
+    base = f"Voicely — {stage.replace('_', ' ').title()}"
     if listing:
         return f"{base} ({listing})"
     suffix = phone[-4:] if len(phone) >= 4 else phone
@@ -371,7 +371,7 @@ class TwentyCRMClient:
         notes = (getattr(update, "notes", "") or "").strip()
         if not notes:
             return None
-        title = f"Speaksy call — {(getattr(update, 'call_date', '') or '')[:10]}"
+        title = f"Voicely call — {(getattr(update, 'call_date', '') or '')[:10]}"
         body = {
             "title": title[:255],
             "bodyV2": {"markdown": notes[:4000]},

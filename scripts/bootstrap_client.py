@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Client bootstrap after unpacking a Speaksy ship ZIP.
+Client bootstrap after unpacking a Voicely ship ZIP.
 
   1. Load .env
   2. Validate required secrets
@@ -52,7 +52,7 @@ async def _prewarm() -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Speaksy client bootstrap")
+    parser = argparse.ArgumentParser(description="Voicely client bootstrap")
     parser.add_argument("--skip-preflight", action="store_true")
     parser.add_argument("--prewarm-only", action="store_true")
     args = parser.parse_args()

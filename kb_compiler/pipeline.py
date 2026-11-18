@@ -124,7 +124,7 @@ async def run_compile(client_id: str, repo_root: Path) -> dict[str, Any]:
             raise ValueError(
                 "Fact extraction produced nothing — the KB was read "
                 f"({len(chunks)} chunks) but the model returned no claims. "
-                "Check SPEAKSY_COMPILER_EXTRACT_MODEL / GEMINI_API_KEY, or try a richer source."
+                "Check VOICELY_COMPILER_EXTRACT_MODEL / GEMINI_API_KEY, or try a richer source."
             )
 
         # Persona/company that doesn't appear in the KB is the #1 critic loop.

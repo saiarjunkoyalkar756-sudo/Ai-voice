@@ -34,6 +34,7 @@ from org_store import (
     update_member_role,
     update_org_workspace_features,
     update_organization,
+    update_user_password,
 )
 from secrets_manager import get_secret
 from tenancy import AuthContext
@@ -114,7 +115,7 @@ def _login_identifier(body: LoginBody) -> str:
     if not raw:
         raise HTTPException(status_code=401, detail="Email and password required")
     if "@" not in raw:
-        return f"{raw}@local.speaksy"
+        return f"{raw}@local.voicely"
     return raw.lower()
 
 
@@ -177,6 +178,14 @@ def _require_org_admin(ctx: AuthContext, org_id: str) -> None:
 
 @router.post("/auth/register")
 async def api_register(body: RegisterBody):
+    import os
+    # SECURITY: Prevent unauthorized public self-registration in production
+    allow_reg = os.getenv("ALLOW_PUBLIC_REGISTRATION", "false").lower() in ("true", "1", "yes")
+    if not allow_reg and os.getenv("ENVIRONMENT", "development").lower() == "production":
+        raise HTTPException(
+            status_code=403,
+            detail="Public registration is disabled in production. Contact an administrator for access.",
+        )
     ensure_bootstrap()
     try:
         user, org = register_user_with_org(
@@ -461,7 +470,7 @@ def perform_login(body: LoginBody) -> dict:
     if not user:
         expected_user = (get_secret("dashboard_username") or "admin").strip()
         expected_pass = get_secret("dashboard_password") or "change-me-now"
-        legacy_email = expected_user if "@" in expected_user else f"{expected_user}@local.speaksy"
+        legacy_email = expected_user if "@" in expected_user else f"{expected_user}@local.voicely"
         if identifier == legacy_email and password == expected_pass:
             user = get_user_by_email(legacy_email)
         if not user:
@@ -491,3 +500,145 @@ def perform_login(body: LoginBody) -> dict:
         "organizations": orgs,
         "organization": get_organization(org_id),
     }
+
+
+class ForgotPasswordRequestBody(BaseModel):
+    email: str
+
+    @field_validator("email")
+    @classmethod
+    def _validate_email(cls, v: str) -> str:
+        v = v.strip().lower()
+        if "@" not in v:
+            raise ValueError("Invalid email address")
+        return v
+
+
+class ForgotPasswordResetBody(BaseModel):
+    email: str
+    otp: str = Field(min_length=6, max_length=6)
+    new_password: str = Field(min_length=8)
+
+    @field_validator("email")
+    @classmethod
+    def _validate_email(cls, v: str) -> str:
+        return v.strip().lower()
+
+
+class OtpLoginRequestBody(BaseModel):
+    email: str
+
+    @field_validator("email")
+    @classmethod
+    def _validate_email(cls, v: str) -> str:
+        return v.strip().lower()
+
+
+class OtpLoginVerifyBody(BaseModel):
+    email: str
+    otp: str = Field(min_length=6, max_length=6)
+
+    @field_validator("email")
+    @classmethod
+    def _validate_email(cls, v: str) -> str:
+        return v.strip().lower()
+
+
+@router.post("/auth/forgot-password/request")
+async def api_forgot_password_request(body: ForgotPasswordRequestBody):
+    ensure_bootstrap()
+    from otp_service import create_and_send_otp
+
+    email = body.email
+    user = get_user_by_email(email)
+    if not user:
+        # Prevent email enumeration while appearing successful to client
+        return {"success": True, "message": "If this email is registered, a verification code has been sent."}
+
+    success, msg = create_and_send_otp(email, purpose="Password Reset")
+    if not success:
+        raise HTTPException(status_code=429 if "wait" in msg.lower() else 500, detail=msg)
+
+    return {"success": True, "message": "Verification code has been sent to your email."}
+
+
+@router.post("/auth/forgot-password/reset")
+async def api_forgot_password_reset(body: ForgotPasswordResetBody):
+    ensure_bootstrap()
+    from otp_service import verify_otp
+
+    email = body.email
+    valid, msg = verify_otp(email, body.otp, purpose="Password Reset", mark_used=True)
+    if not valid:
+        raise HTTPException(status_code=400, detail=msg)
+
+    user = get_user_by_email(email)
+    if not user:
+        raise HTTPException(status_code=404, detail="User account not found.")
+
+    updated = update_user_password(email, body.new_password)
+    if not updated:
+        raise HTTPException(status_code=500, detail="Failed to update password. Please try again.")
+
+    return {"success": True, "message": "Password reset successfully. You can now sign in."}
+
+
+@router.post("/auth/otp-login/request")
+async def api_otp_login_request(body: OtpLoginRequestBody):
+    ensure_bootstrap()
+    from otp_service import create_and_send_otp
+
+    email = body.email
+    user = get_user_by_email(email)
+    if not user:
+        raise HTTPException(status_code=404, detail="No registered account found with this email.")
+
+    success, msg = create_and_send_otp(email, purpose="Sign In")
+    if not success:
+        raise HTTPException(status_code=429 if "wait" in msg.lower() else 500, detail=msg)
+
+    return {"success": True, "message": "Sign-in verification code sent to your email."}
+
+
+@router.post("/auth/otp-login/verify")
+async def api_otp_login_verify(body: OtpLoginVerifyBody):
+    ensure_bootstrap()
+    from otp_service import verify_otp
+    from fastapi.responses import JSONResponse
+    import os
+
+    email = body.email
+    valid, msg = verify_otp(email, body.otp, purpose="Sign In", mark_used=True)
+    if not valid:
+        raise HTTPException(status_code=400, detail=msg)
+
+    user = get_user_by_email(email)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found.")
+
+    token, org_id, role = _issue_token_for_user(user)
+    orgs = list_user_orgs(user["id"])
+
+    payload = {
+        "access_token": token,
+        "token_type": "bearer",
+        "email": user["email"],
+        "user_id": user["id"],
+        "org_id": org_id,
+        "role": role,
+        "is_superadmin": user.get("is_superadmin", False),
+        "organizations": orgs,
+        "organization": get_organization(org_id),
+    }
+
+    response = JSONResponse(payload)
+    response.set_cookie(
+        key=AUTH_COOKIE_NAME,
+        value=token,
+        httponly=True,
+        secure=os.environ.get("ENVIRONMENT", "development") == "production",
+        samesite="lax",
+        max_age=TOKEN_EXPIRE_HOURS * 3600,
+        path="/",
+    )
+    return response

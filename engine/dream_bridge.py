@@ -9,7 +9,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
-logger = logging.getLogger("speaksy-engine")
+logger = logging.getLogger("voicely-engine")
 
 
 async def run_dream_and_hot_context(
