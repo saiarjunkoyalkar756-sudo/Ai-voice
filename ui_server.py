@@ -55,6 +55,13 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 if os.path.isdir(FRONTEND_DIR):
     app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+    for _d in ("brand", "lab", "audio"):
+        _sub = os.path.join(FRONTEND_DIR, _d)
+        if os.path.isdir(_sub):
+            app.mount(f"/{_d}", StaticFiles(directory=_sub), name=f"speaksy_{_d}")
+    _next_static = os.path.join(FRONTEND_DIR, "_next", "static")
+    if os.path.isdir(_next_static):
+        app.mount("/_next/static", StaticFiles(directory=_next_static), name="speaksy_next_static")
 else:
     logger.error("frontend/ folder not found at %s — CSS, JS, and icons will not load", FRONTEND_DIR)
 
@@ -103,6 +110,9 @@ _PUBLIC_PATHS = {
     "/login",
     "/health",
     "/metrics",
+    "/pricing",
+    "/platform",
+    "/contact",
     "/api/auth/login",
     "/api/auth/logout",
     "/api/auth/register",
@@ -121,7 +131,7 @@ def _is_public_path(path: str) -> bool:
         return True
     if path.startswith("/api/auth/"):
         return True
-    if path.startswith("/static/"):
+    if path.startswith(("/static/", "/_next/", "/brand/", "/lab/", "/audio/")):
         return True
     if path.startswith("/api/local/"):
         try:
@@ -3120,6 +3130,41 @@ async def get_homepage():
     if served is not None:
         return served
     return RedirectResponse(url="/login", status_code=302)
+
+
+@app.get("/_next/image")
+async def serve_next_image(url: str = Query(...)):
+    import urllib.parse
+    clean_path = urllib.parse.unquote(url).lstrip("/")
+    local_file = os.path.join(FRONTEND_DIR, clean_path)
+    if os.path.isfile(local_file):
+        media_type = "image/png" if local_file.endswith(".png") else "image/jpeg"
+        return FileResponse(local_file, media_type=media_type)
+    return Response(status_code=404)
+
+
+@app.get("/pricing", response_class=HTMLResponse)
+async def get_pricing_page():
+    served = _serve_spa_html("pricing.html")
+    if served is not None:
+        return served
+    return RedirectResponse(url="/", status_code=302)
+
+
+@app.get("/platform", response_class=HTMLResponse)
+async def get_platform_page():
+    served = _serve_spa_html("platform.html")
+    if served is not None:
+        return served
+    return RedirectResponse(url="/", status_code=302)
+
+
+@app.get("/contact", response_class=HTMLResponse)
+async def get_contact_page():
+    served = _serve_spa_html("contact.html")
+    if served is not None:
+        return served
+    return RedirectResponse(url="/", status_code=302)
 
 
 @app.get("/dashboard", response_class=HTMLResponse)
