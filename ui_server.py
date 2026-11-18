@@ -58,10 +58,10 @@ if os.path.isdir(FRONTEND_DIR):
     for _d in ("brand", "lab", "audio"):
         _sub = os.path.join(FRONTEND_DIR, _d)
         if os.path.isdir(_sub):
-            app.mount(f"/{_d}", StaticFiles(directory=_sub), name=f"speaksy_{_d}")
+            app.mount(f"/{_d}", StaticFiles(directory=_sub), name=f"voicely_{_d}")
     _next_static = os.path.join(FRONTEND_DIR, "_next", "static")
     if os.path.isdir(_next_static):
-        app.mount("/_next/static", StaticFiles(directory=_next_static), name="speaksy_next_static")
+        app.mount("/_next/static", StaticFiles(directory=_next_static), name="voicely_next_static")
 else:
     logger.error("frontend/ folder not found at %s — CSS, JS, and icons will not load", FRONTEND_DIR)
 

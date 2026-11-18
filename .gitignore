@@ -27,3 +27,5 @@ logs/
 *.pem
 *.key
 .DS_Store
+
+frontend/brand/orig_speaksy/
