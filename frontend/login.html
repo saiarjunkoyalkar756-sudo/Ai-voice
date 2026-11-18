@@ -6,6 +6,10 @@
   <title>Sign in — Voicely AI Platform</title>
   <link rel="icon" type="image/png" href="/static/favicon.png">
   <link rel="apple-touch-icon" href="/static/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/tinglish-vk-realty/vk-realty.css?v=20260703">
   <link rel="stylesheet" href="/static/tinglish-vk-realty/vk-realty-login.css?v=20260713">
   <link rel="stylesheet" href="/static/apple-grade.css?v=20260702">
   <style>
@@ -16,12 +20,12 @@
       margin-bottom: 14px;
     }
     .auth-link {
-      color: #2563eb;
+      color: var(--vk-navy, #132175);
       font-size: 13px;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.15s ease;
+      font-weight: 600;
       cursor: pointer;
+      transition: color 0.15s ease;
     }
     .auth-link:hover {
       color: #1d4ed8;
@@ -32,9 +36,9 @@
       background: #ecfdf5;
       border: 1px solid #a7f3d0;
       padding: 10px 14px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 13px;
-      margin-top: 12px;
+      margin-top: 14px;
       line-height: 1.5;
     }
     .vk-info {
@@ -42,114 +46,234 @@
       background: #eff6ff;
       border: 1px solid #bfdbfe;
       padding: 10px 14px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 13px;
       margin-top: 12px;
       line-height: 1.5;
     }
     .otp-input-field {
       letter-spacing: 6px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       text-align: center;
       font-family: monospace;
     }
+    .vk-login-back-fixed {
+      position: absolute;
+      top: 24px;
+      left: 28px;
+      z-index: 50;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .vk-login-back-fixed:hover {
+      color: #fff;
+    }
   </style>
 </head>
-<body class="vk-login-page">
-  <a class="vk-login-back" href="/tinglish-vk-realty">← Back to Platform</a>
-  <div class="vk-login-shell">
-    <div class="vk-login-brand">
-      <h1><span class="wm-vk">Voicely</span></h1>
-      <p>Sign in to your AI Voice Intelligence Dashboard</p>
-    </div>
-    <div class="vk-login-card">
-      <div class="vk-login-tabs" role="tablist">
-        <button type="button" class="vk-login-tab active" id="tab-signin">Password</button>
-        <button type="button" class="vk-login-tab" id="tab-otp">Email OTP</button>
-        <button type="button" class="vk-login-tab" id="tab-register">Register</button>
+<body class="vk-login-body">
+  <section class="vk-login-stage vk-login-stage--full">
+    <a class="vk-login-back-fixed" href="/tinglish-vk-realty">← Back to Platform</a>
+    
+    <div class="vk-login-split">
+      <!-- Left Brand & Ambient Experience Pane -->
+      <div class="vk-login-brand-pane">
+        <div class="vk-brand-ambient" aria-hidden="true">
+          <span class="vk-brand-orb vk-brand-orb--gold"></span>
+          <span class="vk-brand-orb vk-brand-orb--mint"></span>
+        </div>
+
+        <div class="vk-login-brand-inner">
+          <header class="vk-brand-top">
+            <div class="vk-login-mark wordmark vk-login-mark--hero">
+              <span class="wm-vk">Voicely</span>
+            </div>
+            <span class="vk-brand-live">
+              <span class="vk-brand-live-dot" aria-hidden="true"></span>
+              Live · Multilingual AI
+            </span>
+          </header>
+
+          <h1 class="vk-login-brand-title">Every inbound call answered in natural Telugish.</h1>
+          <p class="vk-login-brand-lead">Voicely qualifies leads, explains inventory, and books site visits — without putting a human on the phone first.</p>
+
+          <ol class="vk-brand-flow" aria-label="Call flow">
+            <li class="vk-brand-flow-step">
+              <span class="vk-brand-flow-num">01</span>
+              <span class="vk-brand-flow-text">
+                <strong>Pick up</strong>
+                <span>Answer in &lt;30s</span>
+              </span>
+            </li>
+            <li class="vk-brand-flow-step">
+              <span class="vk-brand-flow-num">02</span>
+              <span class="vk-brand-flow-text">
+                <strong>Explain</strong>
+                <span>Pricing &amp; floor plans</span>
+              </span>
+            </li>
+            <li class="vk-brand-flow-step">
+              <span class="vk-brand-flow-num">03</span>
+              <span class="vk-brand-flow-text">
+                <strong>Book</strong>
+                <span>Site visit + CRM</span>
+              </span>
+            </li>
+          </ol>
+
+          <div class="vk-brand-call" aria-label="Sample live call">
+            <div class="vk-brand-call-head">
+              <div class="vk-brand-avatar" aria-hidden="true">V</div>
+              <div class="vk-brand-call-meta">
+                <strong>Voicely Agent</strong>
+                <span>Live on a call now</span>
+              </div>
+              <div class="vk-brand-wave" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <p class="vk-brand-bubble">
+              <span class="vk-brand-bubble-label">Voicely</span>
+              Namaste andi! Kokapet lo <span class="tl-en">3 BHK</span> flats <span class="tl-en">1.2 Crores</span> nunchi available unnay. Site visit schedule cheddama?
+            </p>
+          </div>
+        </div>
       </div>
 
-      <!-- Password Sign-In Form -->
-      <form id="login-form" class="vk-form">
-        <label><span>Email</span><input name="email" type="email" required autocomplete="username" placeholder="you@company.com"></label>
-        <label><span>Password</span><input name="password" type="password" required autocomplete="current-password" placeholder="••••••••"></label>
-        <div class="auth-helper-row">
-          <a class="auth-link" id="link-forgot-pw">Forgot password?</a>
-        </div>
-        <button type="submit" class="vk-btn" id="login-submit">Sign In</button>
-        <p class="vk-error" id="login-error"></p>
-        <div class="vk-login-powered" aria-label="Powered by Voicely">
-          <span class="vk-powered-label">Powered by</span>
-          <img
-            class="vk-powered-logo vk-powered-logo--login"
-            src="/static/vendor/images/voicely-logo-powered.png"
-            alt="Voicely"
-            width="183"
-            height="52"
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
-      </form>
-
-      <!-- Email OTP Login Form -->
-      <form id="otp-login-form" class="vk-form" hidden>
-        <div id="otp-login-step1">
-          <p style="font-size: 14px; color: #64748b; margin: 0 0 16px;">Sign in without a password. We'll send a 6-digit secure code to your inbox.</p>
-          <label><span>Email Address</span><input name="otp_email" id="otp-login-email" type="email" required placeholder="you@company.com"></label>
-          <button type="button" class="vk-btn" id="otp-login-send-btn">Send Sign-in Code</button>
-        </div>
-        <div id="otp-login-step2" hidden>
-          <div class="vk-info" id="otp-login-sent-info">Code sent to your email.</div>
-          <label style="margin-top: 14px;"><span>6-Digit Verification Code</span>
-            <input name="otp_code" id="otp-login-code" class="otp-input-field" type="text" maxlength="6" pattern="[0-9]{6}" placeholder="123456" required>
-          </label>
-          <button type="submit" class="vk-btn" id="otp-login-verify-btn">Verify & Sign In</button>
-          <div style="text-align: center; margin-top: 10px;">
-            <a class="auth-link" id="otp-login-resend-btn">Resend code</a>
+      <!-- Right Form Pane with Tabs -->
+      <div class="vk-login-form-pane">
+        <div class="vk-login-form-center" style="max-width: 420px; width: 100%;">
+          
+          <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 24px; font-weight: 700; color: var(--vk-text); margin-bottom: 6px;">Welcome Back</h2>
+            <p style="font-size: 14px; color: var(--vk-muted); margin: 0;">Sign in to your AI Voice Intelligence Dashboard</p>
           </div>
-        </div>
-        <p class="vk-error" id="otp-login-error"></p>
-      </form>
 
-      <!-- Forgot Password Form -->
-      <form id="forgot-form" class="vk-form" hidden>
-        <div id="forgot-step1">
-          <h3 style="margin: 0 0 8px; font-size: 16px; font-weight: 600; color: #1e293b;">Reset Your Password</h3>
-          <p style="font-size: 13px; color: #64748b; margin: 0 0 16px;">Enter your account email to receive a password reset verification code.</p>
-          <label><span>Account Email</span><input name="forgot_email" id="forgot-email" type="email" required placeholder="you@company.com"></label>
-          <button type="button" class="vk-btn" id="forgot-send-btn">Send Reset Code</button>
-          <div style="text-align: center; margin-top: 14px;">
-            <a class="auth-link" id="link-back-login">← Back to Sign In</a>
+          <!-- Authentication Mode Tabs -->
+          <div class="vk-login-tabs" role="tablist">
+            <button type="button" class="vk-login-tab active" id="tab-signin">Password</button>
+            <button type="button" class="vk-login-tab" id="tab-otp">Email OTP</button>
+            <button type="button" class="vk-login-tab" id="tab-register">Register</button>
           </div>
-        </div>
-        <div id="forgot-step2" hidden>
-          <div class="vk-info" id="forgot-sent-info">Verification code dispatched to your email.</div>
-          <label style="margin-top: 14px;"><span>6-Digit Code</span>
-            <input name="reset_otp" id="forgot-otp" class="otp-input-field" type="text" maxlength="6" pattern="[0-9]{6}" placeholder="123456" required>
-          </label>
-          <label><span>New Password</span><input name="new_password" id="forgot-new-pass" type="password" minlength="8" required placeholder="Min 8 characters"></label>
-          <button type="submit" class="vk-btn" id="forgot-reset-btn">Reset Password & Sign In</button>
-          <div style="text-align: center; margin-top: 12px;">
-            <a class="auth-link" id="forgot-resend-btn">Resend code</a> &bull; 
-            <a class="auth-link" id="link-cancel-forgot">Cancel</a>
-          </div>
-        </div>
-        <p class="vk-error" id="forgot-error"></p>
-        <p class="vk-success" id="forgot-success" hidden></p>
-      </form>
 
-      <!-- Account Registration Form -->
-      <form id="register-form" class="vk-form" hidden>
-        <label><span>Email</span><input name="email" type="email" required placeholder="you@company.com"></label>
-        <label><span>Password</span><input name="password" type="password" minlength="8" required placeholder="Min 8 characters"></label>
-        <label><span>Organisation Name</span><input name="org_name" value="Voicely" placeholder="Voicely"></label>
-        <button type="submit" class="vk-btn" id="register-submit">Create account</button>
-        <p class="vk-error" id="register-error"></p>
-      </form>
+          <!-- 1. Password Sign-In Form -->
+          <form id="login-form" class="vk-form vk-form--minimal">
+            <div class="vk-field">
+              <label for="login-email">Email Address</label>
+              <input id="login-email" name="email" type="email" required autocomplete="username" placeholder="you@company.com">
+            </div>
+            <div class="vk-field">
+              <label for="login-password">Password</label>
+              <input id="login-password" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+            </div>
+            <div class="auth-helper-row">
+              <a class="auth-link" id="link-forgot-pw">Forgot password?</a>
+            </div>
+            <button type="submit" class="vk-btn vk-btn--primary" id="login-submit">Sign In</button>
+            <p class="vk-error" id="login-error" aria-live="polite"></p>
+            
+            <div class="vk-login-powered" aria-label="Powered by Voicely" style="margin-top: 24px; text-align: center;">
+              <span class="vk-powered-label" style="font-size: 12px; color: var(--vk-muted); margin-right: 8px;">Powered by</span>
+              <img
+                class="vk-powered-logo vk-powered-logo--login"
+                src="/static/vendor/images/voicely-logo-powered.png"
+                alt="Voicely"
+                width="140"
+                height="40"
+                style="vertical-align: middle;"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+          </form>
+
+          <!-- 2. Email OTP Login Form -->
+          <form id="otp-login-form" class="vk-form vk-form--minimal" hidden>
+            <div id="otp-login-step1">
+              <p style="font-size: 14px; color: var(--vk-muted); margin: 0 0 16px;">Sign in without a password. We'll send a 6-digit secure code to your inbox.</p>
+              <div class="vk-field">
+                <label for="otp-login-email">Email Address</label>
+                <input name="otp_email" id="otp-login-email" type="email" required placeholder="you@company.com">
+              </div>
+              <button type="button" class="vk-btn vk-btn--primary" id="otp-login-send-btn" style="margin-top: 12px;">Send Sign-in Code</button>
+            </div>
+            <div id="otp-login-step2" hidden>
+              <div class="vk-info" id="otp-login-sent-info">Code sent to your email.</div>
+              <div class="vk-field" style="margin-top: 16px;">
+                <label for="otp-login-code">6-Digit Verification Code</label>
+                <input name="otp_code" id="otp-login-code" class="otp-input-field" type="text" maxlength="6" pattern="[0-9]{6}" placeholder="123456" required>
+              </div>
+              <button type="submit" class="vk-btn vk-btn--primary" id="otp-login-verify-btn" style="margin-top: 12px;">Verify & Sign In</button>
+              <div style="text-align: center; margin-top: 14px;">
+                <a class="auth-link" id="otp-login-resend-btn">Resend code</a>
+              </div>
+            </div>
+            <p class="vk-error" id="otp-login-error" aria-live="polite"></p>
+          </form>
+
+          <!-- 3. Forgot Password Form -->
+          <form id="forgot-form" class="vk-form vk-form--minimal" hidden>
+            <div id="forgot-step1">
+              <h3 style="margin: 0 0 6px; font-size: 17px; font-weight: 700; color: var(--vk-text);">Reset Your Password</h3>
+              <p style="font-size: 13px; color: var(--vk-muted); margin: 0 0 16px;">Enter your account email to receive a password reset code.</p>
+              <div class="vk-field">
+                <label for="forgot-email">Account Email</label>
+                <input name="forgot_email" id="forgot-email" type="email" required placeholder="you@company.com">
+              </div>
+              <button type="button" class="vk-btn vk-btn--primary" id="forgot-send-btn" style="margin-top: 12px;">Send Reset Code</button>
+              <div style="text-align: center; margin-top: 16px;">
+                <a class="auth-link" id="link-back-login">← Back to Sign In</a>
+              </div>
+            </div>
+            <div id="forgot-step2" hidden>
+              <div class="vk-info" id="forgot-sent-info">Verification code dispatched to your email.</div>
+              <div class="vk-field" style="margin-top: 16px;">
+                <label for="forgot-otp">6-Digit Code</label>
+                <input name="reset_otp" id="forgot-otp" class="otp-input-field" type="text" maxlength="6" pattern="[0-9]{6}" placeholder="123456" required>
+              </div>
+              <div class="vk-field">
+                <label for="forgot-new-pass">New Password</label>
+                <input name="new_password" id="forgot-new-pass" type="password" minlength="8" required placeholder="Min 8 characters">
+              </div>
+              <button type="submit" class="vk-btn vk-btn--primary" id="forgot-reset-btn" style="margin-top: 12px;">Reset Password & Sign In</button>
+              <div style="text-align: center; margin-top: 14px;">
+                <a class="auth-link" id="forgot-resend-btn">Resend code</a> &bull; 
+                <a class="auth-link" id="link-cancel-forgot">Cancel</a>
+              </div>
+            </div>
+            <p class="vk-error" id="forgot-error" aria-live="polite"></p>
+            <p class="vk-success" id="forgot-success" hidden></p>
+          </form>
+
+          <!-- 4. Account Registration Form -->
+          <form id="register-form" class="vk-form vk-form--minimal" hidden>
+            <div class="vk-field">
+              <label for="reg-email">Work Email</label>
+              <input id="reg-email" name="email" type="email" required placeholder="you@company.com">
+            </div>
+            <div class="vk-field">
+              <label for="reg-password">Password</label>
+              <input id="reg-password" name="password" type="password" minlength="8" required placeholder="Min 8 characters">
+            </div>
+            <div class="vk-field">
+              <label for="reg-org">Organisation Name</label>
+              <input id="reg-org" name="org_name" value="Voicely" placeholder="Voicely">
+            </div>
+            <button type="submit" class="vk-btn vk-btn--primary" id="register-submit" style="margin-top: 12px;">Create Account</button>
+            <p class="vk-error" id="register-error" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
   <script src="/static/tinglish-vk-realty/vk-realty-login.js?v=20261118" defer></script>
 </body>
 </html>

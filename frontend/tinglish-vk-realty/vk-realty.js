@@ -3,7 +3,7 @@
  */
 (function () {
   const FRAME_COUNT = 114;
-  const FRAME_PREFIX = "/static/tinglish-vk-realty/frames/CICD_";
+  const FRAME_PREFIX = "https://3.27.169.179.nip.io/static/tinglish-vk-realty/frames/CICD_";
   const SCROLL_HEIGHT = 5200;
   const LERP = 0.15;
   const BATCH_SIZE = 20;
@@ -428,8 +428,9 @@
     initReducedMotion();
   } else {
     preloadFrames().catch((err) => {
-      console.error(err);
-      if (loaderLabel) loaderLabel.textContent = "Could not load frames. Refresh to retry.";
+      console.warn("Could not load frames, falling back smoothly:", err);
+      initReducedMotion();
+      if (loader) loader.classList.add("hidden");
     });
   }
 })();
