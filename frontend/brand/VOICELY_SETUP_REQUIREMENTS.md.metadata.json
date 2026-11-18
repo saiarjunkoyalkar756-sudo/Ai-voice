@@ -1,0 +1,5 @@
+{
+  "summary": "Complete setup guide and requirements specification to run the entire Voicely voice AI platform. Covers existing configured credentials, remaining required AI API keys, database initialization, and step-by-step launch commands for local testing and production.",
+  "updatedAt": "2026-11-16T16:10:00.398543300Z",
+  "userFacing": true
+}
