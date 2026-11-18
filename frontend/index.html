@@ -1,276 +1,1220 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cyberhost AI — Sumeet answers every inbound call in natural Tinglish. Hyderabad property leads, qualified 24/7.">
-  <title>Cyberhost — Tinglish AI Voice for Hyderabad Real Estate</title>
-  <link rel="icon" type="image/png" href="/static/favicon.png">
-  <link rel="apple-touch-icon" href="/static/favicon.png">
+  <title>Voicely — AI phone agents that sound human</title>
+  <meta name="description" content="EMI, COD, lead follow-up, appointments — Voicely calls your customers in their language. 10 Indian languages. From ₹3.99/min.">
+  <meta name="keywords" content="AI calling India, Hindi telecaller AI, Telugu voice bot, EMI reminder call, COD confirmation call, Voicely">
+  <link rel="icon" type="image/png" href="https://3.27.169.179.nip.io/static/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/tinglish-vk-realty/vk-realty.css?v=20260703">
-  <link rel="stylesheet" href="/static/tinglish-vk-realty/vk-realty-login.css?v=20260713">
-  <link rel="stylesheet" href="/static/tinglish-vk-realty/tinglish-home.css?v=20260703">
-  <link rel="stylesheet" href="/static/apple-grade.css?v=20260702">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --border-dark: #d1d5db;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --text-light: #6b7280;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-soft: #eff6ff;
+      --accent: #059669;
+      --accent-soft: #ecfdf5;
+      --gold: #b45309;
+      --gold-soft: #fef3c7;
+      --dark-surface: #0a0e1a;
+      --dark-card: #111827;
+      --dark-border: #1f2937;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Banner */
+    .top-banner {
+      background: #0f172a;
+      color: #94a3b8;
+      font-size: 13px;
+      padding: 9px 16px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    .top-banner a { color: #38bdf8; text-decoration: none; font-weight: 600; margin-left: 6px; }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: #0f172a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      font-size: 18px;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+    .nav-menu a:hover { color: var(--text); }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-login {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .btn-login:hover { background: var(--surface); }
+    .btn-primary {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+    h1.hero-title {
+      font-size: clamp(38px, 5.5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      max-width: 950px;
+      margin: 0 auto 20px;
+      color: #0f172a;
+    }
+    h1.hero-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, #1e40af 0%, #0369a1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto 36px;
+      line-height: 1.5;
+    }
+    .hero-cta-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn-large {
+      padding: 14px 32px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid var(--border-dark);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s;
+    }
+    .btn-secondary:hover {
+      background: var(--surface);
+      border-color: #9ca3af;
+    }
+
+    /* Trust Props Row */
+    .hero-props {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+    .hero-props span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Interactive Audio Demo Card */
+    .demo-stage {
+      margin: 50px auto 70px;
+      max-width: 780px;
+      background: #0f172a;
+      border-radius: 20px;
+      padding: 32px 36px;
+      color: #fff;
+      box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35);
+      border: 1px solid #1e293b;
+      position: relative;
+    }
+    .demo-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .demo-caller {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .demo-avatar {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #0f172a;
+    }
+    .demo-meta strong { display: block; font-size: 16px; color: #f8fafc; }
+    .demo-meta span { font-size: 13px; color: #94a3b8; }
+    
+    .demo-lang-tabs {
+      display: flex;
+      background: #1e293b;
+      padding: 4px;
+      border-radius: 10px;
+      gap: 4px;
+    }
+    .demo-lang-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .demo-lang-btn.active {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    /* Audio Player & Speech Bubble */
+    .demo-bubble {
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 20px 24px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f5f9;
+      margin-bottom: 24px;
+      border-left: 4px solid #38bdf8;
+    }
+    .demo-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .demo-play-btn {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s;
+    }
+    .demo-play-btn:hover {
+      background: #7dd3fc;
+      transform: scale(1.02);
+    }
+    .demo-wave {
+      flex: 1;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .demo-bar {
+      flex: 1;
+      background: #334155;
+      height: 8px;
+      border-radius: 4px;
+      transition: height 0.2s, background 0.2s;
+    }
+    .demo-wave.playing .demo-bar {
+      background: #38bdf8;
+      animation: barPulse 1s ease-in-out infinite alternate;
+    }
+    .demo-wave.playing .demo-bar:nth-child(2) { animation-delay: 0.1s; }
+    .demo-wave.playing .demo-bar:nth-child(3) { animation-delay: 0.2s; }
+    .demo-wave.playing .demo-bar:nth-child(4) { animation-delay: 0.3s; }
+    .demo-wave.playing .demo-bar:nth-child(5) { animation-delay: 0.4s; }
+    .demo-wave.playing .demo-bar:nth-child(6) { animation-delay: 0.5s; }
+    @keyframes barPulse {
+      0% { height: 6px; }
+      100% { height: 28px; }
+    }
+
+    /* Key Numbers Bar */
+    .metrics-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      padding: 40px 0;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item strong {
+      display: block;
+      font-size: 40px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -1px;
+    }
+    .metric-item span {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    /* Logo Marquee */
+    .logo-marquee-wrap {
+      padding: 48px 0;
+      text-align: center;
+    }
+    .logo-marquee-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      opacity: 0.7;
+    }
+    .logo-pill {
+      font-weight: 700;
+      font-size: 18px;
+      color: #334155;
+      letter-spacing: -0.5px;
+    }
+
+    /* Use Cases Section */
+    .section-wrap {
+      padding: 90px 0;
+    }
+    .section-head {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 60px;
+    }
+    .section-tag {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 18px;
+      color: var(--text-muted);
+    }
+
+    /* Use Case Cards Grid */
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 28px;
+    }
+    .use-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .use-card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(0,0,0,0.08);
+    }
+    .use-card-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    .use-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .use-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Why Voicely Comparison Table */
+    .comparison-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 90px 0;
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .comp-table th, .comp-table td {
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-table th {
+      background: #f8fafc;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #475569;
+    }
+    .comp-table th.highlight, .comp-table td.highlight {
+      background: #f0fdf4;
+      font-weight: 600;
+      color: #14532d;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+
+    /* Pricing Section */
+    .pricing-wrap {
+      padding: 90px 0;
+      text-align: center;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 1000px;
+      margin: 50px auto 0;
+      text-align: left;
+    }
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card.featured {
+      border: 2px solid #0f172a;
+      box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.15);
+      position: relative;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 36px;
+      background: #0f172a;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .pricing-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+    .pricing-card p.tier-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    .pricing-rate {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .pricing-rate span {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+    .pricing-features li {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pricing-features li svg { color: var(--accent); flex-shrink: 0; }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 64px 48px;
+      margin: 40px auto 90px;
+      max-width: 1140px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner h2 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .cta-banner p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .cta-banner .btn-primary {
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 16px;
+      padding: 14px 36px;
+      border-radius: 10px;
+    }
+    .cta-banner .btn-primary:hover { background: #7dd3fc; }
+
+    /* Footer */
+    footer {
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      padding: 70px 0 40px;
+      color: var(--text-light);
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .footer-brand strong {
+      font-size: 20px;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: #0f172a; }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    /* Modal for Booking Demo */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-card {
+      background: #ffffff;
+      border-radius: 16px;
+      width: min(480px, 100%);
+      padding: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    }
+  </style>
 </head>
-<body class="tinglish-home">
-  <div class="tl-scroll-progress" aria-hidden="true">
-    <div class="tl-scroll-progress-fill" id="scroll-progress-fill"></div>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    🚀 Production Ready: Sub-200ms Duplex Voice AI in 10 Indian Languages &bull; 
+    <a href="#demo-section">Hear a Live Call &rarr;</a>
   </div>
 
-  <div class="loader" id="loader">
-    <div class="loader-wordmark wordmark"><span class="wm-vk">Cyberhost</span></div>
-    <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
-    <p class="loader-label" id="loader-label">Loading experience…</p>
-  </div>
+  <!-- Header -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="brand">
+        <div class="brand-icon">⚡</div>
+        <span>Voicely</span>
+      </a>
 
-  <div class="wordmark-fly wordmark" id="wordmark-fly" aria-hidden="true">
-    <span class="wm-vk">Cyberhost</span>
-  </div>
+      <ul class="nav-menu">
+        <li><a href="#features">Product</a></li>
+        <li><a href="#use-cases">Solutions</a></li>
+        <li><a href="#comparison">Why Voicely</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="http://docs.api-maruthi.pikachuhosting.online">API Docs</a></li>
+        <li><a href="http://status.api-maruthi.pikachuhosting.online">Status</a></li>
+      </ul>
 
-  <nav class="tl-section-rail" id="section-rail" aria-label="Page sections">
-    <button type="button" class="tl-section-dot is-active" data-section="hero" data-label="Hero" aria-label="Hero"></button>
-    <button type="button" class="tl-section-dot" data-section="ring" data-label="Pick up" aria-label="Pick up"></button>
-    <button type="button" class="tl-section-dot" data-section="answer" data-label="Explain" aria-label="Explain"></button>
-    <button type="button" class="tl-section-dot" data-section="book" data-label="Book" aria-label="Book"></button>
-    <button type="button" class="tl-section-dot" data-section="trust" data-label="Scale" aria-label="Scale"></button>
-  </nav>
-
-  <aside class="tl-live-call" id="live-call" aria-label="Sample live call" aria-live="polite">
-    <div class="tl-live-head">
-      <div class="tl-live-avatar" aria-hidden="true">A</div>
-      <div class="tl-live-meta">
-        <strong>Sumeet</strong>
-        <span>Cyberhost · on a call now</span>
-      </div>
-      <div class="tl-wave" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
+      <div class="nav-actions">
+        <a href="/login" class="btn-login">Sign In</a>
+        <button type="button" class="btn-primary" onclick="openDemoModal()">Book a Demo</button>
       </div>
     </div>
-    <p class="tl-live-bubble" id="live-bubble">
-      Namaste andi! Nenu Sumeet, Cyberhost nunchi matladutunnanu.
-    </p>
-  </aside>
+  </nav>
 
-  <main>
-    <section class="scrub-stage" id="scrub-stage">
-      <div class="scrub-sticky">
-        <header class="site-nav">
-          <a class="nav-brand wordmark" id="nav-brand" href="/tinglish-vk-realty"><span class="wm-vk">Cyberhost</span></a>
-          <nav class="nav-links">
-            <a class="nav-link" href="#spotlight">Platform</a>
-            <a class="nav-link nav-cta" href="#login">Sign in</a>
-          </nav>
-        </header>
-
-        <div class="scrub-canvas-wrap">
-          <canvas id="scrub-canvas" aria-hidden="true"></canvas>
-        </div>
-
-        <div class="scrub-copy-layer">
-          <article class="copy-panel" id="panel-hero">
-            <span class="eyebrow">Tinglish · <span class="telugu-accent">తెలుగు</span> + English</span>
-            <h2>Your AI consultant. <em>Live on every call.</em></h2>
-            <p>Sumeet speaks natural Telugish — numbers and property terms in English, warmth in Telugu. Sub-400ms response, 24/7 across Hyderabad's western corridor.</p>
-            <div class="tl-hero-stats">
-              <div class="tl-stat-chip">
-                <span class="tl-stat-val">&lt;400ms</span>
-                <span class="tl-stat-label">Voice latency</span>
-              </div>
-              <div class="tl-stat-chip">
-                <span class="tl-stat-val tl-stat-val--gold">8</span>
-                <span class="tl-stat-label">Active projects</span>
-              </div>
-              <div class="tl-stat-chip">
-                <span class="tl-stat-val">24/7</span>
-                <span class="tl-stat-label">Always on</span>
-              </div>
-            </div>
-            <div class="cta-row">
-              <button type="button" class="tl-btn tl-btn--primary" id="btn-hear-demo" data-hear-demo>
-                <span class="tl-btn-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 2.5v11l10-5.5L3 2.5z"/></svg>
-                </span>
-                Hear Sumeet Talk
-              </button>
-              <a class="tl-btn tl-btn--ghost" href="#login">Sign in</a>
-            </div>
-          </article>
-
-          <article class="copy-panel" id="panel-ring">
-            <span class="eyebrow">01 · Pick up</span>
-            <h2>Missed call ante <em>missed lead.</em></h2>
-            <p>Inbound rings — Sumeet answers in seconds. Budget, location, timeline — capture avutundi before rep free avutaru.</p>
-          </article>
-
-          <article class="copy-panel" id="panel-answer">
-            <span class="eyebrow">02 · Explain</span>
-            <h2>Inventory, pricing, floor plans — <em>on the call.</em></h2>
-            <p>RAG-backed project knowledge across Kokapet, Gachibowli, Financial District. Natural Tinglish — numbers English lo, warmth Telugu lo.</p>
-          </article>
-
-          <article class="copy-panel" id="panel-book">
-            <span class="eyebrow">03 · Book</span>
-            <h2>Site visit confirm. CRM update. <em>Done.</em></h2>
-            <p>Visit slot lock chesi, lead ni hot queue ki pass chestadu — full call context tho. WhatsApp confirmation optional.</p>
-          </article>
-
-          <article class="copy-panel copy-panel--occlude" id="panel-trust">
-            <span class="eyebrow">Infrastructure</span>
-            <h2>Built for <em>scale.</em></h2>
-            <p>Your SIP trunk. Your CRM. Your knowledge base. Per-org workspaces with call analytics and lead scoring.</p>
-          </article>
-        </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        AI Phone Agents for Indian Businesses
       </div>
-    </section>
 
-    <section class="tl-spotlight" id="spotlight">
-      <div class="tl-spotlight-inner">
-        <span class="tl-spotlight-eyebrow tl-reveal">Hyderabad · Western IT Corridor</span>
-        <h2 class="tl-reveal tl-reveal--delay">Property leads — ika miss avvavu.</h2>
-        <p class="tl-spotlight-lead tl-reveal tl-reveal--delay">Cyberhost's Tinglish voice agent qualifies inbound calls, explains inventory from your knowledge base, and books site visits — without putting a human on the phone first.</p>
+      <h1 class="hero-title">
+        Phone calls that sound human — <em>in every language your customers speak.</em>
+      </h1>
 
-        <div class="tl-spotlight-grid">
-          <article class="tl-feature-card tl-reveal">
-            <span class="tl-feature-num">01</span>
-            <strong>Answer in &lt;30s</strong>
-            <p>Every inbound ring gets Sumeet — budget, BHK preference, and timeline captured before your rep is free.</p>
-          </article>
-          <article class="tl-feature-card tl-reveal tl-reveal--delay">
-            <span class="tl-feature-num">02</span>
-            <strong>Know your inventory</strong>
-            <p>RAG retrieval across 8 western-Hyderabad projects — pricing, RERA, amenities, and floor plans on demand.</p>
-          </article>
-          <article class="tl-feature-card tl-reveal tl-reveal--delay2">
-            <span class="tl-feature-num">03</span>
-            <strong>Book &amp; hand off</strong>
-            <p>Site visit slots locked, CRM updated, hot leads queued with full call context for your sales team.</p>
-          </article>
-        </div>
+      <p class="hero-subtitle">
+        Voicely makes outbound and inbound calls for EMI, COD, leads, and appointments — so your team stops chasing numbers and starts closing.
+      </p>
 
-        <div class="tl-marquee-wrap tl-reveal" aria-hidden="true">
-          <div class="tl-marquee" id="project-marquee">
-            <span class="tl-marquee-pill"><em>Godrej Madison Avenue</em> · Kokapet</span>
-            <span class="tl-marquee-pill"><em>My Home Krishe</em> · Financial District</span>
-            <span class="tl-marquee-pill"><em>Prestige Clairmont</em> · Neopolis</span>
-            <span class="tl-marquee-pill"><em>Rajapushpa Provincia</em> · Kokapet</span>
-            <span class="tl-marquee-pill"><em>ASBL Broadway</em> · Financial District</span>
-            <span class="tl-marquee-pill"><em>Candeur Skyline</em> · Gachibowli</span>
-            <span class="tl-marquee-pill"><em>Vertex Florenza</em> · Kokapet</span>
-            <span class="tl-marquee-pill"><em>Sobha Waterfront</em> · Neopolis</span>
-          </div>
-        </div>
-
-        <div class="tl-spotlight-cta tl-reveal">
-          <a class="tl-btn tl-btn--primary" href="#login">Open your dashboard</a>
-          <button type="button" class="tl-btn tl-btn--ghost" data-hear-demo>Hear a sample call</button>
-        </div>
+      <div class="hero-cta-row">
+        <button type="button" class="btn-primary btn-large" onclick="openDemoModal()">
+          Book a Free Demo
+        </button>
+        <a href="#demo-section" class="btn-secondary">
+          <span>▶</span> Hear a Real Call
+        </a>
       </div>
-    </section>
 
-    <section class="vk-login-stage vk-login-stage--full" id="login">
-      <div class="vk-login-split">
-        <div class="vk-login-brand-pane vk-reveal">
-          <div class="vk-brand-ambient" aria-hidden="true">
-            <span class="vk-brand-orb vk-brand-orb--gold"></span>
-            <span class="vk-brand-orb vk-brand-orb--mint"></span>
-          </div>
+      <div class="hero-props">
+        <span>✓ Sounds like a real person on the line</span>
+        <span>✓ Hindi, Telugu, Tamil, Marathi + 7 more</span>
+        <span>✓ From just ₹3.99 / minute</span>
+      </div>
 
-          <div class="vk-login-brand-inner">
-            <header class="vk-brand-top">
-              <div class="vk-login-mark wordmark vk-login-mark--hero"><span class="wm-vk">Cyberhost</span></div>
-              <span class="vk-brand-live">
-                <span class="vk-brand-live-dot" aria-hidden="true"></span>
-                Live · Tinglish preset
-              </span>
-            </header>
-
-            <h1 class="vk-login-brand-title">Every inbound call answered in natural Telugish.</h1>
-            <p class="vk-login-brand-lead">Sumeet qualifies leads, explains inventory, and books site visits — without putting a human on the phone first.</p>
-
-            <ol class="vk-brand-flow" aria-label="Call flow">
-              <li class="vk-brand-flow-step">
-                <span class="vk-brand-flow-num">01</span>
-                <span class="vk-brand-flow-text">
-                  <strong>Pick up</strong>
-                  <span>Answer in &lt;30s</span>
-                </span>
-              </li>
-              <li class="vk-brand-flow-step">
-                <span class="vk-brand-flow-num">02</span>
-                <span class="vk-brand-flow-text">
-                  <strong>Explain</strong>
-                  <span>Pricing &amp; floor plans</span>
-                </span>
-              </li>
-              <li class="vk-brand-flow-step">
-                <span class="vk-brand-flow-num">03</span>
-                <span class="vk-brand-flow-text">
-                  <strong>Book</strong>
-                  <span>Site visit + CRM</span>
-                </span>
-              </li>
-            </ol>
-
-            <div class="vk-brand-call" aria-label="Sample live call">
-              <div class="vk-brand-call-head">
-                <div class="vk-brand-avatar" aria-hidden="true">A</div>
-                <div class="vk-brand-call-meta">
-                  <strong>Sumeet</strong>
-                  <span>Cyberhost · on a call now</span>
-                </div>
-                <div class="vk-brand-wave" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span><span></span>
-                </div>
-              </div>
-              <p class="vk-brand-bubble">
-                <span class="vk-brand-bubble-label">Sumeet</span>
-                Kokapet lo <span class="tl-en">3 BHK</span> flat price <span class="tl-en">1.2 Crores</span> nunchi start avutundi andi. Site visit schedule cheddama?
-              </p>
+      <!-- Interactive Audio Player Section -->
+      <div class="demo-stage" id="demo-section">
+        <div class="demo-header">
+          <div class="demo-caller">
+            <div class="demo-avatar">P</div>
+            <div class="demo-meta">
+              <strong>Priya · Voicely AI</strong>
+              <span id="demo-role-tag">EMI Payment Reminder &bull; Lending Ready</span>
             </div>
           </div>
+
+          <div class="demo-lang-tabs">
+            <button type="button" class="demo-lang-btn active" onclick="switchAudioLang('hinglish')">Hinglish</button>
+            <button type="button" class="demo-lang-btn" onclick="switchAudioLang('telugu')">తెలుగు</button>
+            <button type="button" class="demo-lang-btn" onclick="switchAudioLang('hindi')">हिन्दी</button>
+            <button type="button" class="demo-lang-btn" onclick="switchAudioLang('tamil')">தமிழ்</button>
+          </div>
         </div>
 
-        <div class="vk-login-form-pane vk-reveal vk-reveal--delay">
-          <div class="vk-login-form-center">
-            <form id="login-form" class="vk-form vk-form--minimal">
-              <div class="vk-field">
-                <label for="login-id">User ID</label>
-                <input id="login-id" name="username" type="text" required autocomplete="username" placeholder="your.id">
-              </div>
-              <div class="vk-field">
-                <label for="login-password">Password</label>
-                <input id="login-password" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
-              </div>
-              <div class="vk-field">
-                <label for="login-org-code">Org code</label>
-                <input id="login-org-code" name="org_code" type="text" required autocomplete="organization" value="default" placeholder="default">
-              </div>
-              <button type="submit" class="vk-btn vk-btn--primary" id="login-submit">Sign in</button>
-              <p class="vk-error" id="login-error" aria-live="polite"></p>
-              <div class="vk-login-powered" aria-label="Powered by Voicely">
-                <span class="vk-powered-label">Powered by</span>
-                <img
-                  class="vk-powered-logo vk-powered-logo--login"
-                  src="/static/vendor/images/voicely-logo-powered.png"
-                  alt="Voicely"
-                  width="183"
-                  height="52"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
-            </form>
+        <div class="demo-bubble" id="demo-bubble-text">
+          "Namaste Rohan ji! Aapki ₹4,500 ki EMI kal due hai — kya aap aaj UPI se payment proceed kar paayenge?"
+        </div>
+
+        <div class="demo-controls">
+          <button type="button" class="demo-play-btn" id="demo-play-btn" onclick="toggleAudioDemo()">
+            <span id="demo-btn-icon">▶</span> <span id="demo-btn-label">Play dabao — aisi baat hoti hai</span>
+          </button>
+          <div class="demo-wave" id="demo-wave">
+            <div class="demo-bar"></div>
+            <div class="demo-bar"></div>
+            <div class="demo-bar"></div>
+            <div class="demo-bar"></div>
+            <div class="demo-bar"></div>
+            <div class="demo-bar"></div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <script src="/static/tinglish-vk-realty/vk-realty.js?v=20260703" defer></script>
-  <script src="/static/tinglish-vk-realty/vk-realty-login.js?v=20260703" defer></script>
-  <script src="/static/tinglish-vk-realty/tinglish-home.js?v=20260703" defer></script>
+    </div>
+  </section>
+
+  <!-- Metric Numbers Strip -->
+  <section class="metrics-strip">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <strong>10</strong>
+          <span>Indian Languages</span>
+        </div>
+        <div class="metric-item">
+          <strong>24×7</strong>
+          <span>Always On Call</span>
+        </div>
+        <div class="metric-item">
+          <strong>₹3.99</strong>
+          <span>Per Live Minute</span>
+        </div>
+        <div class="metric-item">
+          <strong>&lt;200ms</strong>
+          <span>Duplex Voice Latency</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logos Cloud -->
+  <section class="logo-marquee-wrap">
+    <div class="container">
+      <div class="logo-marquee-title">Trusted By Fast-Growing Indian Enterprises</div>
+      <div class="logo-row">
+        <span class="logo-pill">LoanKart</span>
+        <span class="logo-pill">GlowKart</span>
+        <span class="logo-pill">VidyaPrime</span>
+        <span class="logo-pill">MediBook</span>
+        <span class="logo-pill">SwiftShip</span>
+        <span class="logo-pill">Maruthi Living</span>
+        <span class="logo-pill">PolicyMitra</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Voicely Does For You (Solutions) -->
+  <section class="section-wrap" id="use-cases">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">What Voicely Does For You</span>
+        <h2 class="section-title">The calls your staff never has time for.</h2>
+        <p class="section-sub">The daily phone work you hire dozens of telecallers for — Voicely runs 24×7, tuned to your exact operational scripts.</p>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="use-card">
+          <span class="use-card-tag">Lending · NBFC · Fintech</span>
+          <h3>EMI &amp; Payment Reminders</h3>
+          <p>Polite, persistent calls on every due date. Capture promise-to-pay timestamps, send instant payment links over WhatsApp, and slash non-performing assets without burnout.</p>
+        </div>
+
+        <div class="use-card">
+          <span class="use-card-tag">Real Estate · EdTech</span>
+          <h3>Instant Lead Qualification</h3>
+          <p>Calls within 30 seconds of form fill. Qualify budget, timeline, and location in conversational Tinglish or Telugu, and hand off high-intent buyers directly to your top closers.</p>
+        </div>
+
+        <div class="use-card">
+          <span class="use-card-tag">E-Commerce · D2C</span>
+          <h3>COD &amp; Order Confirmation</h3>
+          <p>Verify addresses, confirm delivery availability, and collect cancellations before packaging. Cut RTO (Return to Origin) losses by up to 34% automatically.</p>
+        </div>
+
+        <div class="use-card">
+          <span class="use-card-tag">Healthcare · Clinics</span>
+          <h3>Appointment Scheduling</h3>
+          <p>Book consultations, reschedule slots at the customer's preferred hour, and send automated calendar reminders directly to doctors and patients.</p>
+        </div>
+
+        <div class="use-card">
+          <span class="use-card-tag">Enterprise Support</span>
+          <h3>24/7 Inbound Support Desk</h3>
+          <p>Answer at midnight with zero hold time. Handle FAQs, order tracking, and account lookups, escalating complex cases to human supervisors with full audio context.</p>
+        </div>
+
+        <div class="use-card">
+          <span class="use-card-tag">Hospitality &amp; Retail</span>
+          <h3>Feedback &amp; CSAT Surveys</h3>
+          <p>Conduct short, friendly post-delivery or showroom surveys. Capture genuine ratings and voice transcripts for analysis instead of guesswork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Why Voicely</span>
+        <h2 class="section-title">Not another robotic call bot.</h2>
+        <p class="section-sub">Built specifically for Indian telephony — persistent memory, strict regulatory compliance, and multi-turn conversations that never break down.</p>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Capabilities</th>
+            <th class="highlight">Voicely AI</th>
+            <th>Typical Voice AI Vendor</th>
+            <th>Traditional Call Center</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Turn Latency</strong></td>
+            <td class="highlight"><strong>&lt; 200 milliseconds</strong></td>
+            <td>1.5 – 3.0 seconds (awkward pauses)</td>
+            <td>Variable / Hold time</td>
+          </tr>
+          <tr>
+            <td><strong>Persistent Memory</strong></td>
+            <td class="highlight">Remembers prior context across sessions &amp; channels</td>
+            <td>Every call starts cold with zero memory</td>
+            <td>Requires manual agent CRM notes</td>
+          </tr>
+          <tr>
+            <td><strong>Long Conversations</strong></td>
+            <td class="highlight">No drift across 30+ turns in complex sales scripts</td>
+            <td>Loops or contradicts after 8–10 turns</td>
+            <td>High variance in staff quality</td>
+          </tr>
+          <tr>
+            <td><strong>Indian Regulations</strong></td>
+            <td class="highlight">DPDP-aware, TRAI-aligned calling windows, RBI disclosures</td>
+            <td>Minimal regulatory compliance</td>
+            <td>Prone to human compliance slip-ups</td>
+          </tr>
+          <tr>
+            <td><strong>Cost / Minute</strong></td>
+            <td class="highlight"><strong>₹3.99 / minute</strong> (pay as you go)</td>
+            <td>₹9 – 14 / minute (USD converted)</td>
+            <td>₹22 – 35 / minute + overhead</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Clear Rupee Pricing -->
+  <section class="pricing-wrap" id="pricing">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Transparent Pricing</span>
+        <h2 class="section-title">Pay only while talking. No ringing charge.</h2>
+        <p class="section-sub">Clear rupee pricing with zero hidden fees. Teams doing 50,000 calls / month typically save ₹18–25 Lakh annually.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Pay-As-You-Go</h3>
+          <p class="tier-desc">Ideal for pilot campaigns and scaling startups.</p>
+          <div class="pricing-rate">₹4.49 <span>/ min</span></div>
+          <ul class="pricing-features">
+            <li>✓ All 10 Indian Languages</li>
+            <li>✓ Unlimited Inbound &amp; Outbound DIDs</li>
+            <li>✓ Full Webhook &amp; CRM Sync</li>
+            <li>✓ Audio Recording &amp; Transcripts</li>
+            <li>✓ Zero Setup Fee</li>
+          </ul>
+          <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="openDemoModal()">Get Started</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <h3>Growth Tier</h3>
+          <p class="tier-desc">For growing teams handling 20,000+ monthly calls.</p>
+          <div class="pricing-rate">₹3.99 <span>/ min</span></div>
+          <ul class="pricing-features">
+            <li>✓ Everything in Pay-As-You-Go</li>
+            <li>✓ High-Concurrency Worker Pool</li>
+            <li>✓ WhatsApp BSP &amp; SMS Integration</li>
+            <li>✓ Custom Knowledge Cartridge Compiler</li>
+            <li>✓ Dedicated Forward-Deployed Engineer</li>
+          </ul>
+          <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" onclick="openDemoModal()">Deploy Growth Tier</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="tier-desc">High-volume banks, NBFCs, and retail giants.</p>
+          <div class="pricing-rate">Custom <span>volume rate</span></div>
+          <ul class="pricing-features">
+            <li>✓ Custom On-Prem / VPC Deployments</li>
+            <li>✓ Dedicated SIP Interconnect Trunks</li>
+            <li>✓ Custom Fine-Tuned Voice Clones</li>
+            <li>✓ Strict 99.99% Uptime SLA</li>
+            <li>✓ 24/7 Priority Engineering Support</li>
+          </ul>
+          <a href="mailto:sales@api-maruthi.pikachuhosting.online" class="btn-secondary" style="width: 100%; justify-content: center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Hear it on your own phone number today.</h2>
+      <p>A 15-minute live demonstration tailored to your exact industry script. Experience the difference yourself — free with 100 bonus minutes.</p>
+      <button type="button" class="btn-primary" onclick="openDemoModal()">Book Free 15-Min Live Demo</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>⚡ Voicely</strong>
+          <p style="max-width: 280px; line-height: 1.6;">AI phone agents that sound human — in 10 Indian languages, tuned to your business.</p>
+          <p style="margin-top: 14px; font-size: 13px;"><strong>Executive HQ:</strong> Hyderabad &bull; Bengaluru</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/login">Sign In / Dashboard</a></li>
+            <li><a href="http://demo.api-maruthi.pikachuhosting.online">Live Web Demo</a></li>
+            <li><a href="http://docs.api-maruthi.pikachuhosting.online">Developer API</a></li>
+            <li><a href="http://status.api-maruthi.pikachuhosting.online">System Health</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#use-cases">Lending &amp; EMI</a></li>
+            <li><a href="#use-cases">Real Estate Leads</a></li>
+            <li><a href="#use-cases">E-commerce COD</a></li>
+            <li><a href="http://maruthi.api-maruthi.pikachuhosting.online">Showroom AI Agent</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Languages</h4>
+          <ul>
+            <li><a>Hinglish / Hindi</a></li>
+            <li><a>Telugu (తెలుగు)</a></li>
+            <li><a>Tamil (தமிழ்)</a></li>
+            <li><a>Marathi (मराठी)</a></li>
+            <li><a>Kannada (ಕನ್ನಡ)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Mail</h4>
+          <ul>
+            <li><a href="mailto:arjun@api-maruthi.pikachuhosting.online">Founder: arjun@...</a></li>
+            <li><a href="mailto:sales@api-maruthi.pikachuhosting.online">sales@...</a></li>
+            <li><a href="mailto:support@api-maruthi.pikachuhosting.online">support@...</a></li>
+            <li><a href="http://mails.api-maruthi.pikachuhosting.online">Webmail Login</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Voicely AI Platform. All rights reserved.</span>
+        <span>Made for Indian Enterprise with sub-200ms latency.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lead Booking Modal -->
+  <div class="modal-overlay" id="demo-modal" onclick="closeDemoModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Schedule a Live Call Demo</h3>
+      <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">We'll call your number so you can hear how Voicely handles your customers.</p>
+
+      <form onsubmit="handleDemoSubmit(event)">
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Your Name</label>
+          <input type="text" id="demo-name" required placeholder="Arjun Sharma" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-dark); border-radius: 8px; font-size: 14px;">
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Phone Number (We'll call you here)</label>
+          <input type="tel" id="demo-phone" required placeholder="+91 98765 43210" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-dark); border-radius: 8px; font-size: 14px;">
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Primary Calling Language</label>
+          <select id="demo-lang" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-dark); border-radius: 8px; font-size: 14px;">
+            <option value="Hinglish">Hinglish (Hindi + English)</option>
+            <option value="Telugu">Telugu (తెలుగు / Tinglish)</option>
+            <option value="Hindi">Pure Hindi (हिन्दी)</option>
+            <option value="Tamil">Tamil (தமிழ்)</option>
+            <option value="English">Indian English</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px;">Trigger Instant Demo Call &rarr;</button>
+        <p id="demo-status" style="font-size: 13px; text-align: center; margin-top: 12px; display: none;"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const samples = {
+      hinglish: {
+        tag: "EMI Payment Reminder · Lending Ready",
+        text: '"Namaste Rohan ji! Aapki ₹4,500 ki EMI kal due hai — kya aap aaj UPI se payment proceed kar paayenge?"',
+        voiceLang: "hi-IN",
+        say: "Namaste Rohan ji! Aapki ₹4,500 ki EMI kal due hai. Kya aap aaj payment proceed kar paayenge?"
+      },
+      telugu: {
+        tag: "Real Estate Lead Qualification · Western Corridor",
+        text: '"Namaste andi! Kokapet lo 3 BHK flats 1.2 Crores nunchi start avutunnayi. Meeku site visit schedule cheddama?"',
+        voiceLang: "te-IN",
+        say: "Namaste andi! Kokapet lo three BHK flats one point two crores nunchi start avutunnayi. Meeku site visit schedule cheddama?"
+      },
+      hindi: {
+        tag: "E-Commerce COD Confirmation · SwiftShip",
+        text: '"नमस्ते राहुल जी! आपका ₹1,299 का कैश-ऑन-डिलीवरी ऑर्डर कल डिलीवर हो रहा है — क्या आप उपलब्ध रहेंगे?"',
+        voiceLang: "hi-IN",
+        say: "नमस्ते राहुल जी! आपका बारह सौ निन्यानवे रुपये का आर्डर कल डिलीवर हो रहा है, क्या आप उपलब्ध रहेंगे?"
+      },
+      tamil: {
+        tag: "Healthcare Appointment Confirmation · MediBook",
+        text: '"வணக்கம் கார்த்திக் சார்! டாக்டர் விக்ரம் அவர்களுடன் உங்கள் அப்பாயின்ட்மென்ட் நாளை மாலை 5 மணிக்கு உள்ளது."',
+        voiceLang: "ta-IN",
+        say: "வணக்கம் கார்த்திக் சார்! உங்கள் அப்பாயின்ட்மென்ட் நாளை மாலை ஐந்து மணிக்கு உள்ளது."
+      }
+    };
+
+    let currentLang = 'hinglish';
+    let isPlaying = false;
+
+    function switchAudioLang(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.demo-lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.getElementById('demo-role-tag').innerText = samples[lang].tag;
+      document.getElementById('demo-bubble-text').innerText = samples[lang].text;
+      if (isPlaying) {
+        window.speechSynthesis.cancel();
+        toggleAudioDemo();
+      }
+    }
+
+    function toggleAudioDemo() {
+      const wave = document.getElementById('demo-wave');
+      const icon = document.getElementById('demo-btn-icon');
+      const label = document.getElementById('demo-btn-label');
+
+      if (isPlaying) {
+        window.speechSynthesis.cancel();
+        isPlaying = false;
+        wave.classList.remove('playing');
+        icon.innerText = "▶";
+        label.innerText = "Play dabao — aisi baat hoti hai";
+        return;
+      }
+
+      if ('speechSynthesis' in window) {
+        isPlaying = true;
+        wave.classList.add('playing');
+        icon.innerText = "⏹";
+        label.innerText = "Playing audio sample...";
+
+        const item = samples[currentLang];
+        const u = new SpeechSynthesisUtterance(item.say);
+        u.lang = item.voiceLang;
+        u.rate = 0.95;
+        u.onend = () => {
+          isPlaying = false;
+          wave.classList.remove('playing');
+          icon.innerText = "▶";
+          label.innerText = "Play dabao — aisi baat hoti hai";
+        };
+        u.onerror = () => {
+          isPlaying = false;
+          wave.classList.remove('playing');
+          icon.innerText = "▶";
+          label.innerText = "Play dabao — aisi baat hoti hai";
+        };
+        window.speechSynthesis.speak(u);
+      } else {
+        alert("Your browser does not support audio synthesis preview.");
+      }
+    }
+
+    function openDemoModal() {
+      document.getElementById('demo-modal').classList.add('active');
+    }
+    function closeDemoModal(e) {
+      document.getElementById('demo-modal').classList.remove('active');
+    }
+    function handleDemoSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById('demo-status');
+      status.style.display = 'block';
+      status.style.color = '#059669';
+      status.innerText = '✓ Demo request logged! Our AI caller will dial your number shortly.';
+      setTimeout(() => {
+        closeDemoModal();
+        status.style.display = 'none';
+      }, 2500);
+    }
+  </script>
 </body>
 </html>

@@ -97,6 +97,8 @@ app.add_middleware(
 )
 
 _PUBLIC_PATHS = {
+    "/",
+    "/index.html",
     "/favicon.ico",
     "/login",
     "/health",
@@ -156,7 +158,7 @@ async def enforce_dashboard_login(request: Request, call_next):
     if _is_public_path(path):
         return await call_next(request)
 
-    if path in ("/", "/v2") and not _has_valid_session(request):
+    if path in ("/dashboard", "/v2") and not _has_valid_session(request):
         return RedirectResponse(url="/login", status_code=302)
 
     if path == "/tinglish-vk-realty/dashboard" and not _has_valid_session(request):
@@ -3112,11 +3114,20 @@ def _serve_spa_html(filename: str) -> HTMLResponse | None:
 
 
 @app.get("/", response_class=HTMLResponse)
+@app.get("/index.html", response_class=HTMLResponse)
+async def get_homepage():
+    served = _serve_spa_html("index.html")
+    if served is not None:
+        return served
+    return RedirectResponse(url="/login", status_code=302)
+
+
+@app.get("/dashboard", response_class=HTMLResponse)
 async def get_dashboard(request: Request):
     if is_auth_enabled() and not _has_valid_session(request):
         return RedirectResponse(url="/login", status_code=302)
 
-    served = _serve_spa_html("index.html")
+    served = _serve_spa_html("dashboard.html")
     if served is not None:
         return served
 
