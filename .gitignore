@@ -29,3 +29,6 @@ logs/
 .DS_Store
 
 frontend/brand/orig_speaksy/
+
+*.sqlite3
+*.db
