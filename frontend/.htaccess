@@ -1,0 +1,53 @@
+DirectoryIndex index.html index.php
+
+RewriteEngine On
+RewriteBase /
+
+# 1. Clean HTML Page Routes
+RewriteRule ^pricing/?$ pricing.html [L]
+RewriteRule ^platform/?$ platform.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^login/?$ login.html [L]
+
+# 2. CRM & Admin Portal Routes
+RewriteRule ^leads/?$ api/leads_admin.php [L]
+RewriteRule ^crm/?$ api/leads_admin.php [L]
+RewriteRule ^export/?$ api/export_leads.php [L]
+RewriteRule ^status/?$ status/index.html [L]
+RewriteRule ^demo/?$ demo/index.html [L]
+RewriteRule ^docs/?$ docs/index.html [L]
+
+# 3. Local Database & API Endpoints
+RewriteRule ^api/contact/?$ api/contact.php [L]
+RewriteRule ^api/status/?$ api/status.php [L]
+RewriteRule ^api/webhook/?$ api/webhook_call.php [L]
+RewriteRule ^api/health/?$ api/db_health.php [L]
+
+# 4. Gzip & Brotli Compression for High Speed
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# 5. Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+</IfModule>
+
+# 6. Security Headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
